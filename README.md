@@ -111,7 +111,7 @@ Clone this repository to your desired folder:
 
 ```sh
   git clone git@github.com:shella12/RentAnItemApp.git
-  cd fRentAnItemApp
+  cd RentAnItemApp
 ```
 
 ### Install
@@ -189,7 +189,7 @@ If you like this project by staring it.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- The app is built using this [Design](https://www.behance.net/gallery/37706679/Circle-(Landing-page-Dashboard-Mobile-App)) by [Alexey Savitskiy](https://www.behance.net/alexey_savitskiy)
+The app is built using this [Design](https://www.behance.net/gallery/37706679/Circle-(Landing-page-Dashboard-Mobile-App)) by [Alexey Savitskiy](https://www.behance.net/alexey_savitskiy)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -200,4 +200,4 @@ If you like this project by staring it.
 This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-# RentAnItemApp
+
