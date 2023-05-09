@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import axios from "axios";
+import React, { Component } from 'react';
+import axios from 'axios';
 
 export default class Login extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      email: "",
-      password: "",
-      loginErrors: ""
+      email: '',
+      password: '',
+      loginErrors: '',
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,7 +17,7 @@ export default class Login extends Component {
 
   handleChange(event) {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   }
 
@@ -26,22 +26,22 @@ export default class Login extends Component {
 
     axios
       .post(
-        "http://localhost:3001/sessions",
+        'http://localhost:3001/sessions',
         {
           user: {
-            email: email,
-            password: password
-          }
+            email,
+            password,
+          },
         },
-        { withCredentials: true }
+        { withCredentials: true },
       )
-      .then(response => {
+      .then((response) => {
         if (response.data.logged_in) {
           this.props.handleSuccessfulAuth(response.data);
         }
       })
-      .catch(error => {
-        console.log("login error", error);
+      .catch((error) => {
+        console.log('login error', error);
       });
     event.preventDefault();
   }
