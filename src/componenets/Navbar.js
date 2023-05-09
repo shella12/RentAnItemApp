@@ -14,10 +14,17 @@ const Navbar = () => {
       <div className="hamburger">
         <Hamburger toggled={isOpen} toggle={setOpen} size={20} rounded color="#7e7d7f" />
         <nav className={isOpen ? 'navlinks Open' : 'navlinks'}>
+          <div className="mob-profile">
+            <img src={profilePhoto} alt="profile" className="profile-photo mob-profile-photo" />
+            <p className="username mob-username">Username</p>
+            <p>example@email.com</p>
+          </div>
           <NavLink to="/" activeclassname="active" onClick={() => setOpen(false)}>Houses</NavLink>
           <NavLink to="/MyFavourites" activeclassname="active" onClick={() => setOpen(false)}>My Favorites</NavLink>
           <NavLink to="/AddHouse" activeclassname="active" onClick={() => setOpen(false)}>Add house</NavLink>
           <NavLink to="/DeleteHouse" activeclassname="active" onClick={() => setOpen(false)}>Delete house</NavLink>
+          <hr className="divider" />
+          <NavLink to="/LogOut" activeclassname="active" onClick={() => setOpen(false)}>Log Out</NavLink>
         </nav>
       </div>
       <div className="seacrh-bar">
@@ -26,7 +33,7 @@ const Navbar = () => {
       </div>
       <div className="profile-details">
         <AiOutlineBell className="notification-bell" />
-        <p>Username</p>
+        <p className="username">Username</p>
         <RiArrowDownSLine />
         <img src={profilePhoto} alt="profile" className="profile-photo" />
       </div>

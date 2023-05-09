@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Roboto&display=swap');
 
 *,
 ::after,
@@ -50,15 +50,24 @@ a {
   gap: 0.8rem;
 }
 
-.profile-details p {
+.username {
   color: var(--navbar-link-color);
-  font-weight: bolder;
+  font-family: 'Roboto', sans-serif;
+}
+
+.mob-username {
+  font-size: 1.3rem;
+  margin: 1rem 0 0 0;
 }
 
 .profile-photo {
   aspect-ratio: 1 / 1;
   width: 2rem;
   border-radius: 50%;
+}
+
+.mob-profile-photo {
+  width: 5rem;
 }
 
 .hamburger {
@@ -72,17 +81,37 @@ a {
 .navlinks {
   display: none;
   flex-direction: column;
-  padding: 12rem 3rem;
+  padding: 8rem 3rem;
   position: absolute;
   background-color: #fff;
   top: 0;
   left: 0;
   height: 100vh;
   color: var(--navbar-link-color);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.mob-profile {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.navlinks a {
+  margin: 0.5rem 0;
 }
 
 .Open {
   display: flex;
   width: 25rem;
+}
+
+.active {
+  font-family: 'Roboto', sans-serif;
+}
+
+.divider {
+  opacity: 0.3;
+  width: 70%;
+  margin: 3rem 0 1rem 0;
 }
