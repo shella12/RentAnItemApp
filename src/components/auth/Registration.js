@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 
-export default class Registration extends Component {
+class Registration extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       email: '',
       password: '',
-      password_confirmation: '',
-      registrationErrors: '',
+      passwordConfirmation: '',
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,13 +17,15 @@ export default class Registration extends Component {
   }
 
   handleChange(event) {
+    const { name, value } = event.target;
     this.setState({
-      [event.target.name]: event.target.value,
+      [name]: value,
     });
   }
 
   handleSubmit(event) {
-    const { email, password, password_confirmation } = this.state;
+    const { email, password, passwordConfirmation } = this.state;
+    const { handleSuccessfulAuth } = this.props;
 
     axios
       .post(
@@ -32,23 +34,26 @@ export default class Registration extends Component {
           user: {
             email,
             password,
-            password_confirmation,
+            password_confirmation: passwordConfirmation,
           },
         },
-        { withCrenpmdentials: true },
+        { withCredentials: true },
       )
       .then((response) => {
         if (response.data.status === 'created') {
-          this.props.handleSuccessfulAuth(response.data);
+          handleSuccessfulAuth(response.data);
         }
       })
       .catch((error) => {
         console.log('registration error', error);
       });
+
     event.preventDefault();
   }
 
   render() {
+    const { email, password, passwordConfirmation } = this.state;
+
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -56,7 +61,7 @@ export default class Registration extends Component {
             type="email"
             name="email"
             placeholder="Email"
-            value={this.state.email}
+            value={email}
             onChange={this.handleChange}
             required
           />
@@ -65,16 +70,16 @@ export default class Registration extends Component {
             type="password"
             name="password"
             placeholder="Password"
-            value={this.state.password}
+            value={password}
             onChange={this.handleChange}
             required
           />
 
           <input
             type="password"
-            name="password_confirmation"
+            name="passwordConfirmation"
             placeholder="Password confirmation"
-            value={this.state.password_confirmation}
+            value={passwordConfirmation}
             onChange={this.handleChange}
             required
           />
@@ -85,3 +90,9 @@ export default class Registration extends Component {
     );
   }
 }
+
+Registration.propTypes = {
+  handleSuccessfulAuth: PropTypes.func.isRequired,
+};
+
+export default Registration;

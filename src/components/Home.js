@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 
 import Registration from './auth/Registration';
 import Login from './auth/Login';
@@ -13,15 +14,17 @@ export default class Home extends Component {
   }
 
   handleSuccessfulAuth(data) {
-    this.props.handleLogin(data);
-    this.props.history.push('/dashboard');
+    const { handleLogin, history } = this.props;
+    handleLogin(data);
+    history.push('/dashboard');
   }
 
   handleLogoutClick() {
+    const { handleLogout } = this.props;
     axios
       .delete('http://localhost:3001/logout', { withCredentials: true })
-      .then((response) => {
-        this.props.handleLogout();
+      .then(() => {
+        handleLogout();
       })
       .catch((error) => {
         console.log('logout error', error);
@@ -29,17 +32,29 @@ export default class Home extends Component {
   }
 
   render() {
+    const { loggedInStatus } = this.props;
     return (
       <div>
         <h1>Home</h1>
         <h1>
           Status:
-          {this.props.loggedInStatus}
+          {loggedInStatus}
         </h1>
-        <button onClick={() => this.handleLogoutClick()}>Logout</button>
+        <button type="button" onClick={() => this.handleLogoutClick()}>
+          Logout
+        </button>
         <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
         <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
       </div>
     );
   }
 }
+
+Home.propTypes = {
+  handleLogin: PropTypes.func.isRequired,
+  handleLogout: PropTypes.func.isRequired,
+  loggedInStatus: PropTypes.string.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }).isRequired,
+};

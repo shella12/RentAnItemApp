@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 
 export default class Login extends Component {
+  static propTypes = {
+    handleSuccessfulAuth: PropTypes.func.isRequired,
+  };
+
   constructor(props) {
     super(props);
 
     this.state = {
       email: '',
       password: '',
-      loginErrors: '',
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,9 +20,8 @@ export default class Login extends Component {
   }
 
   handleChange(event) {
-    this.setState({
-      [event.target.name]: event.target.value,
-    });
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
   }
 
   handleSubmit(event) {
@@ -47,6 +50,7 @@ export default class Login extends Component {
   }
 
   render() {
+    const { email, password } = this.state;
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -54,7 +58,7 @@ export default class Login extends Component {
             type="email"
             name="email"
             placeholder="Email"
-            value={this.state.email}
+            value={email}
             onChange={this.handleChange}
             required
           />
@@ -63,7 +67,7 @@ export default class Login extends Component {
             type="password"
             name="password"
             placeholder="Password"
-            value={this.state.password}
+            value={password}
             onChange={this.handleChange}
             required
           />
