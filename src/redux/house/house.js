@@ -13,18 +13,8 @@ const initialState = {
 export const fetchHouse = createAsyncThunk(FETCH_HOUSE, async () => {
   const response = await fetch(api)
     .then((response) => response.json());
-  console.log(response);
   return response;
 });
-// export const addHouse = createAsyncThunk(ADD_House, async (house) => {
-//   const response = await addBooksApi(book);
-//   return response;
-// });
-
-// export const removeBook = createAsyncThunk(REMOVE_BOOK, async (bookId) => {
-//   const response = await deleteBooksApi(bookId);
-//   return response;
-// });
 
 const housesSlice = createSlice({
   name: 'houses',

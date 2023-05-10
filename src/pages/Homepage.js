@@ -10,7 +10,7 @@ const Home = () => {
   const houses = useSelector((state) => state.housesSlice.houses);
   useEffect(() => {
     dispatch(fetchHouse());
-  }, []);
+  });
 
   return (
     <>
