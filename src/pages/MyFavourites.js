@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from "react";
-import { fetchFavorites, postFavorite } from '../redux/favorites/favoriteReducer';
+import { deleteFavorite, fetchFavorites, postFavorite } from '../redux/favorites/favoriteReducer';
 
 const MyFavourites = () => {
   const [houseID, setHouseID] = useState()
@@ -78,10 +78,13 @@ const MyFavourites = () => {
   const handleAddFavorite = (event) => {
     event.preventDefault()
     const house = listAllHouse.find(({id})=> id == houseID)
-    console.log("houseID", houseID)
-    console.log(listAllHouse)
-    console.log(house)
     dispatch(postFavorite({userID: 1, house: house}))
+  }
+
+  const handleRemove = (event, houseID) => {
+    event.preventDefault()
+    
+    dispatch(deleteFavorite({userID: 1, houseID: houseID}))
   }
 
   return (
@@ -96,7 +99,7 @@ const MyFavourites = () => {
       { listHouses?.length > 0 ? listHouses.map((house) => (
         <li key={house.id} className='row'>
           <p>{house.name}#{house.id}</p>
-          <form>
+          <form onSubmit={e=> handleRemove(e, house.id)}>
             <input type="submit" value="Delete" />
           </form>
         </li>
