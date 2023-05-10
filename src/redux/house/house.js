@@ -11,8 +11,9 @@ const initialState = {
   error: null,
 };
 export const fetchHouse = createAsyncThunk(FETCH_HOUSE, async () => {
-  const response = await fetch(`${api}`)
+  const response = await fetch(api)
     .then((response) => response.json());
+  console.log(response);
   return response;
 });
 // export const addHouse = createAsyncThunk(ADD_House, async (house) => {
