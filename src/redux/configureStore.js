@@ -1,9 +1,8 @@
-/* eslint-disable no-underscore-dangle */
-
 import { configureStore } from '@reduxjs/toolkit';
+import housesSlice from './house/house';
 
 const store = configureStore({
-  reducer: { },
+  reducer: { housesSlice },
 });
 
 export default store;
