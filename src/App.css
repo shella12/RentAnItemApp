@@ -62,12 +62,16 @@ a {
   border: 1px solid var(--navbar-icon-color);
   border-radius: 1rem;
   padding: 5px 10px;
+  width: 0;
+  flex: 1;
 }
 
 .seacrh-bar input {
   outline: none;
   border-color: transparent;
   margin-left: 10px;
+  width: 0;
+  flex: 1;
 }
 
 .profile-details {
