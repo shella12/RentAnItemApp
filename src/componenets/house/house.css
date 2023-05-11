@@ -1,5 +1,6 @@
 .house {
     width: 90%;
+    max-width: 400px;
     background-color: white;
     overflow: hidden;
     border: 0.8px solid #d3d3d383;

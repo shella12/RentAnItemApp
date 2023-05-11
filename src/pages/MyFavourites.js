@@ -91,18 +91,16 @@ const MyFavourites = () => {
   return (
   <>
     <h1 className='flex-center'>Favourites</h1>
-    <ul>
-      <li className='flex-center'>
-        <House data={listAllHouse[0]} />
-      </li>
+    <ul className='row wrap'>
       { listHouses?.length > 0 ? listHouses.map((house) => (
-        <li key={house.id} className='flex-center'>
+        <li key={house.id} className='flex-center house-wrapper'>
           <House data={house} />
         </li>
         ))
         : <p>No favorites: List Empty</p>
       }
     </ul>
+    {/* Need to test/use the delete and add favorite
     <form className="row" onSubmit={e => handleAddFavorite(e)}>
       <input type="text" placeholder="House ID" onChange={e=> setHouseID(e.currentTarget.value)}/>
       <input type="submit" placeholder="Add favorite" />
@@ -119,7 +117,7 @@ const MyFavourites = () => {
         ))
         : <p>No favorites: List Empty</p>
       }
-    </ul>
+    </ul>*/}
   </>
 )};
 

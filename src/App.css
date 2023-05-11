@@ -43,6 +43,10 @@ a {
   flex: 1;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
 .navbar,
 .seacrh-bar,
 .profile-details {
