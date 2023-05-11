@@ -19,12 +19,12 @@ const Navbar = () => {
             <p className="username mob-username">Username</p>
             <p>example@email.com</p>
           </div>
-          <NavLink to="/" activeClassName="active" onClick={() => setOpen(false)} aria-label="Houses link">Houses</NavLink>
-          <NavLink to="/MyFavourites" activeClassName="active" onClick={() => setOpen(false)} aria-label="My Favorites link">My Favorites</NavLink>
-          <NavLink to="/AddHouse" activeClassName="active" onClick={() => setOpen(false)} aria-label="Add house link">Add house</NavLink>
-          <NavLink to="/DeleteHouse" activeClassName="active" onClick={() => setOpen(false)} aria-label="Delete house link">Delete house</NavLink>
+          <NavLink to="/" activeclassname="active" onClick={() => setOpen(false)} aria-label="Houses link">Houses</NavLink>
+          <NavLink to="/MyFavourites" activeclassname="active" onClick={() => setOpen(false)} aria-label="My Favorites link">My Favorites</NavLink>
+          <NavLink to="/AddHouse" activeclassname="active" onClick={() => setOpen(false)} aria-label="Add house link">Add house</NavLink>
+          <NavLink to="/DeleteHouse" activeclassname="active" onClick={() => setOpen(false)} aria-label="Delete house link">Delete house</NavLink>
           <hr className="divider" />
-          <NavLink to="/LogOut" activeClassName="active" onClick={() => setOpen(false)} aria-label="Log Out link">Log Out</NavLink>
+          <NavLink to="/LogOut" activeclassname="active" onClick={() => setOpen(false)} aria-label="Log Out link">Log Out</NavLink>
         </nav>
       </div>
       <div className="seacrh-bar">

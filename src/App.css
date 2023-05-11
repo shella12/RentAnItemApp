@@ -9,6 +9,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+body {
+  background-color: #f6f3f8;
+}
+
 :root {
   --navbar-icon-color: #a7a7a7;
   --navbar-link-color: #7e7d7f;
@@ -107,7 +111,7 @@ a {
 }
 
 .hamburger-react {
-  z-index: 3;
+  z-index: 10;
 }
 
 .navlinks {
@@ -121,6 +125,7 @@ a {
   height: 100vh;
   color: var(--navbar-link-color);
   font-size: 1.2rem;
+  z-index: 9;
 }
 
 .mob-profile {
@@ -146,4 +151,38 @@ a {
   opacity: 0.3;
   width: 70%;
   margin: 3rem 0 1rem 0;
+}
+
+.carousel.carousel-slider .control-arrow {
+  top: 45%;
+  background-color: black;
+  border-radius: 50%;
+  bottom: auto;
+  padding: 0.5rem;
+}
+
+li.selected img {
+  box-shadow: 2px 10px 22px -7px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 10px 22px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 10px 22px -7px rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+li.slide :not(.selected) img {
+  transform: scale(0.8);
+  transform: translate(2px, -5%);
+  padding: 4rem;
+}
+
+li.slide div {
+  background-color: transparent;
+}
+
+.carousel-root {
+  margin: 2rem;
+  background-color: #fff;
+}
+
+.carousel .control-dots {
+  translate: 0 1rem;
 }
