@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from "react";
 import { deleteFavorite, fetchFavorites, postFavorite } from '../redux/favorites/favoriteReducer';
+import House from '../componenets/house/House';
 
 const MyFavourites = () => {
   const [houseID, setHouseID] = useState()
@@ -89,7 +90,19 @@ const MyFavourites = () => {
 
   return (
   <>
-    <h1>MyFavourites Page</h1>
+    <h1 className='flex-center'>Favourites</h1>
+    <ul>
+      <li className='flex-center'>
+        <House data={listAllHouse[0]} />
+      </li>
+      { listHouses?.length > 0 ? listHouses.map((house) => (
+        <li key={house.id} className='flex-center'>
+          <House data={house} />
+        </li>
+        ))
+        : <p>No favorites: List Empty</p>
+      }
+    </ul>
     <form className="row" onSubmit={e => handleAddFavorite(e)}>
       <input type="text" placeholder="House ID" onChange={e=> setHouseID(e.currentTarget.value)}/>
       <input type="submit" placeholder="Add favorite" />
