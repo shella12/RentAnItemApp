@@ -8,7 +8,7 @@ const DeleteHouse = () => {
   const dispatch = useDispatch();
   const handleRemove = (house_id) => {
     dispatch(deleteHouse(house_id));
-  }
+  };
   return (
     <>
       <h1 className="flex-center">Delete House</h1>

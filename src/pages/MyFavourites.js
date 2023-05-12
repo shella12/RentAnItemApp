@@ -1,12 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect, useState } from 'react';
-import { deleteFavorite, fetchFavorites, postFavorite } from '../redux/favorites/favoriteReducer';
+import { useEffect } from 'react';
+import { deleteFavorite, fetchFavorites } from '../redux/favorites/favoriteReducer';
 import House from '../componenets/house/House';
 
 const MyFavourites = () => {
-  //const [houseID, setHouseID] = useState();
   const listHouses = useSelector((state) => state.favorite.favorites);
-  //const listAllHouse = useSelector((state) => state.housesSlice.houses);
   const dispatch = useDispatch();
   useEffect(() => {
     if (listHouses.length === 0) {
