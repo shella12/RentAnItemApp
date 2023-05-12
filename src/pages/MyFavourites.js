@@ -13,6 +13,7 @@ const MyFavourites = () => {
       dispatch(fetchFavorites(1));
     }
   }, [dispatch, listHouses]);
+  
 
   const handleAddFavorite = (event) => {
     event.preventDefault();
