@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="hamburger">
         <Hamburger toggled={isOpen} toggle={setOpen} size={20} rounded color="#7e7d7f" />
         <nav className={isOpen ? 'navlinks Open' : 'navlinks'}>
-          <div className="mob-profile">
+          <div className=" column mob-profile">
             <img src={profilePhoto} alt="profile" className="profile-photo mob-profile-photo" />
             <p className="username mob-username">Username</p>
             <p>example@email.com</p>
