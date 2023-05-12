@@ -270,3 +270,9 @@ li.slide div {
   min-height: 350px;
   text-align: center;
 }
+
+@media screen and (max-width: 764px) {
+  .desktop-only {
+    display: none;
+  }
+}
