@@ -4,20 +4,15 @@ import { deleteFavorite, fetchFavorites, postFavorite } from '../redux/favorites
 import House from '../componenets/house/House';
 
 const MyFavourites = () => {
-  const [houseID, setHouseID] = useState();
+  //const [houseID, setHouseID] = useState();
   const listHouses = useSelector((state) => state.favorite.favorites);
-  const listAllHouse = useSelector((state) => state.housesSlice.houses);
+  //const listAllHouse = useSelector((state) => state.housesSlice.houses);
   const dispatch = useDispatch();
   useEffect(() => {
     if (listHouses.length === 0) {
       dispatch(fetchFavorites(1));
     }
   }, [dispatch, listHouses]);
-
-  const handleAddFavorite = () => {
-    const house = listAllHouse.find(({ id }) => id === parseInt(houseID, 10));
-    dispatch(postFavorite({ userID: 1, house }));
-  };
 
   const handleRemove = (houseID) => {
     dispatch(deleteFavorite({ userID: 1, houseID }));
