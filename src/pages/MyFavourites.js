@@ -10,7 +10,7 @@ const MyFavourites = () => {
     if (listHouses.length === 0) {
       dispatch(fetchFavorites(1));
     }
-  }, [dispatch, listHouses]);
+  }, []);
 
   const handleRemove = (houseID) => {
     dispatch(deleteFavorite({ userID: 1, houseID }));
@@ -25,7 +25,7 @@ const MyFavourites = () => {
             <House data={house} handleRemove={handleRemove} />
           </li>
         ))
-          : <p>No favorites: List Empty</p>}
+          : <p className='flex-center empty-list'>No favorites: List Empty</p>}
       </ul>
     </>
   );

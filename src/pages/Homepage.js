@@ -13,7 +13,7 @@ const Home = () => {
     if (houses.length === 0) {
       dispatch(fetchHouse());
     }
-  }, [dispatch, houses]);
+  }, []);
 
   return (
     <>

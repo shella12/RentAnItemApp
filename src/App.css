@@ -256,3 +256,9 @@ li.slide div {
 .btn-default:focus {
   background-color: #d5582a;
 }
+
+.empty-list {
+  width: 100%;
+  min-height: 350px;
+  text-align: center;
+}
