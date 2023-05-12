@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import profilePhoto from '../assets/profilePhoto.png';
 import { useDispatch, useSelector } from 'react-redux';
-import { postFavorite } from '../redux/favorites/favoriteReducer';
+import { deleteFavorite, postFavorite } from '../redux/favorites/favoriteReducer';
 import { useState } from 'react';
 
 const HouseDetails = () => {
@@ -10,11 +10,17 @@ const HouseDetails = () => {
   const { name, owner_name, price, description, picture } = house;
 
   const listFavorite = useSelector((state) => state.favorite.favorites);
-  const [isFavorite, setIsFavorite] = useState(listFavorite.inculdes(house.id));
+  const [isFavorite, setIsFavorite] = useState(listFavorite.some(item => item.id === house.id));
 
   const dispatch = useDispatch();
   const handleAddFavorite = () => {
     dispatch(postFavorite({ userID: 1, house }));
+    setIsFavorite(true);
+  };
+
+  const handleRemove = (houseID) => {
+    dispatch(deleteFavorite({ userID: 1, houseID }));
+    setIsFavorite(false);
   };
 
   return (
@@ -38,7 +44,10 @@ const HouseDetails = () => {
           </p>
         </div>
         <p>{description}</p>
-        <button type="button" className="add-faourite" onClick={handleAddFavorite}>Add to favourite</button>
+        {
+          isFavorite? <button type="button" className="add-faourite" onClick={handleRemove}>Remove to favourite</button>
+          : <button type="button" className="add-faourite" onClick={handleAddFavorite}>Add to favourite</button>
+        }
       </div>
     </section>
   );
