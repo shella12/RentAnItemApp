@@ -18,7 +18,7 @@ const DeleteHouse = () => {
     <>
       <h1 className="flex-center">Delete House</h1>
 
-      <ul className="row wrap">
+      <ul className="flex-center wrap">
         { listAllHouse?.length > 0 ? listAllHouse.map((house) => (
           <li key={house.id} className="flex-center house-wrapper">
             <House data={house} handleRemove={handleRemove} />

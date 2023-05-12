@@ -47,8 +47,8 @@ const HouseDetails = () => {
         </div>
         <p>{description}</p>
         {
-          isFavorite ? <button type="button" className="add-faourite" onClick={handleRemove}>Remove to favourite</button>
-            : <button type="button" className="add-faourite" onClick={handleAddFavorite}>Add to favourite</button>
+          isFavorite ? <button type="button" className="add-favorite" onClick={handleRemove}>Remove to favourite</button>
+            : <button type="button" className="add-favorite" onClick={handleAddFavorite}>Add to favourite</button>
         }
       </div>
     </section>

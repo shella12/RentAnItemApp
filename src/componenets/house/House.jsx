@@ -27,7 +27,7 @@ const House = (props) => {
         </div>
         {
           handleRemove &&
-          <button className='max-content-flex btn-default'
+          <button type="button" className='max-content-flex add-favorite btn-default'
           onClick={e=> handleRemove(id)}>Delete</button>
         }
       </div>

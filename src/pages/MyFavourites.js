@@ -19,7 +19,7 @@ const MyFavourites = () => {
   return (
     <>
       <h1 className="flex-center">Favourites</h1>
-      <ul className="row wrap">
+      <ul className="flex-center wrap">
         { listHouses?.length > 0 ? listHouses.map((house) => (
           <li key={house.id} className="flex-center house-wrapper">
             <House data={house} handleRemove={handleRemove} />
