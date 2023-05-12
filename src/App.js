@@ -7,8 +7,6 @@ import DeleteHouse from './pages/DeleteHouse';
 import HouseDetails from './pages/HouseDetails';
 import Navbar from './componenets/Navbar';
 
-
-
 function App() {
   return (
     <div className="App">
