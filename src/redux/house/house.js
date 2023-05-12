@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const api = 'http://localhost:3001/api/v1/houses';
+const api = 'http://localhost:3000/api/v1/houses';
 
 // const ADD_HOUSE = 'RentAnItemApp/houseReducer/ADD_HOUSE';
 const FETCH_HOUSE = 'RentAnItemApp/houseReducer/FETCH_HOUSE';
@@ -16,6 +16,20 @@ export const fetchHouse = createAsyncThunk(FETCH_HOUSE, async () => {
   return response;
 });
 
+export const deleteHouse = createAsyncThunk('rent-house/house/Delete', async (houseID) => {
+  await fetch(`http://localhost:3000/api/v1/houses/${houseID}/`, {
+    method: 'DELETE',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      id: houseID,
+    }),
+  });
+  return houseID;
+});
+
 const housesSlice = createSlice({
   name: 'houses',
   initialState,
@@ -28,7 +42,10 @@ const housesSlice = createSlice({
       ...state,
       status: 'success',
       houses: action.payload,
-    }));
+    })).addCase(deleteHouse.fulfilled, (state, action) => {
+      const newHouses = state.houses.filter((house) => house.id !== action.payload);
+      return ({ ...state, houses: [...newHouses] });
+    });
   },
 });
 

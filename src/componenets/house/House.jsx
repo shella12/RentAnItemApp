@@ -1,11 +1,19 @@
 import React from 'react'
 import './house.css'
+import { useDispatch } from 'react-redux'
+import { deleteHouse } from '../../redux/house/house'
 
 const House = (props) => {
-  const {picture, name, price, location, description} = props.data
+  const {data, showBtnDelete} = props
+  const {id, picture, name, price} = data
+
+  const dispatch = useDispatch();
+  const handleRemove = () => {
+    dispatch(deleteHouse(id));
+  };
   return (
     <>
-      <div className='house'>
+      <div className='column house'>
         <img src={picture} alt={`house ${name}`} />
         <div className='house-description'>
           <div className='row space-between'>
@@ -17,6 +25,11 @@ const House = (props) => {
             <p>per Month</p>
           </div>
         </div>
+        {
+          showBtnDelete &&
+          <button className='max-content-flex btn-default'
+          onClick={handleRemove}>Delete</button>
+        }
       </div>
     </>
   )

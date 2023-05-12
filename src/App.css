@@ -243,3 +243,16 @@ li.slide div {
   transform: translateY(-150px);
   gap: 2rem;
 }
+
+.btn-default {
+  background-color: var(--orange);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  border: 0;
+}
+
+.btn-default:focus {
+  background-color: #d5582a;
+}

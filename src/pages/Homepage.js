@@ -10,8 +10,10 @@ const Home = () => {
   const navigate = useNavigate();
   const houses = useSelector((state) => state.housesSlice.houses);
   useEffect(() => {
-    dispatch(fetchHouse());
-  });
+    if (houses.length === 0) {
+      dispatch(fetchHouse());
+    }
+  }, [dispatch, houses]);
 
   return (
     <>
