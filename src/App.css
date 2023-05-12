@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Roboto&display=swap');
 
 *,
 ::after,
@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  font-weight: 100;
 }
 
 body {
@@ -16,6 +17,7 @@ body {
 :root {
   --navbar-icon-color: #a7a7a7;
   --navbar-link-color: #7e7d7f;
+  --orange: #ed6b3b;
 }
 
 a {
@@ -129,8 +131,6 @@ a {
 }
 
 .mob-profile {
-  display: flex;
-  flex-direction: column;
   margin-bottom: 2rem;
 }
 
@@ -185,4 +185,61 @@ li.slide div {
 
 .carousel .control-dots {
   translate: 0 1rem;
+}
+
+.caroselImage {
+  width: 100%;
+}
+
+.detail-house-img {
+  aspect-ratio: 2/1;
+}
+
+.add-faourite {
+  padding: 1rem;
+}
+
+.details-section {
+  margin: 4rem;
+}
+
+.details-bar {
+  gap: 40%;
+}
+
+.details-bar h1 {
+  font-family: 'Poppins', serif;
+  font-weight: 500;
+  color: #3a3838;
+}
+
+.details-section button {
+  background-color: var(--orange);
+  color: #f6f3f8;
+  outline: none;
+  border: none;
+  font-size: medium;
+}
+
+.details-price-owner {
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+  color: #ecf2ca;
+  font-family: 'Poppins', sans-serif;
+}
+
+.details-price-owner p {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.details-owner {
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.details {
+  transform: translateY(-150px);
+  gap: 2rem;
 }
