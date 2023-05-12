@@ -13,17 +13,13 @@ const MyFavourites = () => {
       dispatch(fetchFavorites(1));
     }
   }, [dispatch, listHouses]);
-  
 
-  const handleAddFavorite = (event) => {
-    event.preventDefault();
+  const handleAddFavorite = () => {
     const house = listAllHouse.find(({ id }) => id === parseInt(houseID, 10));
     dispatch(postFavorite({ userID: 1, house }));
   };
 
-  const handleRemove = (event, houseID) => {
-    event.preventDefault();
-
+  const handleRemove = (houseID) => {
     dispatch(deleteFavorite({ userID: 1, houseID }));
   };
 
@@ -33,29 +29,7 @@ const MyFavourites = () => {
       <ul className="row wrap">
         { listHouses?.length > 0 ? listHouses.map((house) => (
           <li key={house.id} className="flex-center house-wrapper">
-            <House data={house} />
-          </li>
-        ))
-          : <p>No favorites: List Empty</p>}
-      </ul>
-
-      {/* Part below is need to test add/delete favorite */}
-      <form className="row" onSubmit={(e) => handleAddFavorite(e)}>
-        <input type="text" placeholder="House ID" onChange={(e) => setHouseID(e.currentTarget.value)} />
-        <input type="submit" placeholder="Add favorite" />
-      </form>
-      <ul>
-        <li>House Static</li>
-        { listHouses?.length > 0 ? listHouses.map((house) => (
-          <li key={house.id} className="row">
-            <p>
-              {house.name}
-              #
-              {house.id}
-            </p>
-            <form onSubmit={(e) => handleRemove(e, house.id)}>
-              <input type="submit" value="Delete" />
-            </form>
+            <House data={house} handleRemove={handleRemove} />
           </li>
         ))
           : <p>No favorites: List Empty</p>}

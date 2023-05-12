@@ -4,13 +4,13 @@ import { useDispatch } from 'react-redux'
 import { deleteHouse } from '../../redux/house/house'
 
 const House = (props) => {
-  const {data, showBtnDelete} = props
+  const {data, handleRemove} = props
   const {id, picture, name, price} = data
 
-  const dispatch = useDispatch();
+  /*const dispatch = useDispatch();
   const handleRemove = () => {
     dispatch(deleteHouse(id));
-  };
+  };*/
   return (
     <>
       <div className='column house'>
@@ -26,9 +26,9 @@ const House = (props) => {
           </div>
         </div>
         {
-          showBtnDelete &&
+          handleRemove &&
           <button className='max-content-flex btn-default'
-          onClick={handleRemove}>Delete</button>
+          onClick={e=> handleRemove(id)}>Delete</button>
         }
       </div>
     </>
