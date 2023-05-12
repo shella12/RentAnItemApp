@@ -3,15 +3,17 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchHouse } from '../redux/house/house';
+import house, { fetchHouse } from '../redux/house/house';
 
 const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const houses = useSelector((state) => state.housesSlice.houses);
   useEffect(() => {
-    dispatch(fetchHouse());
-  });
+    if (houses.length === 0) {
+      dispatch(fetchHouse());
+    }
+  }, [dispatch, houses]);
 
   return (
     <>
