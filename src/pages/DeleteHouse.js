@@ -6,8 +6,8 @@ const DeleteHouse = () => {
   const listAllHouse = useSelector((state) => state.housesSlice.houses);
 
   const dispatch = useDispatch();
-  const handleRemove = (house_id) => {
-    dispatch(deleteHouse(house_id));
+  const handleRemove = (houseID) => {
+    dispatch(deleteHouse(houseID));
   };
   return (
     <>
