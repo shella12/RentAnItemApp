@@ -45,8 +45,7 @@ const housesSlice = createSlice({
     })).addCase(deleteHouse.fulfilled, (state, action) => {
       const newHouses = state.houses.filter((house) => house.id !== action.payload);
       return ({ ...state, houses: [...newHouses] });
-    }
-    );
+    });
   },
 });
 

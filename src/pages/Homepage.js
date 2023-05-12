@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import { useDispatch, useSelector } from 'react-redux';
-import house, { fetchHouse } from '../redux/house/house';
+import { fetchHouse } from '../redux/house/house';
 
 const Home = () => {
   const dispatch = useDispatch();
