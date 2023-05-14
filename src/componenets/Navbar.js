@@ -1,9 +1,6 @@
 import { useState } from 'react';
-import { NavLink, Link} from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
-import { AiOutlineBell } from 'react-icons/ai';
-import { RiArrowDownSLine } from 'react-icons/ri';
-import { BiSearch } from 'react-icons/bi';
 import profilePhoto from '../assets/profile-photo.jpeg';
 
 const Navbar = () => {
@@ -37,15 +34,15 @@ const Navbar = () => {
         <RiArrowDownSLine />
         <img src={profilePhoto} alt="profile" className="profile-photo" />
       </div> */}
-      <div className='auth_links'>
-      <>
-                  <Link className="nav-link white" style={{ marginRight: "10px" }} to="/login">SIGN IN</Link>
-                  <Link className="nav-link " to="/register">
-                    <span className="btn-menu">SIGN UP</span>
-                  </Link>
-                </>
-    </div>
-        
+      <div className="auth_links">
+        <>
+          <Link className="nav-link white" style={{ marginRight: '10px' }} to="/login">SIGN IN</Link>
+          <Link className="nav-link " to="/register">
+            <span className="btn-menu">SIGN UP</span>
+          </Link>
+        </>
+      </div>
+
     </div>
   );
 };

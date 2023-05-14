@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../App.scss'
-import Navbar from './Navbar'
-
+import '../App.scss';
+import Navbar from './Navbar';
 
 export default function Header() {
   return (
     <header className="header">
-        <Navbar />
+      <Navbar />
 
       <div className="header-content mt-5">
         <h1 className="header-content__title">Find housing anywhere</h1>
