@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './header.css'
+import '../App.scss'
 import Navbar from './Navbar'
 
 
@@ -10,7 +10,7 @@ export default function Header() {
         <Navbar />
 
       <div className="header-content mt-5">
-        <h1 className="header-content__title">Find perfect rides that fits </h1>
+        <h1 className="header-content__title">Find housing anywhere</h1>
         <p className="header-content__desc">
           The best offers for you at any point of your journey.
           Classy rides that meets your taste.
