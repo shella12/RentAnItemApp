@@ -24,16 +24,6 @@ const Navbar = () => {
           <NavLink to="/LogOut" activeclassname="active" onClick={() => setOpen(false)} aria-label="Log Out link">Log Out</NavLink>
         </nav>
       </div>
-      {/* <div className="seacrh-bar">
-        <input type="search" placeholder="search" />
-        <BiSearch className="search-icon" />
-      </div> */}
-      {/* <div className="profile-details">
-        <AiOutlineBell className="notification-bell" />
-        <p className="username">Username</p>
-        <RiArrowDownSLine />
-        <img src={profilePhoto} alt="profile" className="profile-photo" />
-      </div> */}
       <div className="auth_links">
         <>
           <Link className="nav-link white" style={{ marginRight: '10px' }} to="/login">SIGN IN</Link>
