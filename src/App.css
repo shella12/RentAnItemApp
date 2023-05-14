@@ -40,6 +40,19 @@ a {
   align-items: center;
 }
 
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.max-content-flex {
+  flex: 1;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
 .navbar,
 .seacrh-bar,
 .profile-details {
@@ -59,12 +72,16 @@ a {
   border: 1px solid var(--navbar-icon-color);
   border-radius: 1rem;
   padding: 5px 10px;
+  width: 0;
+  flex: 1;
 }
 
 .seacrh-bar input {
   outline: none;
   border-color: transparent;
   margin-left: 10px;
+  width: 0;
+  flex: 1;
 }
 
 .profile-details {
@@ -225,4 +242,17 @@ li.slide div {
 .details {
   transform: translateY(-150px);
   gap: 2rem;
+}
+
+.btn-default {
+  background-color: var(--orange);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  border: 0;
+}
+
+.btn-default:focus {
+  background-color: #d5582a;
 }
