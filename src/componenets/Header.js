@@ -13,10 +13,10 @@ export default function Header() {
         <h1 className="header-content__title">Find housing anywhere</h1>
         <p className="header-content__desc">
           The best offers for you at any point of your journey.
-          Classy rides that meets your taste.
+          where ever you are, feel yourself like at your own home
         </p>
         <p>
-          <Link className="btn btn-oval" to="/register">Hire Now</Link>
+          <Link className="btn btn-oval" to="/">Hire Now</Link>
         </p>
       </div>
     </header>
