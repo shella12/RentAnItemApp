@@ -1,6 +1,10 @@
+
 import { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
+import { AiOutlineBell } from 'react-icons/ai';
+import { RiArrowDownSLine } from 'react-icons/ri';
+import { BiSearch } from 'react-icons/bi';
 import profilePhoto from '../assets/profile-photo.jpeg';
 
 const Navbar = () => {
@@ -24,17 +28,19 @@ const Navbar = () => {
           <NavLink to="/LogOut" activeclassname="active" onClick={() => setOpen(false)} aria-label="Log Out link">Log Out</NavLink>
         </nav>
       </div>
-      <div className="auth_links">
-        <>
-          <Link className="nav-link white" style={{ marginRight: '10px' }} to="/login">SIGN IN</Link>
-          <Link className="nav-link " to="/register">
-            <span className="btn-menu">SIGN UP</span>
-          </Link>
-        </>
+      <div className="seacrh-bar">
+        <input type="search" placeholder="search" />
+        <BiSearch className="search-icon" />
       </div>
-
+      <div className="profile-details">
+        <AiOutlineBell className="notification-bell" />
+        <p className="username">Username</p>
+        <RiArrowDownSLine />
+        <img src={profilePhoto} alt="profile" className="profile-photo" />
+      </div>
     </div>
   );
 };
 
 export default Navbar;
+
