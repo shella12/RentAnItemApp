@@ -1,12 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import Header from './componenets/Header';
+import './App.css';
 import Home from './pages/Homepage';
 import MyFavourites from './pages/MyFavourites';
 import AddHouse from './pages/AddHouse';
 import DeleteHouse from './pages/DeleteHouse';
 import HouseDetails from './pages/HouseDetails';
-
-import './App.css';
 
 function App() {
   return (

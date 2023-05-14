@@ -51,6 +51,10 @@ a {
   flex-wrap: wrap;
 }
 
+.App {
+  padding-top: 90px;
+}
+
 .navbar,
 .seacrh-bar,
 .profile-details {
@@ -59,32 +63,15 @@ a {
 }
 
 .navbar {
-  /* background-color: #fff; */
+  z-index: 10;
+  width: 100%;
+  position: fixed;
+  top: 0;
   color: var(--navbar-icon-color);
   justify-content: space-between;
   padding: 0.9rem 2rem 0.9rem 0;
 }
 
-.seacrh-bar {
-  justify-content: space-between;
-  border: 1px solid var(--navbar-icon-color);
-  border-radius: 1rem;
-  padding: 5px 10px;
-  width: 0;
-  flex: 1;
-}
-
-.seacrh-bar input {
-  outline: none;
-  border-color: transparent;
-  margin-left: 10px;
-  width: 0;
-  flex: 1;
-}
-
-.profile-details {
-  gap: 0.8rem;
-}
 
 .username {
   color: var(--navbar-link-color);
@@ -193,7 +180,7 @@ li.slide div {
   aspect-ratio: 2/1;
 }
 
-.add-faourite {
+.add-favorite {
   padding: 1rem;
 }
 
@@ -253,4 +240,16 @@ li.slide div {
 
 .btn-default:focus {
   background-color: #d5582a;
+}
+
+.empty-list {
+  width: 100%;
+  min-height: 350px;
+  text-align: center;
+}
+
+@media screen and (max-width: 764px) {
+  .desktop-only {
+    display: none;
+  }
 }
