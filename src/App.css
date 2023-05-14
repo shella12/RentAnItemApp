@@ -53,6 +53,10 @@ a {
   flex-wrap: wrap;
 }
 
+.App {
+  padding-top: 90px;
+}
+
 .navbar,
 .seacrh-bar,
 .profile-details {
@@ -61,6 +65,10 @@ a {
 }
 
 .navbar {
+  z-index: 10;
+  width: 100%;
+  position: fixed;
+  top: 0;
   background-color: #fff;
   color: var(--navbar-icon-color);
   justify-content: space-between;
@@ -195,7 +203,7 @@ li.slide div {
   aspect-ratio: 2/1;
 }
 
-.add-faourite {
+.add-favorite {
   padding: 1rem;
 }
 
@@ -255,4 +263,16 @@ li.slide div {
 
 .btn-default:focus {
   background-color: #d5582a;
+}
+
+.empty-list {
+  width: 100%;
+  min-height: 350px;
+  text-align: center;
+}
+
+@media screen and (max-width: 764px) {
+  .desktop-only {
+    display: none;
+  }
 }
