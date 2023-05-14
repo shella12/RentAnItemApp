@@ -4,8 +4,6 @@
 ::after,
 ::before {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 100;
 }
@@ -61,10 +59,10 @@ a {
 }
 
 .navbar {
-  background-color: #fff;
+  /* background-color: #fff; */
   color: var(--navbar-icon-color);
   justify-content: space-between;
-  padding: 0.9rem 1.9rem 0.9rem 0;
+  padding: 0.9rem 2rem 0.9rem 0;
 }
 
 .seacrh-bar {
