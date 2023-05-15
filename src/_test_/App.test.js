@@ -2,40 +2,41 @@ import renderer, { act } from 'react-test-renderer';
 import '@testing-library/jest-dom';
 import React from 'react';
 import { Provider } from 'react-redux';
-import { fetchFavoriteHouseData, fetchHouseData, testListFavoriteHouses } from './setupTests';
-import configureStore from '../redux/configureStore';
-import MyFavourites from '../pages/MyFavourites';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
+import { fetchFavoriteHouseData, fetchHouseData, testListFavoriteHouses } from './setupTests';
+import store from '../redux/configureStore';
 import App from '../App';
 import { fetchFavorites } from '../redux/favorites/favoriteReducer';
 
-const store = configureStore;
-fetchHouseData()
+fetchHouseData();
 fetchFavoriteHouseData(1);
 
 describe('test App render', () => {
-  test('App should match snapshoot', () => {
-    const tree = renderer.create(
-      <React.StrictMode>
-        <Provider store={store}>
-          <MemoryRouter initialEntries={['/']}>
-            <App />
-          </MemoryRouter>
-        </Provider>
-      </React.StrictMode>,
-    ).toJSON();
+  test('App should match snapshoot', async () => {
+    let tree;
+    act(() => {
+      tree = renderer.create(
+        <React.StrictMode>
+          <Provider store={store}>
+            <MemoryRouter initialEntries={['/']}>
+              <App />
+            </MemoryRouter>
+          </Provider>
+        </React.StrictMode>,
+      );
+    });
 
-    expect(tree).toMatchSnapshot();
+    await waitFor(() => {
+      expect(tree.toJSON()).toMatchSnapshot();
+    });
   });
-})
+});
 
 describe('test App Routing', () => {
-
   test('test should render MyFavorite page and contain list favorite items', async () => {
-
     await act(async () => {
-      store.dispatch(fetchFavorites(1));
+      await store.dispatch(fetchFavorites(1));
     });
 
     render(
@@ -47,18 +48,16 @@ describe('test App Routing', () => {
         </Provider>
       </React.StrictMode>,
     );
-    
-    const item = testListFavoriteHouses[0];
-    expect(screen.getByText("Favourites")).toBeInTheDocument();
-    expect(screen.getByText(item.name)).toBeInTheDocument();
-  })
-  
-  test('test should render DeleteHouse page and contain list favorite items', async () => {
 
+    const item = testListFavoriteHouses[0];
+    expect(screen.getByText('Favourites')).toBeInTheDocument();
+    expect(screen.getByText(item.name)).toBeInTheDocument();
+  });
+
+  test('test should render DeleteHouse page and contain list favorite items', async () => {
     await act(async () => {
       store.dispatch(fetchFavorites(1));
     });
-
 
     render(
       <React.StrictMode>
@@ -69,9 +68,11 @@ describe('test App Routing', () => {
         </Provider>
       </React.StrictMode>,
     );
-    
+
     const item = testListFavoriteHouses[0];
-    expect(screen.getByText("Delete House")).toBeInTheDocument();
-    expect(screen.getByText(item.name)).toBeInTheDocument();
-  })
-})
+    await waitFor(() => {
+      expect(screen.getByText('Delete House')).toBeInTheDocument();
+      expect(screen.getByText(item.name)).toBeInTheDocument();
+    });
+  });
+});
