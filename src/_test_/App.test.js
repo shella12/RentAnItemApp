@@ -29,3 +29,49 @@ describe('test App render', () => {
     expect(tree).toMatchSnapshot();
   });
 })
+
+describe('test App Routing', () => {
+
+  test('test should render MyFavorite page and contain list favorite items', async () => {
+
+    await act(async () => {
+      store.dispatch(fetchFavorites(1));
+    });
+
+
+    render(
+      <React.StrictMode>
+        <Provider store={store}>
+          <MemoryRouter initialEntries={['/MyFavourites']}>
+            <App />
+          </MemoryRouter>
+        </Provider>
+      </React.StrictMode>,
+    );
+    
+    const item = testListFavoriteHouses[0];
+    expect(screen.getByText("Favourites")).toBeInTheDocument();
+    expect(screen.getByText(item.name)).toBeInTheDocument();
+  })
+  test('test should render DeleteHouse page and contain list favorite items', async () => {
+
+    await act(async () => {
+      store.dispatch(fetchFavorites(1));
+    });
+
+
+    render(
+      <React.StrictMode>
+        <Provider store={store}>
+          <MemoryRouter initialEntries={['/DeleteHouse']}>
+            <App />
+          </MemoryRouter>
+        </Provider>
+      </React.StrictMode>,
+    );
+    
+    const item = testListFavoriteHouses[0];
+    expect(screen.getByText("Delete House")).toBeInTheDocument();
+    expect(screen.getByText(item.name)).toBeInTheDocument();
+  })
+})
