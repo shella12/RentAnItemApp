@@ -38,7 +38,6 @@ describe('test App Routing', () => {
       store.dispatch(fetchFavorites(1));
     });
 
-
     render(
       <React.StrictMode>
         <Provider store={store}>
@@ -53,6 +52,7 @@ describe('test App Routing', () => {
     expect(screen.getByText("Favourites")).toBeInTheDocument();
     expect(screen.getByText(item.name)).toBeInTheDocument();
   })
+  
   test('test should render DeleteHouse page and contain list favorite items', async () => {
 
     await act(async () => {
