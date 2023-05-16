@@ -26,7 +26,7 @@ export default function Footer() {
         . All rights reserved
       </p>
       <div className="social-icons">
-      <a href="https://facebook.com" aria-label="Facebook">
+        <a href="https://facebook.com" aria-label="Facebook">
           <FontAwesomeIcon icon={faFacebookF} />
         </a>
         <a href="https://twitter.com" aria-label="Twitter">
