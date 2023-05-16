@@ -6,11 +6,13 @@ import MyFavourites from './pages/MyFavourites';
 import AddHouse from './pages/AddHouse';
 import DeleteHouse from './pages/DeleteHouse';
 import HouseDetails from './pages/HouseDetails';
+import Header from './componenets/Header';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+      <Header />
       <Routes>
 
         <Route path="/" element={<Home />} />
