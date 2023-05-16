@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test render List Favorites should match snapshoot 1`] = `
+Array [
+  <h1
+    className="flex-center"
+  >
+    Favourites
+  </h1>,
+  <ul
+    className="flex-center wrap"
+  >
+    <p
+      className="flex-center empty-list"
+    >
+      No favorites: List Empty
+    </p>
+  </ul>,
+]
+`;
