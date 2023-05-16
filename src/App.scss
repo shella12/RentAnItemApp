@@ -1,3 +1,7 @@
+.custom-navbar{
+  background-color: transparent;
+
+}
 
 .header {
   width: 100%;
@@ -99,62 +103,6 @@
   background-color: #e8f0ff;
 }
 
-.call-action {
-  height: 150px;
-  background: url("./assets/profile-photo.jpeg") top center no-repeat;
-  color: #e8f0ff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.custom-navbar{
-  background-color: transparent;
-
-}
-
-.footer {
-  color: #b9b6b6;
-  text-align: center;
-  font-size: small;
-}
-
-.login-box {
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  position: relative;
-}
-
-.login-box::after {
-  content: "";
-  background: url("./assets/profile-photo.jpeg") bottom center no-repeat;
-  background-size: cover;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-}
-
-.form-control {
-  border-radius: 20px !important;
-  padding: 5px 10px;
-}
-
-.modal-popup {
-  overflow: hidden;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 /* Media queries for responsiveness */
 @media screen and (max-width: 767px) {
   .header {
@@ -195,26 +143,7 @@
     width: 100px;
   }
 
-  .about-section {
-    padding: 10px;
-
-    &__sub {
-      font-size: 10px;
-    }
-
-    &__primary,
-    &__left-title {
-      font-size: 18px;
-    }
-
-    &__desc {
-      font-size: 12px;
-    }
-  }
-
-  /* Additional styles for small screens */
 }
-
 /* Media queries for larger screens if needed */
 @media screen and (max-width: 575px) {
   /* Styles for iPhone */
@@ -243,21 +172,7 @@
   .logo {
   width: 80px;
   }
-  .about-section {
-  &__primary,
-  &__left-title {
-  font-size: 22px;
-  }
-  &__desc {
-  font-size: 12px;
-  }
-  }
-  .call-action {
-  height: 100px;
-  }
-  .footer {
-  font-size: x-small;
-  }
+ 
   }
   
   @media screen and (min-width: 576px) and (max-width: 767px) {
@@ -287,19 +202,5 @@
   .logo {
   width: 90px;
   }
-  .about-section {
-  &__primary,
-  &__left-title {
-  font-size: 23px;
-  }
-  &__desc {
-  font-size: 13px;
-  }
-  }
-  .call-action {
-  height: 125px;
-  }
-  .footer {
-  font-size: small;
-  }
+
   }

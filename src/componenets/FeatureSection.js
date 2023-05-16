@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import home from '../assets/feature-ride.png';
+import home from '../assets/WhatsApp Image 2023-05-16 at 3.38.19 PM.jpeg';
 
 export default function FeatureSection() {
   const isMobile = window.innerWidth <= 767;
