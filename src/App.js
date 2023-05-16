@@ -8,6 +8,7 @@ import DeleteHouse from './pages/DeleteHouse';
 import HouseDetails from './pages/HouseDetails';
 import Header from './componenets/Header';
 import FeatureSection from './componenets/FeatureSection';
+import Footer from './componenets/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       {/* <Navbar /> */}
       <Header />
       <FeatureSection />
+      <Footer />
       <Routes>
 
         <Route path="/" element={<Home />} />
