@@ -27,12 +27,21 @@
   }
 }
 
-.btn-oval {
+.btn-oval_feature  {
   border-radius: 35px !important;
   background-color: #ea531c !important;
   border-color: #ea531c !important;
   color: #fff !important;
   padding: 5px 20px;
+  margin: 20px;
+}
+
+.btn-oval {
+  border-radius: 35px !important;
+  background-color: #ea531c !important;
+  border-color: #ea531c !important;
+  color: #fff !important;
+  padding: 5px 30px;
 }
 
 .btn-menu {
@@ -62,10 +71,6 @@
   padding: 0 !important;
 }
 
-.slack {
-  margin: 0 auto;
-}
-
 .logo {
   width: 150px;
 }
@@ -90,18 +95,54 @@
 
   &__left-title {
     text-align: left;
+    padding: 20px;
   }
 
   &__desc {
     font-weight: 100;
     font-size: 14px;
     color: #000;
+    padding: 20px;
   }
 }
 
 .feature-section {
   background-color: #e8f0ff;
 }
+.footer {
+  color: #b9b6b6;
+  text-align: center;
+  font-size: 20px;
+}
+.circle {
+  color: black;
+  font-size: 30px;
+  margin-left: 8px;
+  position: relative;
+  top: -50px; /* Adjust the value to move the word up or down */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: blue;
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+
+.circle_nav {
+  color: white;
+  font-size: 30px;
+  margin-left: 10px;
+  position: relative;
+  top: -30px;
+}
+
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 767px) {
@@ -122,7 +163,12 @@
       }
     }
   }
-
+  .circle_nav {
+    margin-left: 20px;
+    position: relative;
+    top: -30px;
+  }
+  
   .btn-oval {
     padding:0 25px;
   }
@@ -160,6 +206,12 @@
   }
   }
   }
+  .circle_nav {
+    margin-left: 0px;
+    position: relative;
+    top: -30px;
+  }
+  
   .btn-oval {
   padding: 5px 10px;
   }
