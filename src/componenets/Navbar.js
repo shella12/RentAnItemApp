@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
@@ -43,4 +42,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

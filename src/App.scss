@@ -1,6 +1,5 @@
-.custom-navbar{
+.custom-navbar {
   background-color: transparent;
-
 }
 
 .header {
@@ -27,7 +26,7 @@
   }
 }
 
-.btn-oval_feature  {
+.btn-oval_feature {
   border-radius: 35px !important;
   background-color: #ea531c !important;
   border-color: #ea531c !important;
@@ -64,7 +63,6 @@
 .white {
   color: #fff !important;
 }
-
 
 .container {
   max-width: 768px !important;
@@ -109,11 +107,13 @@
 .feature-section {
   background-color: #e8f0ff;
 }
+
 .footer {
   color: #b9b6b6;
   text-align: center;
   font-size: 20px;
 }
+
 .circle {
   color: black;
   font-size: 30px;
@@ -134,7 +134,6 @@
   margin: 0 10px;
 }
 
-
 .circle_nav {
   color: white;
   font-size: 30px;
@@ -142,7 +141,6 @@
   position: relative;
   top: -30px;
 }
-
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 767px) {
@@ -163,16 +161,16 @@
       }
     }
   }
+
   .circle_nav {
     margin-left: 20px;
     position: relative;
     top: -30px;
   }
-  
-  .btn-oval {
-    padding:0 25px;
-  }
 
+  .btn-oval {
+    padding: 0 25px;
+  }
 
   .auth_links {
     display: flex;
@@ -180,79 +178,92 @@
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
-  
+
     .nav-link-space {
       margin-right: 10px; /* Adjust the margin value as needed */
     }
   }
+
   .logo {
     width: 100px;
   }
-
 }
+
 /* Media queries for larger screens if needed */
 @media screen and (max-width: 575px) {
   /* Styles for iPhone */
   .header {
-  height: 150%;
-  padding: 50px;
-  &-content {
-  width: 150px;
-  &__title {
-  font-size: 18px;
+    height: 150%;
+    padding: 50px;
+
+    &-content {
+      width: 150px;
+
+      &__title {
+        font-size: 18px;
+      }
+
+      &__desc {
+        font-size: 12px;
+      }
+    }
   }
-  &__desc {
-  font-size: 12px;
-  }
-  }
-  }
+
   .circle_nav {
-    margin-left: 0px;
+    margin-left: 0;
     position: relative;
     top: -30px;
   }
-  
+
   .btn-oval {
-  padding: 5px 10px;
-  }
-  .btn-menu {
-  padding: 5px 5px;
-  }
-  .auth_links {
-  font-size: 16px;
-  }
-  .logo {
-  width: 80px;
-  }
- 
-  }
-  
-  @media screen and (min-width: 576px) and (max-width: 767px) {
-  /* Styles for Samsung */
-  .header {
-  height: 200%;
-  padding: 75px;
-  &-content {
-  width: 180px;
-  &__title {
-  font-size: 20px;
-  }
-  &__desc {
-  font-size: 14px;
-  }
-  }
-  }
-  .btn-oval {
-  padding: 5px 15px;
-  }
-  .btn-menu {
-  padding: 5px 7.5px;
-  }
-  .auth_links {
-  font-size: 18px;
-  }
-  .logo {
-  width: 90px;
+    padding: 5px 10px;
   }
 
+  .btn-menu {
+    padding: 5px 5px;
   }
+
+  .auth_links {
+    font-size: 16px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  /* Styles for Samsung */
+  .header {
+    height: 200%;
+    padding: 75px;
+
+    &-content {
+      width: 180px;
+
+      &__title {
+        font-size: 20px;
+      }
+
+      &__desc {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .btn-oval {
+    padding: 5px 15px;
+  }
+
+  .btn-menu {
+    padding: 5px 7.5px;
+  }
+
+  .auth_links {
+    font-size: 18px;
+  }
+
+  .logo {
+    width: 90px;
+  }
+}
