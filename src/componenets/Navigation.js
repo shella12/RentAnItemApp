@@ -11,7 +11,9 @@ export default function Navigation() {
 
   return (
     <Navbar collapseOnSelect expand="sm" className="custom-navbar">
-      <Navbar.Brand href="/"><img className="logo" src={logo} alt="" /></Navbar.Brand>
+      <Navbar.Brand href="/"><img className="logo" src={logo} alt="" />
+      <span className="circle_nav">Circle</span>
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto" />
