@@ -20,7 +20,7 @@ export default function FeatureSection() {
             We will find the best place for you and ensure safe parking conditions.
           </p>
           <p>
-            <a href="#register" className="btn btn-oval">
+            <a href="#register" className="btn btn-oval_feature ">
               Learn more
             </a>
           </p>
