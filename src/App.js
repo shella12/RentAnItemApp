@@ -7,12 +7,14 @@ import AddHouse from './pages/AddHouse';
 import DeleteHouse from './pages/DeleteHouse';
 import HouseDetails from './pages/HouseDetails';
 import Header from './componenets/Header';
+import FeatureSection from './componenets/FeatureSection';
 
 function App() {
   return (
     <div className="App">
       {/* <Navbar /> */}
       <Header />
+      <FeatureSection />
       <Routes>
 
         <Route path="/" element={<Home />} />
