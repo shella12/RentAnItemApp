@@ -3,12 +3,12 @@ import './house.css'
 
 const House = (props) => {
   const {data, handleRemove} = props
-  const {id, picture, name, price, description} = data
+  const {id, name, price, description} = data
 
   return (
     <>
       <div className='column house'>
-        <img src={picture} alt={`house ${name}`} />
+        <img src={data.picture_url} alt={`house ${name}`} />
         <div className='column house-content-wrapper'>
           <div className='column max-content-flex house-content'>
             <div className='row space-between'>

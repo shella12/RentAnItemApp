@@ -12,10 +12,8 @@ const Home = () => {
   const houses = useSelector((state) => state.housesSlice.houses);
   const fetchStatus = useSelector((state) => state.housesSlice.status);
   useEffect(() => {
-    if (fetchStatus === 'idle') {
-      dispatch(fetchHouse());
-    }
-  });
+    dispatch(fetchHouse());
+  }, [houses, dispatch]);
 
   return (
     <>
@@ -29,17 +27,19 @@ const Home = () => {
             </li>
         )) }
       </ul>
+    <section className="section">
       <Carousel showArrows autoFocus centerMode>
         {houses.map((house) => (
           <div key={house.id}>
-            <img src={house.picture} alt="" className="caroselImage" />
+            <img src={house.picture_url} alt="" className="caroselImage" />
             <button type="button" className="legend" onClick={() => navigate('/HouseDetails', { state: { house } })}>
               See Details
             </button>
           </div>
         )) }
       </Carousel>
-    </>
+    </section>
+  </>
   );
 };
 

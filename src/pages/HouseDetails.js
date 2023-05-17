@@ -8,12 +8,13 @@ const HouseDetails = () => {
   const listHouse = useSelector(state => state.housesSlice.houses);
   const { houseId } = useParams()
   const house = listHouse.find((house) => house === houseId);
-  const {
-    name, ownerName, price, description, picture_url,
+  const { id, name, 
+    price, description, 
+    picture_url, owner_name
   } = house;
 
   const listFavorite = useSelector((state) => state.favorite.favorites);
-  const [isFavorite, setIsFavorite] = useState(listFavorite.some((item) => item.id === house.id));
+  const [isFavorite, setIsFavorite] = useState(listFavorite.some((item) => item.id === id));
 
   const dispatch = useDispatch();
   const handleAddFavorite = () => {
@@ -22,7 +23,7 @@ const HouseDetails = () => {
   };
 
   const handleRemove = () => {
-    dispatch(deleteFavorite({ userID: 1, houseID: house.id }));
+    dispatch(deleteFavorite({ userID: 1, houseID: id }));
     setIsFavorite(false);
   };
 
@@ -37,7 +38,7 @@ const HouseDetails = () => {
         <div className="row details-price-owner">
           <div className="row details-owner">
             <img src={profilePhoto} alt="house owner" className="profile-photo mob-profile-photo" />
-            <p>{ownerName}</p>
+            <p>{owner_name}</p>
           </div>
           <p>
             $

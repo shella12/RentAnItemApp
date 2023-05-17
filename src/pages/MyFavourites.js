@@ -18,7 +18,7 @@ const MyFavourites = () => {
   };
 
   return (
-    <>
+    <section className="section">
       <h1 className="flex-center">Favourites</h1>
       {listHouses?.length ===0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
       <ul className="flex-center wrap">
@@ -28,7 +28,7 @@ const MyFavourites = () => {
           </li>
         ))}
       </ul>
-    </>
+    </section>
   );
 };
 
