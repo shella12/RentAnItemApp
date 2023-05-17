@@ -53,8 +53,8 @@ a {
   flex-wrap: wrap;
 }
 
-.section {
-  padding-top: 90px;
+.App {
+  padding-top: 80px;
 }
 
 .navbar,

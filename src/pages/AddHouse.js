@@ -1,8 +1,17 @@
 import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+import FlashMessage from 'react-flash-message';
 import { addHouse } from '../redux/house/house';
 
 const AddHouse = () => {
   const dispatch = useDispatch();
+  const [name, setName] = useState('');
+  const [price, setPrice] = useState('');
+  const [description, setDescription] = useState('');
+  const [picture, setPicture] = useState('');
+  const [owner, setOwner] = useState('');
+  const [status, setStatus] = useState(false);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -12,7 +21,13 @@ const AddHouse = () => {
     data.append('house[owner_name]', form.owner.value);
     data.append('house[description]', form.description.value);
     data.append('house[picture]', form.picture.files[0]);
+    setStatus(true);
     dispatch(addHouse(data));
+    setName('');
+    setPrice('');
+    setDescription('');
+    setPicture('');
+    setOwner('');
   };
 
   return (
@@ -30,13 +45,20 @@ const AddHouse = () => {
             name="name"
             type="text"
             placeholder="House type e.g pent house, cottage etc..."
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             required
           />
-          <input className="input-text" name="price" min="1" type="number" placeholder="Price e.g $30,00,0000..." required />
-          <input className="input-text" name="owner" type="text" placeholder="owner name e.g John doe" required />
-          <input className="input-text" name="picture" type="file" placeholder="Picture url" required />
-          <textarea className="input-textarea" name="description" placeholder="write a description of the house ..." required />
+          <input className="input-text" name="price" min="1" type="number" placeholder="Price e.g $30,00,0000..." value={price} onChange={(e) => setPrice(e.target.value)} required />
+          <input className="input-text" name="owner" type="text" placeholder="owner name e.g John doe" value={owner} onChange={(e) => setOwner(e.target.value)} required />
+          <input className="input-text" name="picture" type="file" placeholder="Picture url" value={picture} onChange={(e) => setPicture(e.target.value)} required />
+          <textarea className="input-textarea" name="description" placeholder="write a description of the house ..." value={description} onChange={(e) => setDescription(e.target.value)} required />
           <button className="btn" type="submit">Add a house</button>
+          {status && (
+          <FlashMessage duration={5000} persistOnHover>
+            <p>Message</p>
+          </FlashMessage>
+          )}
         </form>
       </div>
     </section>
