@@ -40,7 +40,8 @@ const HouseDetails = () => {
     <>
     <Navbar title={name} />
     <section className="section column details-section">
-      <img src={picture_url} alt="House" className="caroselImage detail-house-img" />
+      <img src={picture_url} alt="House" 
+      className="caroselImage detail-house-img" />
       <div className="column details">
         <div className="row details-price-owner">
           <div className="row details-owner">
@@ -56,6 +57,7 @@ const HouseDetails = () => {
           </p>
         </div>
         <div className='detail-description'>
+          <h2 className='desktop-only detail-title'>{name}</h2>
           <p>{description}</p>
           {
             isFavorite ? <button type="button" className="add-favorite" onClick={handleRemove}>Remove to favourite</button>

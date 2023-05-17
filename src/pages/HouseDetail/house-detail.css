@@ -11,8 +11,8 @@
 
 .details-section {
   position: absolute;
-  top: 30px;
   height: 100%;
+  top: 30px;
   background-color: white;
 }
 
@@ -58,10 +58,55 @@
 
 .detail-description {
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.detail-description p {
+  flex: 1;
 }
 
 .details {
   transform: translateY(-6rem);
   gap: 2rem;
   flex: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .details {
+    transform: translateY(0);
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  .details-section {
+    flex-direction: row;
+    width: 100%;
+    top: 50px;
+  }
+  .detail-house-img {
+    width: 50%;
+    object-fit: cover;
+    aspect-ratio: inherit;
+    margin: 1rem;
+  }
+
+  .details-price-owner {
+    color: black;
+    background-image: none;
+    margin-bottom: 80px;
+    padding-right: 28px;
+  }
+
+  .details-price-owner p {
+    color: black;
+  }
+
+  .detail-title {
+    margin-bottom: 24px;
+  }
+
+  .add-favorite {
+    margin-bottom: 20px;
+  }
 }
