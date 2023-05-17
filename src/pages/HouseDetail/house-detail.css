@@ -1,0 +1,67 @@
+.detail-house-img {
+  width: 100%;
+}
+
+.add-favorite {
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+}
+
+.details-section {
+  position: absolute;
+  top: 30px;
+  height: 100%;
+  background-color: white;
+}
+
+.details-bar {
+  gap: 40%;
+}
+
+.details-bar h1 {
+  font-family: 'Poppins', serif;
+  font-weight: 500;
+  color: #3a3838;
+}
+
+.details-section button {
+  background-color: var(--orange);
+  color: #f6f3f8;
+  outline: none;
+  border: none;
+  font-size: medium;
+}
+
+.details-price-owner {
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-image: linear-gradient(0deg, black, rgba(0, 0, 0, 0));
+}
+
+.details-price-owner p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.details-owner {
+  align-items: center;
+  gap: 0.6rem;
+  color: white;
+  padding: 16px;
+}
+
+.detail-description {
+  padding: 16px;
+}
+
+.details {
+  transform: translateY(-6rem);
+  gap: 2rem;
+  flex: 1;
+}

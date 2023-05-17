@@ -4,7 +4,7 @@ import Home from './pages/Homepage';
 import MyFavourites from './pages/MyFavourites';
 import AddHouse from './pages/AddHouse';
 import DeleteHouse from './pages/DeleteHouse';
-import HouseDetails from './pages/HouseDetails';
+import HouseDetails from './pages/HouseDetail/HouseDetails';
 
 function App() {
   return (

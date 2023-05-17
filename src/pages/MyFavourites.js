@@ -21,7 +21,6 @@ const MyFavourites = () => {
     <>
     <Navbar title="My Favorites" />
     <section className="section">
-      <h1 className="flex-center">Favourites</h1>
       {favorites?.length ===0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
       <ul className="flex-center wrap">
         {favorites.map((house) => (
