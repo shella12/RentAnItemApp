@@ -8,7 +8,7 @@ const House = (props) => {
   return (
     <>
       <div className='column house'>
-        <img src={picture} alt={`house ${name}`} />
+        <img src={picture.picture_url} alt={`house ${name}`} />
         <div className='column house-content-wrapper'>
           <div className='column max-content-flex house-content'>
             <div className='row space-between'>

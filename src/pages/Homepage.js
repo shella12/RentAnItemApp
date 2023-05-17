@@ -10,17 +10,15 @@ const Home = () => {
   const navigate = useNavigate();
   const houses = useSelector((state) => state.housesSlice.houses);
   useEffect(() => {
-    if (houses.length === 0) {
-      dispatch(fetchHouse());
-    }
-  });
+    dispatch(fetchHouse());
+  }, [houses, dispatch]);
 
   return (
     <section className="section">
       <Carousel showArrows autoFocus centerMode>
         {houses.map((house) => (
           <div key={house.id}>
-            <img src={house.picture} alt="" className="caroselImage" />
+            <img src={house.picture_url} alt="" className="caroselImage" />
             <button type="button" className="legend" onClick={() => navigate('/HouseDetails', { state: { house } })}>
               See Details
             </button>

@@ -273,7 +273,7 @@ li.slide div {
 
 .add-house-section {
   background: url(./assets/images.jpeg) no-repeat;
-  background-size: cover ;
+  background-size: cover;
 }
 
 .backdrop {
@@ -283,7 +283,7 @@ li.slide div {
   text-align: center;
 }
 
-.backdrop p{
+.backdrop p {
   width: 50%;
   font-weight: 300;
   font-size: 0.8rem;
@@ -296,14 +296,15 @@ form {
   align-items: center;
 }
 
-.input-text, .input-textarea {
-border: 1px solid rgba(0, 0, 0, 0.359);
-border-radius: 1.5rem;
-padding: 0.5rem 1rem;
-width: 50%;
-background-color: transparent;
-outline-color: var(--orange);
-font-weight: 500;
+.input-text,
+.input-textarea {
+  border: 1px solid rgba(0, 0, 0, 0.359);
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  width: 50%;
+  background-color: transparent;
+  outline-color: var(--orange);
+  font-weight: 500;
 }
 
 .input-textarea {
@@ -312,29 +313,30 @@ font-weight: 500;
 }
 
 .btn {
-border: none;
-border-radius: 1.5rem;
-padding: 0.5rem 1.3rem;
-background-color: #ec6232;
-outline: none;
-font-weight: 500;
-color: #f6f3f8;
-box-shadow: -1px -1px 53px 0px #ed6b3b;
--webkit-box-shadow: -1px -1px 53px 0px #ed6b3b;
--moz-box-shadow: -1px -1px 53px 0px #ed6b3b;
-}
-
-.btn:is(:hover, :active) {
-  transform: scale(1.1);
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1.3rem;
   background-color: #ec6232;
-  box-shadow: -1px -1px 53px 0px #ed6b3b;
--webkit-box-shadow: -1px -1px 53px 0px #ed6b3b;
--moz-box-shadow: -1px -1px 53px 0px #ed6b3b;
+  outline: none;
+  font-weight: 500;
+  color: #f6f3f8;
+  box-shadow: -1px -1px 53px 0 #ed6b3b;
+  -webkit-box-shadow: -1px -1px 53px 0 #ed6b3b;
+  -moz-box-shadow: -1px -1px 53px 0 #ed6b3b;
 }
 
 .btn:active {
   background-color: #e95321;
 }
+
+.btn:is(:hover, :active) {
+  transform: scale(1.1);
+  background-color: #ec6232;
+  box-shadow: -1px -1px 53px 0 #ed6b3b;
+  -webkit-box-shadow: -1px -1px 53px 0 #ed6b3b;
+  -moz-box-shadow: -1px -1px 53px 0 #ed6b3b;
+}
+
 @media screen and (max-width: 764px) {
   .desktop-only {
     display: none;
