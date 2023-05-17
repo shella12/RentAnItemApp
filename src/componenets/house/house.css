@@ -9,6 +9,12 @@
   margin-bottom: 1.5em;
   border-radius: 0.2em;
   box-shadow: 1px 6px 12px rgba(120, 121, 121, 0.3);
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+
+.house:hover {
+  transform: scale(1.02);
 }
 
 .house img {
