@@ -19,6 +19,7 @@ const Home = () => {
 
   return (
     <>
+      {houses?.length ===0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
       <ul className='column'>
         {houses.map((house) => (
             <li key={house.id}>

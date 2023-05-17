@@ -20,13 +20,13 @@ const MyFavourites = () => {
   return (
     <>
       <h1 className="flex-center">Favourites</h1>
+      {listHouses?.length ===0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
       <ul className="flex-center wrap">
-        { listHouses?.length > 0 ? listHouses.map((house) => (
+        {listHouses.map((house) => (
           <li key={house.id} className="flex-center house-wrapper">
             <House data={house} handleRemove={handleRemove} />
           </li>
-        ))
-          : <p className="flex-center empty-list">No favorites: List Empty</p>}
+        ))}
       </ul>
     </>
   );
