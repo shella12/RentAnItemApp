@@ -337,6 +337,12 @@ form {
   -moz-box-shadow: -1px -1px 53px 0 #ed6b3b;
 }
 
+.flash-message {
+  color: #d5582a;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 @media screen and (max-width: 764px) {
   .desktop-only {
     display: none;

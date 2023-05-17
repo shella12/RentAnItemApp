@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { addHouse } from '../redux/house/house';
 import FlashMessage from '../componenets/FlashMessage';
+import { addHouse } from '../redux/house/house';
 
 const AddHouse = () => {
   const dispatch = useDispatch();
@@ -10,6 +10,7 @@ const AddHouse = () => {
   const [description, setDescription] = useState('');
   const [picture, setPicture] = useState('');
   const [owner, setOwner] = useState('');
+  const [status, setStatus] = useState(false);
   const [message, setMessage] = useState('');
 
   const handleSubmit = (event) => {
@@ -21,13 +22,14 @@ const AddHouse = () => {
     data.append('house[owner_name]', form.owner.value);
     data.append('house[description]', form.description.value);
     data.append('house[picture]', form.picture.files[0]);
-   setMessage('Form submitted!');
+    setStatus(true);
     dispatch(addHouse(data));
     setName('');
     setPrice('');
     setDescription('');
     setPicture('');
     setOwner('');
+    setMessage('your house has been added successfully!');
   };
 
   return (
@@ -39,7 +41,8 @@ const AddHouse = () => {
           This new house is all you ever wanted and more.
           The best journey takes you home
         </p>
-        <form className="column" onSubmit={handleSubmit}>
+        {status && <FlashMessage message={message} duration={5000} />}
+        <form className="column" onSubmit={handleSubmit} onChange={() => setStatus(false)}>
           <input
             className="input-text"
             name="name"
@@ -55,7 +58,6 @@ const AddHouse = () => {
           <textarea className="input-textarea" name="description" placeholder="write a description of the house ..." value={description} onChange={(e) => setDescription(e.target.value)} required />
           <button className="btn" type="submit">Add a house</button>
         </form>
-        {message && <FlashMessage message={message} duration={5000} />}
       </div>
     </section>
   );
