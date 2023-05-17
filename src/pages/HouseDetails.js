@@ -21,8 +21,8 @@ const HouseDetails = () => {
     setIsFavorite(true);
   };
 
-  const handleRemove = (houseID) => {
-    dispatch(deleteFavorite({ userID: 1, houseID }));
+  const handleRemove = () => {
+    dispatch(deleteFavorite({ userID: 1, houseID: house.id }));
     setIsFavorite(false);
   };
 

@@ -10,8 +10,9 @@ const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const houses = useSelector((state) => state.housesSlice.houses);
+  const fetchStatus = useSelector((state) => state.housesSlice.status);
   useEffect(() => {
-    if (houses.length === 0) {
+    if (fetchStatus === 'idle') {
       dispatch(fetchHouse());
     }
   });
