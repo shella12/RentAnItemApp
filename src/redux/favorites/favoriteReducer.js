@@ -38,7 +38,7 @@ export const deleteFavorite = createAsyncThunk('rent-house/favorite/Delete', asy
 const favoriteReducer = createSlice({
   name: 'favorites',
   initialState: {
-    favorites: [],
+    favorites: undefined,
   },
   extraReducers: (builder) => {
     builder

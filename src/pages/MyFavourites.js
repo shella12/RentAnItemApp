@@ -7,7 +7,7 @@ const MyFavourites = () => {
   const listHouses = useSelector((state) => state.favorite.favorites);
   const dispatch = useDispatch();
   useEffect(() => {
-    if (listHouses.length === 0) {
+    if (!listHouses) {
       dispatch(fetchFavorites(1));
     }
   });

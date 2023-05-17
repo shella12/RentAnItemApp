@@ -9,6 +9,7 @@ const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const houses = useSelector((state) => state.housesSlice.houses);
+  const fetchStatus = useSelector((state) => state.housesSlice.status);
   useEffect(() => {
     dispatch(fetchHouse());
   }, [houses, dispatch]);
