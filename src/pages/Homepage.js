@@ -16,7 +16,7 @@ const Home = () => {
   });
 
   return (
-    <>
+    <section className="section">
       <Carousel showArrows autoFocus centerMode>
         {houses.map((house) => (
           <div key={house.id}>
@@ -27,7 +27,7 @@ const Home = () => {
           </div>
         )) }
       </Carousel>
-    </>
+    </section>
   );
 };
 

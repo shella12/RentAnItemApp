@@ -8,7 +8,7 @@ const HouseDetails = () => {
   const location = useLocation();
   const { house } = location.state;
   const {
-    name, ownerName, price, description, picture,
+    name, price, description, picture,
   } = house;
 
   const listFavorite = useSelector((state) => state.favorite.favorites);
@@ -36,7 +36,7 @@ const HouseDetails = () => {
         <div className="row details-price-owner">
           <div className="row details-owner">
             <img src={profilePhoto} alt="house owner" className="profile-photo mob-profile-photo" />
-            <p>{ownerName}</p>
+            <p>{house.owner_name}</p>
           </div>
           <p>
             $
