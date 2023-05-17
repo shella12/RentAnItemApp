@@ -38,12 +38,15 @@ export const deleteFavorite = createAsyncThunk('rent-house/favorite/Delete', asy
 const favoriteReducer = createSlice({
   name: 'favorites',
   initialState: {
-    favorites: undefined,
+    favorites: [],
+    status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
   },
   extraReducers: (builder) => {
     builder
       .addCase(fetchFavorites.fulfilled,
-        (state, action) => ({ ...state, favorites: [...action.payload] }))
+        (state, action) => ({ ...state, status: 'success', favorites: [...action.payload] }))
+      .addCase(fetchFavorites.pending,
+        (state, action) => ({ ...state, status: 'pending'}))
       .addCase(postFavorite.fulfilled,
         (state, action) => ({ ...state, favorites: [...state.favorites, action.payload] }))
       .addCase(deleteFavorite.fulfilled,

@@ -5,9 +5,10 @@ import House from '../componenets/house/House';
 
 const MyFavourites = () => {
   const listHouses = useSelector((state) => state.favorite.favorites);
+  const status = useSelector((state) => state.favorite.status);
   const dispatch = useDispatch();
   useEffect(() => {
-    if (!listHouses) {
+    if (status === 'idle') {
       dispatch(fetchFavorites(1));
     }
   });
