@@ -5,9 +5,10 @@ import { deleteHouse, fetchHouse } from '../redux/house/house';
 
 const DeleteHouse = () => {
   const listAllHouse = useSelector((state) => state.housesSlice.houses);
+  const fetchStatus = useSelector((state) => state.housesSlice.status);
   const dispatch = useDispatch();
   useEffect(() => {
-    if (listAllHouse.length === 0) {
+    if (fetchStatus === 'idle') {
       dispatch(fetchHouse());
     }
   });
