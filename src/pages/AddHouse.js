@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import FlashMessage from 'react-flash-message';
 import { addHouse } from '../redux/house/house';
+import FlashMessage from '../componenets/FlashMessage';
 
 const AddHouse = () => {
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ const AddHouse = () => {
   const [description, setDescription] = useState('');
   const [picture, setPicture] = useState('');
   const [owner, setOwner] = useState('');
-  const [status, setStatus] = useState(false);
+  const [message, setMessage] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -21,7 +21,7 @@ const AddHouse = () => {
     data.append('house[owner_name]', form.owner.value);
     data.append('house[description]', form.description.value);
     data.append('house[picture]', form.picture.files[0]);
-    setStatus(true);
+   setMessage('Form submitted!');
     dispatch(addHouse(data));
     setName('');
     setPrice('');
@@ -54,12 +54,8 @@ const AddHouse = () => {
           <input className="input-text" name="picture" type="file" placeholder="Picture url" value={picture} onChange={(e) => setPicture(e.target.value)} required />
           <textarea className="input-textarea" name="description" placeholder="write a description of the house ..." value={description} onChange={(e) => setDescription(e.target.value)} required />
           <button className="btn" type="submit">Add a house</button>
-          {status && (
-          <FlashMessage duration={5000} persistOnHover>
-            <p>Message</p>
-          </FlashMessage>
-          )}
         </form>
+        {message && <FlashMessage message={message} duration={5000} />}
       </div>
     </section>
   );
