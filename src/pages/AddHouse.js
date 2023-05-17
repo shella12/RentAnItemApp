@@ -12,13 +12,6 @@ const AddHouse = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // const data = {
-    //   name,
-    //   price: Number(price),
-    //   pic: picture,
-    //   description,
-    //   owner_name: owner,
-    // };
     const form = event.target;
     const data = new FormData();
     data.append('house[name]', form.name.value);
@@ -26,7 +19,6 @@ const AddHouse = () => {
     data.append('house[owner_name]', form.owner.value);
     data.append('house[description]', form.description.value);
     data.append('house[picture]', form.picture.files[0]);
-    console.log(data);
     dispatch(addHouse(data));
   };
 

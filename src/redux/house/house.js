@@ -14,7 +14,7 @@ const initialState = {
 export const addHouse = createAsyncThunk(ADD_HOUSE, async (data) => {
   const response = await fetch(api, {
     method: 'POST',
-    body: JSON.stringify(data),
+    body: data,
   }).then((response) => response.text());
   return response;
 });
