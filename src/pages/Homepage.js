@@ -5,23 +5,26 @@ import { Carousel } from 'react-responsive-carousel';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchHouse } from '../redux/house/house';
 import House from '../componenets/house/House';
+import Navbar from '../componenets/navbar/Navbar';
 
 const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const houses = useSelector((state) => state.housesSlice.houses);
-  const fetchStatus = useSelector((state) => state.housesSlice.status);
+  const {houses, status} = useSelector((state) => state.housesSlice);
   useEffect(() => {
-    dispatch(fetchHouse());
-  }, [houses, dispatch]);
+    if (status === 'idle') {
+      dispatch(fetchHouse());
+    }
+  });
 
   return (
     <>
+      <Navbar title="Houses" />
       {houses?.length ===0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
       <ul className='column'>
         {houses.map((house) => (
             <li key={house.id}>
-              <Link className="flex-center legend">
+              <Link to={`/houses/${house.id}`} className="flex-center legend">
                 <House data={house}/>
               </Link>
             </li>

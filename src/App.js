@@ -5,12 +5,10 @@ import MyFavourites from './pages/MyFavourites';
 import AddHouse from './pages/AddHouse';
 import DeleteHouse from './pages/DeleteHouse';
 import HouseDetails from './pages/HouseDetails';
-import Navbar from './componenets/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Routes>
         <Route path="houses">
           <Route index element={<Home />} />

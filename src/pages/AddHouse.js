@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { addHouse } from '../redux/house/house';
+import Navbar from '../componenets/navbar/Navbar';
 
 const AddHouse = () => {
   const dispatch = useDispatch();
@@ -16,6 +17,8 @@ const AddHouse = () => {
   };
 
   return (
+    <>
+    <Navbar title="New House" />
     <section className="add-house-section">
       <div className="backdrop column flex-center">
         <h1>Add a house</h1>
@@ -40,6 +43,7 @@ const AddHouse = () => {
         </form>
       </div>
     </section>
+    </>
   );
 };
 

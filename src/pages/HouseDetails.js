@@ -1,22 +1,31 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import profilePhoto from '../assets/profilePhoto.png';
-import { deleteFavorite, postFavorite } from '../redux/favorites/favoriteReducer';
+import { deleteFavorite, fetchFavorites, postFavorite } from '../redux/favorites/favoriteReducer';
 import { useParams } from 'react-router-dom';
+import { fetchHouse } from '../redux/house/house';
+import Navbar from '../componenets/navbar/Navbar';
 
 const HouseDetails = () => {
-  const listHouse = useSelector(state => state.housesSlice.houses);
+  const houses = useSelector(state => state.housesSlice.houses);
+  const status = useSelector(state => state.housesSlice.status);
   const { houseId } = useParams()
-  const house = listHouse.find((house) => house === houseId);
+  const house = houses.find((item) => item.id == houseId);
   const { id, name, 
     price, description, 
     picture_url, owner_name
-  } = house;
+  } = house || {};;
 
-  const listFavorite = useSelector((state) => state.favorite.favorites);
-  const [isFavorite, setIsFavorite] = useState(listFavorite.some((item) => item.id === id));
+  const favorites = useSelector((state) => state.favorite.favorites);
+  const [isFavorite, setIsFavorite] = useState(favorites.some((item) => item.id === id));
 
   const dispatch = useDispatch();
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchHouse());
+      dispatch(fetchFavorites(1));
+    }
+  });
   const handleAddFavorite = () => {
     dispatch(postFavorite({ userID: 1, house }));
     setIsFavorite(true);
@@ -28,7 +37,9 @@ const HouseDetails = () => {
   };
 
   return (
-    <section className="column details-section">
+    <>
+    <Navbar title={name} />
+    <section className="section column details-section">
       <div className="row details-bar">
         <a href="/">back</a>
         <h1>{name}</h1>
@@ -54,6 +65,7 @@ const HouseDetails = () => {
         }
       </div>
     </section>
+    </>
   );
 };
 
