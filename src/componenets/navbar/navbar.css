@@ -1,0 +1,83 @@
+.navbar,
+.seacrh-bar,
+.profile-details {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  z-index: 10;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  font-size: 1.3rem;
+  background-color: #fff;
+  color: var(--navbar-icon-color);
+  justify-content: space-between;
+  padding: 0.9rem;
+}
+
+.navbar h1 {
+  font-size: 1.2rem;
+}
+
+.seacrh-bar {
+  justify-content: space-between;
+  border: 1px solid var(--navbar-icon-color);
+  border-radius: 1rem;
+  padding: 5px 10px;
+  width: 0;
+  flex: 1;
+}
+
+.seacrh-bar input {
+  outline: none;
+  border-color: transparent;
+  margin-left: 10px;
+  width: 0;
+  flex: 1;
+}
+
+.profile-details {
+  gap: 0.8rem;
+}
+
+.username {
+  color: var(--navbar-link-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+.hamburger {
+  position: relative;
+}
+
+.hamburger-react {
+  z-index: 10;
+}
+
+.navlinks {
+  display: none;
+  flex-direction: column;
+  padding: 8rem 3rem;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: -0.9rem;
+  height: 100vh;
+  color: var(--navbar-link-color);
+  font-size: 1.2rem;
+  z-index: 9;
+}
+
+.mob-profile {
+  margin-bottom: 2rem;
+}
+
+.navlinks a {
+  margin: 0.5rem 0;
+}
+
+.Open {
+  display: flex;
+  width: 25rem;
+}

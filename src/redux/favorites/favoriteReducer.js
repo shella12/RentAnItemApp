@@ -39,11 +39,14 @@ const favoriteReducer = createSlice({
   name: 'favorites',
   initialState: {
     favorites: [],
+    status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
   },
   extraReducers: (builder) => {
     builder
       .addCase(fetchFavorites.fulfilled,
-        (state, action) => ({ ...state, favorites: [...action.payload] }))
+        (state, action) => ({ ...state, status: 'success', favorites: [...action.payload] }))
+      .addCase(fetchFavorites.pending,
+        (state) => ({ ...state, status: 'pending' }))
       .addCase(postFavorite.fulfilled,
         (state, action) => ({ ...state, favorites: [...state.favorites, action.payload] }))
       .addCase(deleteFavorite.fulfilled,

@@ -2,12 +2,13 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { deleteFavorite, fetchFavorites } from '../redux/favorites/favoriteReducer';
 import House from '../componenets/house/House';
+import Navbar from '../componenets/navbar/Navbar';
 
 const MyFavourites = () => {
-  const listHouses = useSelector((state) => state.favorite.favorites);
+  const { favorites, status } = useSelector((state) => state.favorite);
   const dispatch = useDispatch();
   useEffect(() => {
-    if (listHouses.length === 0) {
+    if (status === 'idle') {
       dispatch(fetchFavorites(1));
     }
   });
@@ -18,15 +19,17 @@ const MyFavourites = () => {
 
   return (
     <>
-      <h1 className="flex-center">Favourites</h1>
-      <ul className="flex-center wrap">
-        { listHouses?.length > 0 ? listHouses.map((house) => (
-          <li key={house.id} className="flex-center house-wrapper">
-            <House data={house} handleRemove={handleRemove} />
-          </li>
-        ))
-          : <p className="flex-center empty-list">No favorites: List Empty</p>}
-      </ul>
+      <Navbar title="My Favorites" />
+      <section className="section">
+        {favorites?.length === 0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
+        <ul className="flex-center wrap">
+          {favorites.map((house) => (
+            <li key={house.id} className="flex-center house-wrapper">
+              <House data={house} handleRemove={handleRemove} />
+            </li>
+          ))}
+        </ul>
+      </section>
     </>
   );
 };
