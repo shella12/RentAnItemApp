@@ -16,10 +16,10 @@ export default function Footer() {
       <p>
         Lafayette Ave 156, Brooklyn,NY,USA
         <br />
-        35 Sl Andrew's St, Cambridge CB2 3AR, Great Britain
+        35 Sl Andrews St, Cambridge CB2 3AR, Great Britain
       </p>
       +347 863106 681
-    
+
       <div className="social-icons">
         <a href="https://facebook.com" aria-label="Facebook">
           <FontAwesomeIcon icon={faFacebookF} />
@@ -31,7 +31,6 @@ export default function Footer() {
           <FontAwesomeIcon icon={faInstagram} />
         </a>
 
-     
       </div>
       <p>
         Circle
@@ -39,7 +38,7 @@ export default function Footer() {
         {new Date().getFullYear()}
         . All rights reserved
       </p>
-    
+
     </section>
   );
 }
