@@ -105,42 +105,12 @@ a {
 }
 
 .mob-profile-photo {
-  width: 5rem;
+  width: 4rem;
 }
 
-.hamburger {
-  position: relative;
-}
-
-.hamburger-react {
-  z-index: 10;
-}
-
-.navlinks {
-  display: none;
-  flex-direction: column;
-  padding: 8rem 3rem;
-  position: absolute;
-  background-color: #fff;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  color: var(--navbar-link-color);
-  font-size: 1.2rem;
-  z-index: 9;
-}
-
-.mob-profile {
-  margin-bottom: 2rem;
-}
-
-.navlinks a {
-  margin: 0.5rem 0;
-}
-
-.Open {
-  display: flex;
-  width: 25rem;
+.mob-username {
+  font-size: 1.3rem;
+  margin: 1rem 0 0 0;
 }
 
 .active {
