@@ -17,7 +17,7 @@ const MyFavourites = () => {
   };
 
   return (
-    <>
+    <section className="section">
       <h1 className="flex-center">Favourites</h1>
       <ul className="flex-center wrap">
         { listHouses?.length > 0 ? listHouses.map((house) => (
@@ -27,7 +27,7 @@ const MyFavourites = () => {
         ))
           : <p className="flex-center empty-list">No favorites: List Empty</p>}
       </ul>
-    </>
+    </section>
   );
 };
 

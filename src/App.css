@@ -54,7 +54,7 @@ a {
 }
 
 .App {
-  padding-top: 90px;
+  padding-top: 80px;
 }
 
 .navbar,
@@ -269,6 +269,78 @@ li.slide div {
   width: 100%;
   min-height: 350px;
   text-align: center;
+}
+
+.add-house-section {
+  background: url(./assets/images.jpeg) no-repeat;
+  background-size: cover;
+}
+
+.backdrop {
+  background-color: #ffffffb5;
+  backdrop-filter: blur(1px);
+  min-height: 100vh;
+  text-align: center;
+}
+
+.backdrop p {
+  width: 50%;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+form {
+  margin: 2rem;
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
+}
+
+.input-text,
+.input-textarea {
+  border: 1px solid rgba(0, 0, 0, 0.359);
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  width: 50%;
+  background-color: transparent;
+  outline-color: var(--orange);
+  font-weight: 500;
+}
+
+.input-textarea {
+  border-radius: 0.5rem;
+  height: 7rem;
+}
+
+.btn {
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1.3rem;
+  background-color: #ec6232;
+  outline: none;
+  font-weight: 500;
+  color: #f6f3f8;
+  box-shadow: -1px -1px 53px 0 #ed6b3b;
+  -webkit-box-shadow: -1px -1px 53px 0 #ed6b3b;
+  -moz-box-shadow: -1px -1px 53px 0 #ed6b3b;
+}
+
+.btn:active {
+  background-color: #e95321;
+}
+
+.btn:is(:hover, :active) {
+  transform: scale(1.1);
+  background-color: #ec6232;
+  box-shadow: -1px -1px 53px 0 #ed6b3b;
+  -webkit-box-shadow: -1px -1px 53px 0 #ed6b3b;
+  -moz-box-shadow: -1px -1px 53px 0 #ed6b3b;
+}
+
+.flash-message {
+  color: #d5582a;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 764px) {

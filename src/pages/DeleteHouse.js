@@ -16,7 +16,7 @@ const DeleteHouse = () => {
     dispatch(deleteHouse(houseID));
   };
   return (
-    <>
+    <section className="section">
       <h1 className="flex-center">Delete House</h1>
 
       <ul className="flex-center wrap">
@@ -28,7 +28,7 @@ const DeleteHouse = () => {
           : <p className="flex-center empty-list">No Houses: List Empty</p>}
       </ul>
 
-    </>
+    </section>
   );
 };
 

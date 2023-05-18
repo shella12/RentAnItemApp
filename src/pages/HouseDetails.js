@@ -8,7 +8,7 @@ const HouseDetails = () => {
   const location = useLocation();
   const { house } = location.state;
   const {
-    name, ownerName, price, description, picture,
+    name, price, description,
   } = house;
 
   const listFavorite = useSelector((state) => state.favorite.favorites);
@@ -31,12 +31,12 @@ const HouseDetails = () => {
         <a href="/">back</a>
         <h1>{name}</h1>
       </div>
-      <img src={picture} alt="House" className="caroselImage detail-house-img" />
+      <img src={house.picture_url} alt="House" className="caroselImage detail-house-img" />
       <div className="column details">
         <div className="row details-price-owner">
           <div className="row details-owner">
             <img src={profilePhoto} alt="house owner" className="profile-photo mob-profile-photo" />
-            <p>{ownerName}</p>
+            <p>{house.owner_name}</p>
           </div>
           <p>
             $

@@ -4,10 +4,10 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
-    "@testing-library/user-event": "^13.5.0",
     "@testing-library/jest-dom": "^5.16.5",
-    "fetch-mock": "^9.11.0",
+    "@testing-library/user-event": "^13.5.0",
     "@types/node-fetch": "^2.6.3",
+    "fetch-mock": "^9.11.0",
     "hamburger-react": "^2.5.0",
     "node-fetch": "^2.6.11",
     "prop-types": "^15.8.1",
