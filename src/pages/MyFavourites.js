@@ -5,7 +5,7 @@ import House from '../componenets/house/House';
 import Navbar from '../componenets/navbar/Navbar';
 
 const MyFavourites = () => {
-  const {favorites, status} = useSelector((state) => state.favorite);
+  const { favorites, status } = useSelector((state) => state.favorite);
   const dispatch = useDispatch();
   useEffect(() => {
     if (status === 'idle') {
@@ -19,17 +19,17 @@ const MyFavourites = () => {
 
   return (
     <>
-    <Navbar title="My Favorites" />
-    <section className="section">
-      {favorites?.length ===0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
-      <ul className="flex-center wrap">
-        {favorites.map((house) => (
-          <li key={house.id} className="flex-center house-wrapper">
-            <House data={house} handleRemove={handleRemove} />
-          </li>
-        ))}
-      </ul>
-    </section>
+      <Navbar title="My Favorites" />
+      <section className="section">
+        {favorites?.length === 0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
+        <ul className="flex-center wrap">
+          {favorites.map((house) => (
+            <li key={house.id} className="flex-center house-wrapper">
+              <House data={house} handleRemove={handleRemove} />
+            </li>
+          ))}
+        </ul>
+      </section>
     </>
   );
 };

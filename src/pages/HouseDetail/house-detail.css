@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-.add-favorite {
+.details-section .add-favorite {
   padding: 1rem;
   position: absolute;
   bottom: 0;
@@ -102,7 +102,7 @@
     color: black;
   }
 
-  .detail-title {
+  .details-section .detail-title {
     margin-bottom: 24px;
   }
 

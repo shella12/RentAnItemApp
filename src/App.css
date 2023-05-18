@@ -141,6 +141,10 @@ li.slide div {
   text-align: center;
 }
 
+.add-favorite {
+  padding: 1rem;
+}
+
 .add-house-section {
   background: url(./assets/images.jpeg) no-repeat;
   background-size: cover;

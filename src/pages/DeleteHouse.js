@@ -18,19 +18,19 @@ const DeleteHouse = () => {
   };
   return (
     <>
-    <Navbar title="Delete House" />
-    <section className="section">
-      <h1 className="flex-center">Delete House</h1>
-      {listAllHouse?.length ===0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
-      <ul className="flex-center wrap">
-        { listAllHouse.map((house) => (
-          <li key={house.id} className="flex-center house-wrapper">
-            <House data={house} handleRemove={handleRemove} />
-          </li>
-        ))}
-      </ul>
+      <Navbar title="Delete House" />
+      <section className="section">
+        <h1 className="flex-center">Delete House</h1>
+        {listAllHouse?.length === 0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
+        <ul className="flex-center wrap">
+          { listAllHouse.map((house) => (
+            <li key={house.id} className="flex-center house-wrapper">
+              <House data={house} handleRemove={handleRemove} />
+            </li>
+          ))}
+        </ul>
 
-    </section>
+      </section>
     </>
   );
 };

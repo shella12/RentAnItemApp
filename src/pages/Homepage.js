@@ -10,7 +10,7 @@ import Navbar from '../componenets/navbar/Navbar';
 const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const {houses, status} = useSelector((state) => state.housesSlice);
+  const { houses, status } = useSelector((state) => state.housesSlice);
   useEffect(() => {
     if (status === 'idle') {
       dispatch(fetchHouse());
@@ -20,29 +20,29 @@ const Home = () => {
   return (
     <>
       <Navbar title="Houses" />
-      {houses?.length ===0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
-      <ul className='column'>
+      {houses?.length === 0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
+      <ul className="column">
         {houses.map((house) => (
-            <li key={house.id}>
-              <Link to={`/houses/${house.id}`} className="flex-center legend">
-                <House data={house}/>
-              </Link>
-            </li>
+          <li key={house.id}>
+            <Link to={`/houses/${house.id}`} className="flex-center legend">
+              <House data={house} />
+            </Link>
+          </li>
         )) }
       </ul>
-    <section className="section">
-      <Carousel showArrows autoFocus centerMode>
-        {houses.map((house) => (
-          <div key={house.id}>
-            <img src={house.picture_url} alt="" className="caroselImage" />
-            <button type="button" className="legend" onClick={() => navigate('/HouseDetails', { state: { house } })}>
-              See Details
-            </button>
-          </div>
-        )) }
-      </Carousel>
-    </section>
-  </>
+      <section className="section">
+        <Carousel showArrows autoFocus centerMode>
+          {houses.map((house) => (
+            <div key={house.id}>
+              <img src={house.picture_url} alt="" className="caroselImage" />
+              <button type="button" className="legend" onClick={() => navigate('/HouseDetails', { state: { house } })}>
+                See Details
+              </button>
+            </div>
+          )) }
+        </Carousel>
+      </section>
+    </>
   );
 };
 

@@ -18,31 +18,31 @@ const AddHouse = () => {
 
   return (
     <>
-    <Navbar title="New House" />
-    <section className="add-house-section">
-      <div className="backdrop column flex-center">
-        <h1>Add a house</h1>
-        <p>
-          Turn the key and walk through the door.
-          This new house is all you ever wanted and more.
-          The best journey takes you home
-        </p>
-        <form className="column" onSubmit={handleSubmit}>
-          <input
-            className="input-text"
-            name="name"
-            type="text"
-            placeholder="House type e.g pent house, cottage etc..."
-            required
-          />
-          <input className="input-text" name="price" min="1" type="number" placeholder="Price e.g $30,00,0000..." required />
-          <input className="input-text" name="owner" type="text" placeholder="owner name e.g John doe" required />
-          <input className="input-text" name="picture" type="file" placeholder="Picture url" required />
-          <textarea className="input-textarea" name="description" placeholder="write a description of the house ..." required />
-          <button className="btn" type="submit">Add a house</button>
-        </form>
-      </div>
-    </section>
+      <Navbar title="New House" />
+      <section className="add-house-section">
+        <div className="backdrop column flex-center">
+          <h1>Add a house</h1>
+          <p>
+            Turn the key and walk through the door.
+            This new house is all you ever wanted and more.
+            The best journey takes you home
+          </p>
+          <form className="column" onSubmit={handleSubmit}>
+            <input
+              className="input-text"
+              name="name"
+              type="text"
+              placeholder="House type e.g pent house, cottage etc..."
+              required
+            />
+            <input className="input-text" name="price" min="1" type="number" placeholder="Price e.g $30,00,0000..." required />
+            <input className="input-text" name="owner" type="text" placeholder="owner name e.g John doe" required />
+            <input className="input-text" name="picture" type="file" placeholder="Picture url" required />
+            <textarea className="input-textarea" name="description" placeholder="write a description of the house ..." required />
+            <button className="btn" type="submit">Add a house</button>
+          </form>
+        </div>
+      </section>
     </>
   );
 };
