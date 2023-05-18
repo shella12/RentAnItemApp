@@ -5,12 +5,14 @@ import AddHouse from './pages/AddHouse';
 import DeleteHouse from './pages/DeleteHouse';
 import App from './pages/App';
 import HouseDetails from './pages/HouseDetail/HouseDetails';
-
+import Navbar from './componenets/navbar/Navbar';
 const Routess = () => (
   <div className="App">
+          <Navbar />
     <Routes>
       <Route exact path="/" element={<App />} />
       <Route path="houses">
+  
         <Route index element={<Home />} />
         <Route path="favorites" element={<MyFavourites />} />
         <Route path="add" element={<AddHouse />} />
