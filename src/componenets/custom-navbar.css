@@ -1,11 +1,10 @@
 .custom-navbar {
-    background-color: transparent;
-    position: relative;
-    z-index: 10;
-    top: 0;
-    font-size: 1.3rem;
-    color: var(--navbar-icon-color);
-    justify-content: space-between;
-    padding: 0.9rem;
-  }
-  
+  background-color: transparent;
+  position: relative;
+  z-index: 10;
+  top: 0;
+  font-size: 1.3rem;
+  color: var(--navbar-icon-color);
+  justify-content: space-between;
+  padding: 0.9rem;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo-fotor-bg-remover-2023051812511.png';
-import './custom-navbar.css'; 
+import './custom-navbar.css';
 
 export default function Navigation() {
   return (
