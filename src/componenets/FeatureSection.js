@@ -15,7 +15,7 @@ export default function FeatureSection() {
           </h4>
           <p className="about-section__desc">
             More than hundreds of house at your disposal. Only the best and checked with owners.
-            We will find best place for you and conditions for a safe transction and comfortable place.
+            We will find best place for you and conditions for a safe and comfortable place.
           </p>
           <p>
             <a href="#link" className="btn btn-oval">
