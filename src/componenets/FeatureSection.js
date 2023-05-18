@@ -11,11 +11,11 @@ export default function FeatureSection() {
         </Col>
         <Col sm={6} className="pt-5">
           <h4 className="about-section__left-title pt-5">
-            Best rides for your trips
+            Only best place for your rest
           </h4>
           <p className="about-section__desc">
-            More than hundreds of rides at your disposal. Only the best and checked with owners.
-            We will find best place for you and conditions for a safe parking.
+            More than hundreds of house at your disposal. Only the best and checked with owners.
+            We will find best place for you and conditions for a safe transction and comfortable place.
           </p>
           <p>
             <a href="#link" className="btn btn-oval">
