@@ -19,7 +19,7 @@ body {
 .header {
   width: 100%;
   height: 400px;
-  background: url("./assets/head_image.jpg") bottom center no-repeat;
+  background: url("./assets/3vau5vtfa3qn7k8v.jpg") bottom center no-repeat;
   padding: 30px;
 
   &-content {
@@ -33,7 +33,10 @@ body {
     }
 
     &__desc {
-      font-weight: 100;
+      font-weight: 600;
+      font-size: 14px;
+      // color: rgb(243, 113, 38);
+      color: #000;
       text-shadow: 0 1px 1px rgba($color: #000, $alpha: 0.4);
     }
   }
@@ -66,7 +69,6 @@ body {
   }
 
   &__desc {
-    font-weight: 100;
     font-size: 14px;
     color: #000;
   }
@@ -79,7 +81,19 @@ body {
 .footer {
   color: #b9b6b6;
   text-align: center;
-  font-size: small;
+  font-size: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: blue;
+  font-size: 20px;
+  margin: 0 10px;
 }
 
 .btn-oval {
@@ -110,23 +124,6 @@ body {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
   position: relative;
-}
-
-.login-box::after {
-  content: "";
-  background: url("./assets/head_image.jpg") bottom center no-repeat;
-  background-size: cover;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-}
-
-.form-control {
-  border-radius: 20px !important;
-  padding: 5px 10px;
 }
 
 .modal-popup {

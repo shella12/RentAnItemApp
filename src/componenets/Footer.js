@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import logo from '../assets/red-circle-effect-png-transparent-5Kdj5f.png';
+import logo from '../assets/WhatsApp Image 2023-05-18 at 1.53.12 PM.jpeg';
 
 export default function Footer() {
   return (
@@ -11,20 +11,15 @@ export default function Footer() {
         <Link className="nav-link white" to="/">
           <img className="logo" src={logo} alt="Home" />
         </Link>
-        <span className="circle">Circle</span>
       </h2>
 
       <p>
-        Plot 1 Unit F, Ewet Housing Estate
+        Lafayette Ave 156, Brooklyn,NY,USA
         <br />
-        +2348035336234
+        35 Sl Andrew's St, Cambridge CB2 3AR, Great Britain
       </p>
-      <p>
-        Car Rentals
-        { ' ' }
-        {new Date().getFullYear()}
-        . All rights reserved
-      </p>
+      +347 863106 681
+    
       <div className="social-icons">
         <a href="https://facebook.com" aria-label="Facebook">
           <FontAwesomeIcon icon={faFacebookF} />
@@ -35,7 +30,16 @@ export default function Footer() {
         <a href="https://instagram.com" aria-label="Instagram">
           <FontAwesomeIcon icon={faInstagram} />
         </a>
+
+     
       </div>
+      <p>
+        Circle
+        { ' ' }
+        {new Date().getFullYear()}
+        . All rights reserved
+      </p>
+    
     </section>
   );
 }
