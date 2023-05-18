@@ -1,33 +1,29 @@
 import React from 'react';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import logo from '../assets/red-circle-effect-png-transparent-5Kdj5f.png';
-import '../App.scss';
+import logo from '../assets/logo_white.png';
 
 export default function Navigation() {
-//   const token = useSelector(state => state.user.token);
-//   const email = useSelector(state => state.users.email);
+  // const token = useSelector(state => state.user.token);
+  // const email = useSelector(state => state.user.email
 
   return (
-    <Navbar collapseOnSelect expand="sm" className="custom-navbar">
-      <Navbar.Brand href="/">
-        <img className="logo" src={logo} alt="" />
-        <span className="circle_nav">Circle</span>
-      </Navbar.Brand>
+    <Navbar collapseOnSelect expand="sm">
+      <Navbar.Brand href="/"><img className="logo" src={logo} alt="Car Rentals" /></Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto" />
-        <Nav className="auth_links">
-
-          <>
-            <Link className="nav-link " to="/login">SIGN IN</Link>
-            <span className="nav-link-space" />
-            <Link className="nav-link" to="/register">
-              <span className="btn-menu">SIGN UP</span>
-            </Link>
-          </>
-
+        <Nav>
+       
+                <>
+                  <Link className="nav-link white" to="/login">SIGN IN</Link>
+                  <Link className="nav-link" to="/register">
+                    <span className="btn-menu">SIGN UP</span>
+                  </Link>
+                </>
+          
+              
         </Nav>
       </Navbar.Collapse>
     </Navbar>
