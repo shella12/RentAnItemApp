@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { NavLink, useParams } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
 // import { AiOutlineBell } from 'react-icons/ai';
@@ -54,6 +55,10 @@ const Navbar = (props) => {
   </div> */}
     </div>
   );
+};
+
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
 };
 
 export default Navbar;

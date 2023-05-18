@@ -5,13 +5,13 @@ import MyFavourites from './pages/MyFavourites';
 import AddHouse from './pages/AddHouse';
 import DeleteHouse from './pages/DeleteHouse';
 import HouseDetails from './pages/HouseDetail/HouseDetails';
-import Auth from './componenets/Auth';
+// import Auth from './componenets/Auth';
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Auth />} />
+        {/* <Route path="/" element={<Auth />} /> */ }
         <Route path="houses">
           <Route index element={<Home />} />
           <Route path="favorites" element={<MyFavourites />} />

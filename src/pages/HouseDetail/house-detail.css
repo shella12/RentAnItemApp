@@ -79,11 +79,13 @@
     flex-direction: column-reverse;
     justify-content: space-between;
   }
+
   .details-section {
     flex-direction: row;
     width: 100%;
     top: 50px;
   }
+
   .detail-house-img {
     width: 50%;
     object-fit: cover;
