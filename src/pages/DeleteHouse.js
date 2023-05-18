@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import House from '../componenets/house/House';
 import { deleteHouse, fetchHouse } from '../redux/house/house';
+import Navbar from '../componenets/navbar/Navbar';
 
 const DeleteHouse = () => {
   const listAllHouse = useSelector((state) => state.housesSlice.houses);
@@ -16,19 +17,21 @@ const DeleteHouse = () => {
     dispatch(deleteHouse(houseID));
   };
   return (
-    <section className="section">
-      <h1 className="flex-center">Delete House</h1>
+    <>
+      <Navbar title="Delete House" />
+      <section className="section">
+        <h1 className="flex-center">Delete House</h1>
+        {listAllHouse?.length === 0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
+        <ul className="flex-center wrap">
+          { listAllHouse.map((house) => (
+            <li key={house.id} className="flex-center house-wrapper">
+              <House data={house} handleRemove={handleRemove} />
+            </li>
+          ))}
+        </ul>
 
-      <ul className="flex-center wrap">
-        { listAllHouse?.length > 0 ? listAllHouse.map((house) => (
-          <li key={house.id} className="flex-center house-wrapper">
-            <House data={house} handleRemove={handleRemove} />
-          </li>
-        ))
-          : <p className="flex-center empty-list">No Houses: List Empty</p>}
-      </ul>
-
-    </section>
+      </section>
+    </>
   );
 };
 

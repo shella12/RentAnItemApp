@@ -4,19 +4,21 @@ import Home from './pages/Homepage';
 import MyFavourites from './pages/MyFavourites';
 import AddHouse from './pages/AddHouse';
 import DeleteHouse from './pages/DeleteHouse';
-import HouseDetails from './pages/HouseDetails';
-import Navbar from './componenets/Navbar';
+import HouseDetails from './pages/HouseDetail/HouseDetails';
+// import Auth from './componenets/Auth';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/MyFavourites" element={<MyFavourites />} />
-        <Route path="/AddHouse" element={<AddHouse />} />
-        <Route path="/DeleteHouse" element={<DeleteHouse />} />
-        <Route path="/HouseDetails" element={<HouseDetails />} />
+        {/* <Route path="/" element={<Auth />} /> */ }
+        <Route path="houses">
+          <Route index element={<Home />} />
+          <Route path="favorites" element={<MyFavourites />} />
+          <Route path="add" element={<AddHouse />} />
+          <Route path="delete" element={<DeleteHouse />} />
+          <Route path=":houseId" element={<HouseDetails />} />
+        </Route>
       </Routes>
     </div>
   );
