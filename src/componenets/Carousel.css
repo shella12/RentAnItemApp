@@ -15,7 +15,6 @@
 }
 
 .swiper-slide img {
-  object-fit: cover;
   display: block;
   aspect-ratio: 1/1;
   width: 100%;
@@ -33,9 +32,20 @@
   border: none;
 }
 
+@media only screen and (min-width: 445px) {
+  .swiper-slide {
+    width: 400px;
+    height: 400px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .swiper-slide {
     width: 500px;
     height: 450px;
+  }
+
+  .swiper-slide img {
+    object-fit: cover;
   }
 }
