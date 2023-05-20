@@ -5,8 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from 'react-redux';
 import Routess from './Routess';
 import './App.scss';
+import './App.css';
 import store from './redux/configureStore';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
