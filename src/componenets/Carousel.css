@@ -17,14 +17,28 @@ body {
 }
 
 .swiper-slide {
+  display: flex;
+  flex-direction: column;
   background-position: center;
   background-size: cover;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
 }
 
 .swiper-slide img {
   display: block;
   aspect-ratio: 5/5;
   width: 100%;
+}
+
+.btn-see-details {
+transform: translateY(-3.5rem);
+background-color: #ed6b3b;
+color: #fff;
+font-family: 'Poppins', sans-serif;
+font-size: 1rem;
+font-weight: 300;
+padding: 1rem;
+outline: none;
+border: none;
 }

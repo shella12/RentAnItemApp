@@ -1,19 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-// import required modules
 import { EffectCoverflow, Pagination } from 'swiper';
-
 import './Carousel.css';
-
-// import required modules
 import PropTypes from 'prop-types';
 
 const Carousel = (props) => {
@@ -40,7 +32,7 @@ const Carousel = (props) => {
         {houses.map((house) => (
           <SwiperSlide key={house.id}>
             <img src={house.picture_url} alt="" className="caroselImage" />
-            <button type="button" onClick={() => navigate(`/houses/${house.id}`, { state: { house } })}>Click me</button>
+            <button type="button" onClick={() => navigate(`/houses/${house.id}`, { state: { house } })} className="btn-see-details">See details</button>
           </SwiperSlide>
         )) }
       </Swiper>
