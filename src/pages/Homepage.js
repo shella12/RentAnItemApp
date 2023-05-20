@@ -7,12 +7,10 @@ import Navbar from '../componenets/navbar/Navbar';
 
 const Home = () => {
   const dispatch = useDispatch();
-  const { houses, status } = useSelector((state) => state.housesSlice);
+  const { houses } = useSelector((state) => state.housesSlice);
   useEffect(() => {
-    if (status === 'idle') {
-      dispatch(fetchHouse());
-    }
-  },[houses]);
+    dispatch(fetchHouse());
+  }, [dispatch]);
 
   return (
     <>
