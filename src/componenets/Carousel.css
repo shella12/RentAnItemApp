@@ -38,11 +38,6 @@
   }
 
   .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    background-position: center;
-    background-size: cover;
     width: 400px;
-    height: 350px;
   }
 }
