@@ -12,7 +12,7 @@ const Home = () => {
     if (status === 'idle') {
       dispatch(fetchHouse());
     }
-  });
+  },[houses]);
 
   return (
     <>
