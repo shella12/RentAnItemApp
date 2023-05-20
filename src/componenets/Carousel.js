@@ -1,5 +1,4 @@
 import React from 'react';
-import { GrFormPrevious, GrFormNext } from 'react-icons/gr';
 import { useNavigate } from 'react-router-dom';
 
 // Import Swiper React components
@@ -44,15 +43,6 @@ const Carousel = (props) => {
             <button type="button" onClick={() => navigate(`/houses/${house.id}`, { state: { house } })}>Click me</button>
           </SwiperSlide>
         )) }
-        <div className="slider-controler">
-          <div className="swiper-button-prev slider-arrow">
-            <GrFormPrevious />
-          </div>
-          <div className="swiper-button-next slider-arrow">
-            <GrFormNext />
-          </div>
-          <div className="swiper-pagination" />
-        </div>
       </Swiper>
     </div>
   );

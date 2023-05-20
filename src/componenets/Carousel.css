@@ -25,5 +25,6 @@ body {
 
 .swiper-slide img {
   display: block;
+  aspect-ratio: 5/5;
   width: 100%;
 }
