@@ -1,202 +1,70 @@
-<a name="readme-top"></a>
+# Getting Started with Create React App
 
-<!-- TABLE OF CONTENTS -->
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# 📗 Table of Contents
+## Available Scripts
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
-- [📝 License](#license)
+In the project directory, you can run:
 
-<!-- PROJECT DESCRIPTION -->
+### `npm start`
 
-# 📖 RENT A HOUSE <a name="about-project"></a>
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-**RENT A HOUSE** is a react application used to rent and buy houses and uses rails api for authentication and data storage.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## 🛠 Built With <a name="built-with"></a>
+### `npm test`
 
-### Tech Stack <a name="tech-stack"></a>
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-<details>
-  <summary>Language</summary>
-  <ul>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript</a></li>
-  </ul>
-</details>
+### `npm run build`
 
-<details>
-  <summary>Libraries</summary>
-  <ul>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript</a></li>
-    <li><a href="https://react.dev/">Reactjs</a></li>
-    <li><a href="https://redux.js.org/">Redux</a></li>
-  </ul>
-</details>
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-<!-- Features -->
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Key Features <a name="key-features"></a>
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- **See houses-List**
-- **Rent a house**
-- **Add houses**
-- **Delete hosues**
+### `npm run eject`
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-### Back End app <a name="live-demo"></a>
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Click [here](https://github.com/shella12/RentAnItemBackend) to access the back end app that was built with ruby-on-rails
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-### Kanban
-- Click [here](https://github.com/users/shella12/projects/12) to see the Front End Kanban project
-- Click [here](https://github.com/users/shella12/projects/11) to see the Back End Kanban project
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-### ScreenShots of Kanban boards
-![image](https://user-images.githubusercontent.com/44798044/236760630-feca6d27-23fd-4af2-8ddd-9812e62e183c.png)
-![image](https://user-images.githubusercontent.com/44798044/236760117-f47fb991-c12e-4f3d-9cc1-120fa9986b02.png)
+## Learn More
 
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-<!-- GETTING STARTED -->
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## 💻 Getting Started <a name="getting-started"></a>
+### Code Splitting
 
-To get a local copy up and running follow these simple example steps.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Prerequisites
+### Analyzing the Bundle Size
 
-In order to run this project you need to install these prerequisites:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-- If you're running on Windows you can download the prerequisites from the links down below:
+### Making a Progressive Web App
 
-> [Nodejs](https://nodejs.org/en/)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-> [Git](https://git-scm.com/)
+### Advanced Configuration
 
-- If you're running on Linux follow these steps down below:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-- Install git.
+### Deployment
 
-```sh
- sudo apt install git
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-- Install nodejs and npm.
+### `npm run build` fails to minify
 
-```sh
- sudo apt install nodejs
-```
-
-### Setup
-
-Clone this repository to your desired folder:
-
-```sh
-  git clone git@github.com:shella12/RentAnItemApp.git
-  cd RentAnItemApp
-```
-
-### Install
-
-Install this project with:
-
-```sh
-  npm install
-```
-
-### Usage
-
-To run the project, execute the following command:
-
-`npm start`
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- AUTHORS -->
-
-## 👥 Authors <a name="authors"></a>
-
-
-👤 **Zuhra Hashimi**
-
-- GitHub: [@ZuhRa-HashiMi](https://github.com/ZuhRa-HashiMi)
-- LinkedIn: [Zuhra Hashmi](https://www.linkedin.com/in/zuhra-hashimi/)
-- AngelList: [zuhra-hashimi](https://wellfound.com/u/zuhra-hashimi)
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-👤 **Ayesha Arshad**
-
-- GitHub: [@shella12](https://github.com/shella12)
-- Twitter: [@Ayesha Arshad](https://twitter.com/AyeshaA03712974)
-- LinkedIn: [Ayesha Arshad](https://www.linkedin.com/in/ayesha-arshad-a690a015a/)
-
-👤 **Ssekweyama Pius**
-
-
-- GitHub: [@githubhandle](https://github.com/SSEKPIUS)
-- Twitter: [@twitterhandle](https://twitter.com/SSEK_PIUS)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/pius-ssekweyama-23665794)
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-- **Add rating system**
-- **Updating houses details**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-## 🤝 Contributing <a name="contributing"></a>
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/ZuhRa-HashiMi/Final_front-end/issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- SUPPORT -->
-
-## ⭐️ Show your support <a name="support"></a>
-
-If you like this project by staring it.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-The app is built using this [Design](https://www.behance.net/gallery/37706679/Circle-(Landing-page-Dashboard-Mobile-App)) by [Alexey Savitskiy](https://www.behance.net/alexey_savitskiy)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
-
-## 📝 License <a name="license"></a>
-
-This project is [MIT](./LICENSE) licensed.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
