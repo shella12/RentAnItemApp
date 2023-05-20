@@ -11,12 +11,12 @@ const Home = ({ handleLogin, handleLogout, loggedInStatus }) => {
 
   const handleSuccessfulAuth = useCallback((data) => {
     handleLogin(data);
-    navigate('/dashboard');
+    navigate('/houses');
   }, [handleLogin, navigate]);
 
   const handleLogoutClick = useCallback(() => {
     axios
-      .delete('http://localhost:3001/logout', { withCredentials: true })
+      .delete('http://localhost:3000/logout', { withCredentials: true })
       .then(() => {
         handleLogout();
       })

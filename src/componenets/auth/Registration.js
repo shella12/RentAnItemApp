@@ -29,7 +29,7 @@ class Registration extends Component {
 
     axios
       .post(
-        'http://localhost:3001/registrations',
+        'http://localhost:3000/registrations',
         {
           user: {
             email,

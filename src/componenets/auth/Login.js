@@ -26,10 +26,11 @@ export default class Login extends Component {
 
   handleSubmit(event) {
     const { email, password } = this.state;
+    const { handleSuccessfulAuth } = this.props;
 
     axios
       .post(
-        'http://localhost:3001/sessions',
+        'http://localhost:3000/sessions',
         {
           user: {
             email,

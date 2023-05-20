@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 
-import Home from './componenets/Home';
+import Home from './componenets/First';
 import Dashboard from './componenets/Dashboard';
 
 export default class App extends Component {
