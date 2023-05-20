@@ -19,9 +19,7 @@ const Home = () => {
       <Navbar title="Houses" />
       {houses?.length === 0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
       <section className="section home-section">
-        <div>
-          <Carousel houses={houses} />
-        </div>
+        <Carousel houses={houses} />
       </section>
     </>
   );

@@ -1,19 +1,8 @@
-/* html,
-body {
-  position: relative;
-  height: 100%;
-} */
-
-/* #app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .swiper {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+  height: 80vh;
 }
 
 .swiper-slide {
@@ -32,13 +21,28 @@ body {
 }
 
 .btn-see-details {
-transform: translateY(-3.5rem);
-background-color: #ed6b3b;
-color: #fff;
-font-family: 'Poppins', sans-serif;
-font-size: 1rem;
-font-weight: 300;
-padding: 1rem;
-outline: none;
-border: none;
+  transform: translateY(-3.5rem);
+  background-color: #ed6b3b;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 1rem;
+  outline: none;
+  border: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .swiper-slide img {
+    aspect-ratio: 16 / 16;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 350px;
+  }
 }

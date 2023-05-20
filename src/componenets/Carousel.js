@@ -12,7 +12,7 @@ const Carousel = (props) => {
   const { houses } = props;
   const navigate = useNavigate();
   return (
-    <div>
+    <>
       <Swiper
         effect="coverflow"
         grabCursor
@@ -36,7 +36,7 @@ const Carousel = (props) => {
           </SwiperSlide>
         )) }
       </Swiper>
-    </div>
+    </>
   );
 };
 
