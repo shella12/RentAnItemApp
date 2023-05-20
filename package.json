@@ -8,26 +8,19 @@
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/user-event": "^13.5.0",
-<<<<<<< HEAD
     "@types/node-fetch": "^2.6.3",
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
     "fetch-mock": "^9.11.0",
     "hamburger-react": "^2.5.0",
     "node-sass": "^8.0.0",
-=======
-    "axios": "^1.4.0",
->>>>>>> Login
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
     "react-icons": "^4.8.0",
     "react-redux": "^8.0.5",
     "react-responsive-carousel": "^3.2.23",
-=======
->>>>>>> Login
     "react-router": "^6.1.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.1",

@@ -5,13 +5,17 @@ import AddHouse from './pages/AddHouse';
 import DeleteHouse from './pages/DeleteHouse';
 import App from './pages/App';
 import HouseDetails from './pages/HouseDetail/HouseDetails';
-import Navbar from './componenets/navbar/Navbar';
+import Login from './componenets/auth/Login';
+import Registration from './componenets/auth/Registration';
+// import Navbar from './componenets/navbar/Navbar';
 
 const Routess = () => (
   <div className="App">
-    <Navbar />
+    {/* <Navbar /> */}
     <Routes>
       <Route exact path="/" element={<App />} />
+      <Route path="login" element={<Login />} />
+      <Route path="register" element={<Registration />} />
       <Route path="houses">
 
         <Route index element={<Home />} />

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 
-import Home from './components/Home';
-import Dashboard from './components/Dashboard';
+import Home from './componenets/Home';
+import Dashboard from './componenets/Dashboard';
 
 export default class App extends Component {
   constructor() {
