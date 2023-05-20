@@ -10,13 +10,14 @@
   flex-direction: column;
   background-position: center;
   background-size: cover;
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 500px;
 }
 
 .swiper-slide img {
+  object-fit: cover;
   display: block;
-  aspect-ratio: 5/5;
+  aspect-ratio: 1/1;
   width: 100%;
 }
 
@@ -33,11 +34,8 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .swiper-slide img {
-    aspect-ratio: 16 / 16;
-  }
-
   .swiper-slide {
-    width: 400px;
+    width: 500px;
+    height: 450px;
   }
 }
