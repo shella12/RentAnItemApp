@@ -1,23 +1,59 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { GrFormPrevious, GrFormNext } from 'react-icons/gr';
+import { useNavigate } from 'react-router-dom';
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+// import required modules
+import { EffectCoverflow, Pagination } from 'swiper';
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper';
+import './Carousel.css';
+
+// import required modules
 import PropTypes from 'prop-types';
 
 const Carousel = (props) => {
   const { houses } = props;
   const navigate = useNavigate();
   return (
-    <div className="container">
-      <h1 className="heading">Rent a House</h1>
-
+    <div>
+      <Swiper
+        effect="coverflow"
+        grabCursor
+        centeredSlides
+        slidesPerView="auto"
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
+      >
+        {houses.map((house) => (
+          <SwiperSlide key={house.id}>
+            <img src={house.picture_url} alt="" className="caroselImage" />
+            <button type="button" onClick={() => navigate(`/houses/${house.id}`, { state: { house } })}>Click me</button>
+          </SwiperSlide>
+        )) }
+        <div className="slider-controler">
+          <div className="swiper-button-prev slider-arrow">
+            <GrFormPrevious />
+          </div>
+          <div className="swiper-button-next slider-arrow">
+            <GrFormNext />
+          </div>
+          <div className="swiper-pagination" />
+        </div>
+      </Swiper>
     </div>
   );
 };

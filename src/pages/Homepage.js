@@ -13,13 +13,12 @@ const Home = () => {
       dispatch(fetchHouse());
     }
   });
-  // const images = houses.map((house) => house.picture_url);
 
   return (
     <>
       <Navbar title="Houses" />
       {houses?.length === 0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
-      <section className="section">
+      <section className="section home-section">
         <div>
           <Carousel houses={houses} />
         </div>
