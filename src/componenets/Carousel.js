@@ -33,7 +33,7 @@ const Carousel = (props) => {
         {houses.map((house) => (
           <SwiperSlide key={house.id}>
             <img src={house.picture_url} alt="" className="caroselImage" />
-            <div className="row carousel-card-details">
+            <div className="carousel-card-details">
               <div className="column">
                 <p>{house.name}</p>
                 <div>

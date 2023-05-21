@@ -1,23 +1,13 @@
 .detail-house-img {
+  aspect-ratio: 1.5/1;
   width: 100%;
 }
 
-.details-section .add-favorite {
-  padding: 1rem;
-  position: absolute;
-  bottom: 0;
-  width: 90%;
-}
-
 .details-section {
-  position: absolute;
-  height: 100%;
-  top: 30px;
-  background-color: white;
-}
-
-.details-bar {
-  gap: 40%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem !important;
+  height: 80vh;
 }
 
 .details-bar h1 {
@@ -32,6 +22,7 @@
   outline: none;
   border: none;
   font-size: medium;
+  margin-top: 1rem;
 }
 
 .details-price-owner {
@@ -39,9 +30,9 @@
   align-items: center;
   font-family: 'Poppins', sans-serif;
   color: white;
-  padding-left: 16px;
-  padding-right: 16px;
-  background-image: linear-gradient(0deg, black, rgba(0, 0, 0, 0));
+  backdrop-filter: blur(1px);
+  padding: 0 1rem 0 0;
+  background-color: rgba(0, 0, 0, 0.029);
 }
 
 .details-price-owner p {
@@ -57,58 +48,46 @@
 }
 
 .detail-description {
-  padding: 16px;
   display: flex;
   flex-direction: column;
-  flex: 1;
-}
-
-.detail-description p {
-  flex: 1;
+  padding: 0 1rem 0.5rem 1rem;
 }
 
 .details {
   transform: translateY(-6rem);
   gap: 2rem;
-  flex: 1;
 }
 
 @media screen and (min-width: 768px) {
+  .details-section {
+    margin: 5%;
+    flex-direction: row;
+    height: auto;
+  }
+
+  .details-section img {
+    aspect-ratio: 1/1;
+    flex: 1; 
+    object-fit: cover;
+  }
+
   .details {
     transform: translateY(0);
-    flex-direction: column-reverse;
-    justify-content: space-between;
-  }
-
-  .details-section {
-    flex-direction: row;
-    width: 100%;
-    top: 50px;
-  }
-
-  .detail-house-img {
-    width: 50%;
-    object-fit: cover;
-    aspect-ratio: inherit;
-    margin: 1rem;
+    flex: 1;
   }
 
   .details-price-owner {
-    color: black;
-    background-image: none;
-    margin-bottom: 80px;
-    padding-right: 28px;
-  }
-
-  .details-price-owner p {
+    backdrop-filter: none;
+    background-color: transparent;
     color: black;
   }
 
-  .details-section .detail-title {
-    margin-bottom: 24px;
+  .details-price-owner p{
+    color: black;
   }
 
-  .add-favorite {
-    margin-bottom: 20px;
+  .details-section button {
+   align-self: flex-end;
+    margin-top: 1rem;
   }
 }

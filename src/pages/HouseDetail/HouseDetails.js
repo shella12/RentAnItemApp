@@ -40,7 +40,7 @@ const HouseDetails = () => {
   return (
     <>
       <Navbar title={name} />
-      <section className="section column details-section">
+      <section className="section details-section">
         <img
           src={house.picture_url}
           alt="House"
