@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import logo from '../assets/WhatsApp Image 2023-05-18 at 1.53.12 PM.jpeg';
+import logo from '../assets/logoC.jpeg';
 
 export default function Footer() {
   return (
