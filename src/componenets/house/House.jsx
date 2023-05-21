@@ -44,17 +44,19 @@ const House = (props) => {
   );
 };
 
+House.defaultProps = {
+  handleRemove: () => {},
+};
+
 House.propTypes = {
-  data: PropTypes.objectOf(
-    ({
-      id: PropTypes.number,
-      name: PropTypes.string,
-      description: PropTypes.string,
-      price: PropTypes.number,
-      picture_url: PropTypes.string,
-    }),
-  ).isRequired,
-  handleRemove: PropTypes.func.isRequired,
+  data: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    description: PropTypes.string,
+    price: PropTypes.string,
+    picture_url: PropTypes.string,
+  }).isRequired,
+  handleRemove: PropTypes.func,
 };
 
 export default House;

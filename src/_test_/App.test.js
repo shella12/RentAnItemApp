@@ -12,6 +12,12 @@ import { fetchFavorites } from '../redux/favorites/favoriteReducer';
 fetchHouseData();
 fetchFavoriteHouseData(1);
 
+jest.mock('../pages/Homepage.js', () => {
+  const MockedHomepage = () => <h1>Home Page Component</h1>;
+  MockedHomepage.displayName = 'Homepage';
+  return MockedHomepage;
+});
+
 describe('test App render', () => {
   test('App should match snapshoot', async () => {
     let tree;
@@ -42,7 +48,7 @@ describe('test App Routing', () => {
     render(
       <React.StrictMode>
         <Provider store={store}>
-          <MemoryRouter initialEntries={['/MyFavourites']}>
+          <MemoryRouter initialEntries={['/houses/favorites']}>
             <App />
           </MemoryRouter>
         </Provider>
@@ -50,7 +56,7 @@ describe('test App Routing', () => {
     );
 
     const item = testListFavoriteHouses[0];
-    expect(screen.getByText('Favourites')).toBeInTheDocument();
+    expect(screen.getByText('Favorites')).toBeInTheDocument();
     expect(screen.getByText(item.name)).toBeInTheDocument();
   });
 
@@ -62,7 +68,7 @@ describe('test App Routing', () => {
     render(
       <React.StrictMode>
         <Provider store={store}>
-          <MemoryRouter initialEntries={['/DeleteHouse']}>
+          <MemoryRouter initialEntries={['/houses/delete']}>
             <App />
           </MemoryRouter>
         </Provider>
@@ -71,7 +77,7 @@ describe('test App Routing', () => {
 
     const item = testListFavoriteHouses[0];
     await waitFor(() => {
-      expect(screen.getByText('Delete House')).toBeInTheDocument();
+      expect(screen.getByText('Delete house')).toBeInTheDocument();
       expect(screen.getByText(item.name)).toBeInTheDocument();
     });
   });
