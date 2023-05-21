@@ -5,7 +5,6 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper';
-// import IconRating from 'react-icon-rating';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import './Carousel.css';
 import PropTypes from 'prop-types';
@@ -37,10 +36,6 @@ const Carousel = (props) => {
             <div className="row carousel-card-details">
               <div className="column">
                 <p>{house.name}</p>
-                {/* <IconRating
-              toggledClassName="fa fa-star"
-              untoggledClassName="fa fa-star-o"
-              halfClassName="fa fa-star-half-o" /> */}
                 <div>
                   <AiFillStar className="stars" />
                   <AiFillStar className="stars" />
