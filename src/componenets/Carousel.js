@@ -5,6 +5,8 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper';
+// import IconRating from 'react-icon-rating';
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import './Carousel.css';
 import PropTypes from 'prop-types';
 
@@ -32,6 +34,26 @@ const Carousel = (props) => {
         {houses.map((house) => (
           <SwiperSlide key={house.id}>
             <img src={house.picture_url} alt="" className="caroselImage" />
+            <div className="row carousel-card-details">
+              <div className="column">
+                <p>{house.name}</p>
+                {/* <IconRating
+              toggledClassName="fa fa-star"
+              untoggledClassName="fa fa-star-o"
+              halfClassName="fa fa-star-half-o" /> */}
+                <div>
+                  <AiFillStar className="stars" />
+                  <AiFillStar className="stars" />
+                  <AiFillStar className="stars" />
+                  <AiFillStar className="stars" />
+                  <AiOutlineStar className="stars" />
+                </div>
+              </div>
+              <div className="column">
+                <p>{house.price}</p>
+                <p className="grey-text">per month</p>
+              </div>
+            </div>
             <button type="button" onClick={() => navigate(`/houses/${house.id}`, { state: { house } })} className="btn-see-details">See details</button>
           </SwiperSlide>
         )) }
