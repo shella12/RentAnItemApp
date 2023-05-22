@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -7,12 +8,11 @@ import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import './Carousel.css';
-import PropTypes from 'prop-types';
-import { propTypes } from 'react-bootstrap/esm/Image';
 
 const Carousel = (props) => {
   const { houses } = props;
   const navigate = useNavigate();
+
   return (
     <>
       <Swiper
@@ -33,7 +33,7 @@ const Carousel = (props) => {
       >
         {houses.map((house) => (
           <SwiperSlide key={house.id}>
-            <img src={house.picture_url} alt="" className="caroselImage" />
+            <img src={house.picture_url} alt="" className="carouselImage" />
             <div className="carousel-card-details">
               <div className="column">
                 <p>{house.name}</p>
@@ -50,25 +50,31 @@ const Carousel = (props) => {
                 <p className="grey-text">per month</p>
               </div>
             </div>
-            <button type="button" onClick={() => navigate(`/houses/${house.id}`, { state: { house } })} className="btn-see-details">See details</button>
+            <button
+              type="button"
+              onClick={() => navigate(`/houses/${house.id}`, { state: { house } })}
+              className="btn-see-details"
+            >
+              See details
+            </button>
           </SwiperSlide>
-        )) }
+        ))}
       </Swiper>
     </>
   );
 };
 
 Carousel.propTypes = {
-  houses: PropTypes.arrayOf(PropTypes.shape(
-    ({
-      id: PropTypes.number,
-      name: PropTypes.string,
+  houses: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
       description: PropTypes.string,
       owner_name: PropTypes.string,
-      price: PropTypes.string,
-      picture_url: PropTypes.string,
+      price: PropTypes.string.isRequired,
+      picture_url: PropTypes.string.isRequired,
     }),
   ).isRequired,
-)};
+};
 
 export default Carousel;

@@ -1,5 +1,5 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { useEffect} from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Carousel from '../componenets/Carousel';
 import { fetchHouse } from '../redux/house/house';
@@ -11,7 +11,6 @@ const Home = () => {
   useEffect(() => {
     dispatch(fetchHouse());
   }, [dispatch]);
-
 
   return (
     <>

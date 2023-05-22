@@ -1,5 +1,5 @@
 .detail-house-img {
-  aspect-ratio: 1.5/1;
+  aspect-ratio: 3/2;
   width: 100%;
 }
 
@@ -68,7 +68,7 @@
   .details-section img {
     aspect-ratio: 1/1;
     max-height: 500px;
-    flex: 1; 
+    flex: 1;
     object-fit: cover;
   }
 
@@ -83,12 +83,12 @@
     color: black;
   }
 
-  .details-price-owner p{
+  .details-price-owner p {
     color: black;
   }
 
   .details-section button {
-   align-self: flex-end;
+    align-self: flex-end;
     margin-top: 1rem;
   }
 }

@@ -4,16 +4,16 @@ import { NavLink, useParams, useNavigate } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
 import { IoIosArrowBack } from 'react-icons/io';
 import { BiSearch } from 'react-icons/bi';
-import profilePhoto from '../../assets/profile-photo.jpeg';
 import axios from 'axios';
+import profilePhoto from '../../assets/profile-photo.jpeg';
 import './navbar.css';
 
 const Navbar = (props) => {
-  const { title} = props;
+  const { title } = props;
   const [isOpen, setOpen] = useState(false);
   const isDetails = useParams().houseId !== undefined;
   const navigate = useNavigate();
-    
+
   const handleLogout = useCallback(() => {
     axios
       .delete('http://localhost:3000/logout', { withCredentials: true })
@@ -44,8 +44,8 @@ const Navbar = (props) => {
             <NavLink to="/houses/add" activeclassname="active" onClick={() => setOpen(false)} aria-label="Add house link">Add house</NavLink>
             <NavLink to="/houses/delete" activeclassname="active" onClick={() => setOpen(false)} aria-label="Delete house link">Delete house</NavLink>
             <hr className="divider" />
-            <NavLink activeclassname="active" onClick={handleLogout } aria-label="Log Out link">Log Out</NavLink>
-        </nav>
+            <NavLink activeclassname="active" onClick={handleLogout} aria-label="Log Out link">Log Out</NavLink>
+          </nav>
         </div>
       )}
 
@@ -56,7 +56,7 @@ const Navbar = (props) => {
 };
 
 Navbar.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 export default Navbar;
