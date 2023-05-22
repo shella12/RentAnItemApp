@@ -3,10 +3,6 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 
 export default class Login extends Component {
-  static propTypes = {
-    handleSuccessfulAuth: PropTypes.func.isRequired,
-  };
-
   constructor(props) {
     super(props);
 
@@ -41,7 +37,7 @@ export default class Login extends Component {
       )
       .then((response) => {
         if (response.data.logged_in) {
-          this.props.handleSuccessfulAuth(response.data);
+          handleSuccessfulAuth(response.data);
         }
       })
       .catch((error) => {
@@ -79,3 +75,7 @@ export default class Login extends Component {
     );
   }
 }
+
+Login.propTypes = {
+  handleSuccessfulAuth: PropTypes.func.isRequired,
+};

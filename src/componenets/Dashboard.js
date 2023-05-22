@@ -1,15 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Dashboard = (props) => (
-  <div>
+const Dashboard = (props) => {
+  const { loggedInStatus } = props;
+  return (
     <div>
-      <h1>Dashboard</h1>
-      <h1>
-        Status:
-        {props.loggedInStatus}
-      </h1>
+      <div>
+        <h1>Dashboard</h1>
+        <h1>
+          Status:
+          {loggedInStatus}
+        </h1>
+      </div>
     </div>
-  </div>
-);
+  );
+};
+
+Dashboard.propTypes = {
+  loggedInStatus: PropTypes.string.isRequired,
+};
 
 export default Dashboard;
