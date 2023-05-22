@@ -49,9 +49,15 @@ export default class Login extends Component {
   render() {
     const { email, password } = this.state;
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <input
+      <div className="add-house-section"> 
+      <div className="backdrop column flex-center">
+      <h1>Sign in</h1>
+          <p>
+            Hello there! Sign in and start managing your system
+          </p>
+        <form onSubmit={this.handleSubmit} className="column" >
+          <input 
+             className="input-text"
             type="email"
             name="email"
             placeholder="Email"
@@ -61,6 +67,7 @@ export default class Login extends Component {
           />
 
           <input
+             className="input-text"
             type="password"
             name="password"
             placeholder="Password"
@@ -69,8 +76,9 @@ export default class Login extends Component {
             required
           />
 
-          <button type="submit">Login</button>
+          <button type="submit" className="btn" >Login</button>
         </form>
+      </div>
       </div>
     );
   }
