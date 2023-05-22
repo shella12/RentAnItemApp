@@ -39,7 +39,14 @@ const favoriteReducer = createSlice({
   name: 'favorites',
   initialState: {
     favorites: [],
+    user: null,
     status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
+  },
+  reducers: {
+    updateUser: (state, action) => {
+      state.user = action.payload;
+      return state
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -57,4 +64,5 @@ const favoriteReducer = createSlice({
   },
 });
 
+export const updateUser = favoriteReducer.actions.updateUser;
 export default favoriteReducer.reducer;

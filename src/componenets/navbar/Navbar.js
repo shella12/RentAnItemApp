@@ -6,14 +6,15 @@ import { IoIosArrowBack } from 'react-icons/io';
 import { BiSearch } from 'react-icons/bi';
 import profilePhoto from '../../assets/profile-photo.jpeg';
 import './navbar.css';
+import { useSelector } from 'react-redux';
 
 const Navbar = (props) => {
   const { title} = props;
   const [isOpen, setOpen] = useState(false);
   const isDetails = useParams().houseId !== undefined;
   const navigate = useNavigate();
-    
-
+  
+  const currentUser = useSelector((state) => state.favorite.user);
   return (
     <div className="navbar">
       {isDetails ? (
@@ -27,14 +28,14 @@ const Navbar = (props) => {
             <div className=" column mob-profile">
               <img src={profilePhoto} alt="profile" className="profile-photo mob-profile-photo" />
               <p className="username mob-username">Username</p>
-              <p>example@email.com</p>
+              <p>{currentUser?.email}</p>
             </div>
             <NavLink to="/houses" activeclassname="active" onClick={() => setOpen(false)} aria-label="Houses link">Houses</NavLink>
             <NavLink to="/houses/favorites" activeclassname="active" onClick={() => setOpen(false)} aria-label="My Favorites link">My Favorites</NavLink>
             <NavLink to="/houses/add" activeclassname="active" onClick={() => setOpen(false)} aria-label="Add house link">Add house</NavLink>
             <NavLink to="/houses/delete" activeclassname="active" onClick={() => setOpen(false)} aria-label="Delete house link">Delete house</NavLink>
             <hr className="divider" />
-            <button aria-label="Log Out button" onClick={props.handleLogoutClick}>Log Out</button>
+            <button aria-label="Log Out button" onClick={props.handleLogout}>Log Out</button>
 
 
           </nav>

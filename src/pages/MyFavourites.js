@@ -5,16 +5,18 @@ import House from '../componenets/house/House';
 import Navbar from '../componenets/navbar/Navbar';
 
 const MyFavourites = () => {
+  const currentUser = useSelector((state) => state.favorite.user);
   const { favorites, status } = useSelector((state) => state.favorite);
   const dispatch = useDispatch();
   useEffect(() => {
+    console.log(currentUser)
     if (status === 'idle') {
-      dispatch(fetchFavorites(1));
+      dispatch(fetchFavorites(currentUser.id));
     }
   });
 
   const handleRemove = (houseID) => {
-    dispatch(deleteFavorite({ userID: 1, houseID }));
+    dispatch(deleteFavorite({ userID: currentUser.id, houseID }));
   };
 
   return (

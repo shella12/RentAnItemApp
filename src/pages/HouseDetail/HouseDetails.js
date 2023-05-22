@@ -17,6 +17,7 @@ const HouseDetails = () => {
     price, description,
   } = house || {};
 
+  const currentUser = useSelector((state) => state.favorite.user);
   const favorites = useSelector((state) => state.favorite.favorites);
   const [isFavorite, setIsFavorite] = useState(favorites.some((item) => item.id === id));
 
@@ -24,16 +25,16 @@ const HouseDetails = () => {
   useEffect(() => {
     if (status === 'idle') {
       dispatch(fetchHouse());
-      dispatch(fetchFavorites(1));
+      dispatch(fetchFavorites(currentUser.id));
     }
   });
   const handleAddFavorite = () => {
-    dispatch(postFavorite({ userID: 1, house }));
+    dispatch(postFavorite({ userID: currentUser.id, house }));
     setIsFavorite(true);
   };
 
   const handleRemove = () => {
-    dispatch(deleteFavorite({ userID: 1, houseID: id }));
+    dispatch(deleteFavorite({ userID: currentUser.id, houseID: id }));
     setIsFavorite(false);
   };
 
@@ -42,7 +43,7 @@ const HouseDetails = () => {
       <Navbar title={name} />
       <section className="section details-section">
         <img
-          src={house.picture_url}
+          src={house?.picture_url}
           alt="House"
           className="caroselImage detail-house-img"
         />
@@ -54,7 +55,7 @@ const HouseDetails = () => {
                 alt="house owner"
                 className="profile-photo mob-profile-photo"
               />
-              <p>{house.owner_name}</p>
+              <p>{house?.owner_name}</p>
             </div>
             <p>
               $

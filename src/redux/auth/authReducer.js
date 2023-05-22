@@ -1,39 +1,34 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-export const registerUser = createAsyncThunk('rent-house/favorites', async ({ email, password }) => {
-  const result = await fetch('http://localhost:3000/users', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      user: { email, password, password_confirmation: password },
-    }),
-  });
-  await result.json();
-  return { email, password };
+export const fetchUser = createAsyncThunk('auth/fetchUser', async () => {
+  console.log('start fetch:')
+  const result = await fetch('http://localhost:3000/logged_in');
+  console.log('start fetch:', result)
+  const data = await result.json();
+  console.log('start fetch data:', data)
+  return data;
 });
 
 const authReducer = createSlice({
   name: 'auth',
   initialState: {
     user: null,
-    status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
+    logged_in: false
   },
-  extraReducers: (builder) => {
-    builder
-      .addCase(registerUser.fulfilled,
-        (state, action) => ({ ...state, status: 'success', user: { ...action.payload } }))
-      .addCase(registerUser.pending,
-        (state) => ({ ...state, status: 'pending' }));
-    /* .addCase(postFavorite.fulfilled,
-        (state, action) => ({ ...state, favorites: [...state.favorites, action.payload] }))
-      .addCase(deleteFavorite.fulfilled,
-        (state, action) => {
-          const newFavorites = state.favorites.filter((favorite) => favorite.id !== action.payload);
-          return ({ ...state, favorites: [...newFavorites] });
-        }); */
+  reducers: {
+    updateUser: (state, action) => {
+      state.user = action.payload;
+      state.logged_in = true;
+      return state
+    },
   },
+  extraReducers: {
+    [fetchUser.fulfilled]: (state, action) => {
+      state.user = action.payload.user;
+      state.logged_in = true;
+    }
+  }
 });
 
+export const updateUser = authReducer.actions.updateUser;
 export default authReducer.reducer;

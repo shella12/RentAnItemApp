@@ -26,7 +26,7 @@ class Registration extends Component {
   handleSubmit(event) {
     const { email, password, passwordConfirmation } = this.state;
     const { handleSuccessfulAuth } = this.props;
-
+    
     axios
       .post(
         'http://localhost:3000/registrations',
