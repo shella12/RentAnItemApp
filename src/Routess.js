@@ -1,6 +1,6 @@
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import './App.css';
 import Home from './pages/Homepage';
 import MyFavourites from './pages/MyFavourites';
 import AddHouse from './pages/AddHouse';
@@ -14,14 +14,6 @@ import { updateUser } from './redux/favorites/favoriteReducer';
 const Routess = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
-  const currentUser = useSelector((state) => state.favorite.user);
-
-  useEffect(() => {
-    if (currentUser) {
-      navigate('/houses');
-    }
-  });
 
   const handleSuccessfulAuth = (data) => {
     dispatch(updateUser(data.user));
