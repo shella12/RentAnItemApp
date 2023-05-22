@@ -8,6 +8,7 @@ import { EffectCoverflow, Pagination } from 'swiper';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import './Carousel.css';
 import PropTypes from 'prop-types';
+import { propTypes } from 'react-bootstrap/esm/Image';
 
 const Carousel = (props) => {
   const { houses } = props;
@@ -58,16 +59,16 @@ const Carousel = (props) => {
 };
 
 Carousel.propTypes = {
-  houses: PropTypes.objectOf(
+  houses: PropTypes.arrayOf(PropTypes.shape(
     ({
       id: PropTypes.number,
       name: PropTypes.string,
       description: PropTypes.string,
       owner_name: PropTypes.string,
-      price: PropTypes.number,
+      price: PropTypes.string,
       picture_url: PropTypes.string,
     }),
   ).isRequired,
-};
+)};
 
 export default Carousel;

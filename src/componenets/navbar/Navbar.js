@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { NavLink, useParams, useNavigate } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
 import { IoIosArrowBack } from 'react-icons/io';
 import { BiSearch } from 'react-icons/bi';
 import profilePhoto from '../../assets/profile-photo.jpeg';
+import axios from 'axios';
 import './navbar.css';
 
 const Navbar = (props) => {
@@ -13,7 +14,16 @@ const Navbar = (props) => {
   const isDetails = useParams().houseId !== undefined;
   const navigate = useNavigate();
     
-
+  const handleLogout = useCallback(() => {
+    axios
+      .delete('http://localhost:3000/logout', { withCredentials: true })
+      .then(() => {
+        navigate('/'); // Redirect to the "Houses" page after successful logout
+      })
+      .catch((error) => {
+        console.log('logout error', error);
+      });
+  }, [navigate]);
   return (
     <div className="navbar">
       {isDetails ? (
@@ -34,7 +44,7 @@ const Navbar = (props) => {
             <NavLink to="/houses/add" activeclassname="active" onClick={() => setOpen(false)} aria-label="Add house link">Add house</NavLink>
             <NavLink to="/houses/delete" activeclassname="active" onClick={() => setOpen(false)} aria-label="Delete house link">Delete house</NavLink>
             <hr className="divider" />
-            <button aria-label="Log Out button" onClick={props.handleLogoutClick}>Log Out</button>
+            <button aria-label="Log Out button" onClick={handleLogout}>Log Out</button>
 
 
           </nav>
@@ -48,8 +58,7 @@ const Navbar = (props) => {
 };
 
 Navbar.propTypes = {
-  title: PropTypes.string.isRequired,
-  handleLogout: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired
 };
 
 export default Navbar;
