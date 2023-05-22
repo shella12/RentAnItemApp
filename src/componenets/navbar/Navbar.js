@@ -44,10 +44,8 @@ const Navbar = (props) => {
             <NavLink to="/houses/add" activeclassname="active" onClick={() => setOpen(false)} aria-label="Add house link">Add house</NavLink>
             <NavLink to="/houses/delete" activeclassname="active" onClick={() => setOpen(false)} aria-label="Delete house link">Delete house</NavLink>
             <hr className="divider" />
-            <button aria-label="Log Out button" onClick={handleLogout}>Log Out</button>
-
-
-          </nav>
+            <NavLink activeclassname="active" onClick={handleLogout } aria-label="Log Out link">Log Out</NavLink>
+        </nav>
         </div>
       )}
 
