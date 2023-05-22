@@ -60,13 +60,14 @@
 
 @media screen and (min-width: 768px) {
   .details-section {
-    margin: 5%;
+    margin: 1% 5%;
     flex-direction: row;
     height: auto;
   }
 
   .details-section img {
     aspect-ratio: 1/1;
+    max-height: 500px;
     flex: 1; 
     object-fit: cover;
   }
