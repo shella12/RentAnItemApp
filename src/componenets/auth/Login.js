@@ -9,6 +9,7 @@ export default class Login extends Component {
     this.state = {
       email: '',
       password: '',
+      error: '',
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -38,47 +39,46 @@ export default class Login extends Component {
       .then((response) => {
         if (response.data.logged_in) {
           handleSuccessfulAuth(response.data);
+        } else {
+          this.setState({ error: 'error happened: please check email and password' });
         }
-      })
-      .catch((error) => {
-        console.log('login error', error);
       });
     event.preventDefault();
   }
 
   render() {
-    const { email, password } = this.state;
+    const { email, password, error } = this.state;
     return (
-      <div className="add-house-section"> 
-      <div className="backdrop column flex-center">
-      <h1>Sign in</h1>
+      <div className="add-house-section">
+        <div className="backdrop column flex-center">
+          <h1>Sign in</h1>
           <p>
             Hello there! Sign in and start managing your system
           </p>
-        <form onSubmit={this.handleSubmit} className="column" >
-          <input 
-             className="input-text"
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={email}
-            onChange={this.handleChange}
-            required
-          />
+          <form onSubmit={this.handleSubmit} className="column">
+            <input
+              className="input-text"
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={email}
+              onChange={this.handleChange}
+              required
+            />
 
-          <input
-             className="input-text"
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={password}
-            onChange={this.handleChange}
-            required
-          />
-
-          <button type="submit" className="btn" >Login</button>
-        </form>
-      </div>
+            <input
+              className="input-text"
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={password}
+              onChange={this.handleChange}
+              required
+            />
+            <p>{error}</p>
+            <button type="submit" className="btn">Login</button>
+          </form>
+        </div>
       </div>
     );
   }

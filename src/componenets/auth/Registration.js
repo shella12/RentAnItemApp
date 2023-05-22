@@ -10,6 +10,7 @@ class Registration extends Component {
       email: '',
       password: '',
       passwordConfirmation: '',
+      error: '',
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,7 +27,7 @@ class Registration extends Component {
   handleSubmit(event) {
     const { email, password, passwordConfirmation } = this.state;
     const { handleSuccessfulAuth } = this.props;
-    
+
     axios
       .post(
         'http://localhost:3000/registrations',
@@ -42,59 +43,66 @@ class Registration extends Component {
       .then((response) => {
         if (response.data.status === 'created') {
           handleSuccessfulAuth(response.data);
+        } else {
+          this.setState({ error: 'error happened: please check email and password' });
         }
       })
       .catch((error) => {
-        console.log('registration error', error);
+        this.setState({
+          error: error.message,
+        });
       });
 
     event.preventDefault();
   }
 
   render() {
-    const { email, password, passwordConfirmation } = this.state;
+    const {
+      email, password, passwordConfirmation, error,
+    } = this.state;
 
     return (
-      <div className="add-house-section"> 
-      <div className="backdrop column flex-center">
-      <h1>Sign Up</h1>
+      <div className="add-house-section">
+        <div className="backdrop column flex-center">
+          <h1>Sign Up</h1>
           <p>
             Hello there! Sign up and start managing your system
           </p>
-        <form onSubmit={this.handleSubmit} className="column">
-          <input
-            className="input-text"
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={email}
-            onChange={this.handleChange}
-            required
-          />
+          <form onSubmit={this.handleSubmit} className="column">
+            <input
+              className="input-text"
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={email}
+              onChange={this.handleChange}
+              required
+            />
 
-          <input
-            className="input-text"
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={password}
-            onChange={this.handleChange}
-            required
-          />
+            <input
+              className="input-text"
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={password}
+              onChange={this.handleChange}
+              required
+            />
 
-          <input
-            className="input-text"
-            type="password"
-            name="passwordConfirmation"
-            placeholder="Password confirmation"
-            value={passwordConfirmation}
-            onChange={this.handleChange}
-            required
-          />
+            <input
+              className="input-text"
+              type="password"
+              name="passwordConfirmation"
+              placeholder="Password confirmation"
+              value={passwordConfirmation}
+              onChange={this.handleChange}
+              required
+            />
+            <p>{error}</p>
 
-          <button type="submit" className='btn'>Register</button>
-        </form>
-      </div>
+            <button type="submit" className="btn">Register</button>
+          </form>
+        </div>
       </div>
     );
   }

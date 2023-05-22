@@ -45,12 +45,12 @@ const House = (props) => {
 };
 
 House.propTypes = {
-  data: PropTypes.objectOf(
+  data: PropTypes.shape(
     ({
       id: PropTypes.number,
       name: PropTypes.string,
       description: PropTypes.string,
-      price: PropTypes.number,
+      price: PropTypes.string,
       picture_url: PropTypes.string,
     }),
   ).isRequired,

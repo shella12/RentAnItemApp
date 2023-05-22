@@ -9,7 +9,6 @@ const MyFavourites = () => {
   const { favorites, status } = useSelector((state) => state.favorite);
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log(currentUser)
     if (status === 'idle') {
       dispatch(fetchFavorites(currentUser.id));
     }
