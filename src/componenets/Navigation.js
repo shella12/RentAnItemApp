@@ -1,28 +1,27 @@
-import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import logo from '../assets/logo-fotor-bg-remover-2023051812511.png';
-import './custom-navbar.css';
+import React, { useState } from 'react';
+import { Sling as Hamburger } from 'hamburger-react';
+import { NavLink } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 export default function Navigation() {
+  const [isOpen, setOpen] = useState(false);
   return (
-    <Navbar collapseOnSelect expand="sm" className="custom-navbar">
-      <Navbar.Brand href="/"><img className="logo" src={logo} alt="circle" /></Navbar.Brand>
-      <Navbar.Toggle style={{ fontSize: '2rem', padding: '0.5rem' }} aria-controls="responsive-navbar-nav" />
-
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto" />
-        <Nav>
-
-          <>
-            <Link className="nav-link white " style={{ fontSize: '1.3rem', fontWeight: '550' }} to="/login">SIGN IN</Link>
-            <Link className="nav-link" style={{ fontSize: '1.3rem', fontWeight: '500' }} to="/register">
-              <span className="btn-menu">SIGN UP</span>
-            </Link>
-          </>
-
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+    <div className="navbar-landing">
+      <NavLink to="/" className="logo-block">
+        <img className="logo" src={logo} alt="Logo" />
+        Circle
+      </NavLink>
+      <div className="hamburger-landing">
+        <Hamburger toggled={isOpen} toggle={setOpen} size={20} rounded color="#ffffff" />
+        <nav className={isOpen ? 'navlinks-landing Open' : 'navlinks-landing'}>
+          <NavLink activeclassname="active" onClick={() => setOpen(false)} aria-label="Login link" to="/login">SIGN IN</NavLink>
+          <NavLink activeclassname="active" onClick={() => setOpen(false)} aria-label="Sign up link" to="/register">SIGN UP</NavLink>
+        </nav>
+      </div>
+      <div className="desktop-links">
+        <NavLink activeclassname="active" onClick={() => setOpen(false)} aria-label="Login link" to="/login">SIGN IN</NavLink>
+        <NavLink activeclassname="active" onClick={() => setOpen(false)} aria-label="Sign up link" to="/register">SIGN UP</NavLink>
+      </div>
+    </div>
   );
 }
