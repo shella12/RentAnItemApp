@@ -15,7 +15,7 @@ export default function Header() {
           The best offers for you at any point of your journey.
           where ever you are, feel yourself like at your own home.
         </p>
-        <Link className="btn btn-landing" to="/register">Rent a house</Link>
+        <Link className="btn" to="/register">Rent a house</Link>
       </div>
 
     </section>

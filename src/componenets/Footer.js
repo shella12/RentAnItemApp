@@ -6,13 +6,12 @@ import logo from '../assets/logo.png';
 
 export default function Footer() {
   return (
-    <section className="about-section footer">
-      <h2 className="about-section__primary">
-        <Link className="nav-link white" to="/">
-          <img className="logo" src={logo} alt="Home" />
-        </Link>
-      </h2>
-
+    <section className="footer">
+      <Link className="logo-block" to="/">
+        <img className="logo" src={logo} alt="Home" />
+        {' '}
+        Circle
+      </Link>
       <p>
         Lafayette Ave 156, Brooklyn,NY,USA
         <br />

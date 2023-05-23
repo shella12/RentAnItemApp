@@ -3,7 +3,7 @@ import home from '../assets/houses.jpeg';
 
 export default function FeatureSection() {
   return (
-    <section className="about-section feature-section">
+    <section className="about-section">
       <img src={home} className="img-fluid" alt="home" />
       <div className="about-section-details">
         <h4>Only best place for your rest</h4>

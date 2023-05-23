@@ -67,6 +67,7 @@
 }
 
 .header {
+  padding-top: 1rem;
   backdrop-filter: blur(2px);
 }
 
@@ -83,7 +84,8 @@
   display: flex;
   gap: 2rem;
   padding: 5% 15%;
-  background-color: #fff;
+  background-color: #e8f0ff;
+  flex-direction: column;
 }
 
 .about-section-details {
@@ -92,7 +94,7 @@
   gap: 1rem;
 }
 
-.about-section-details img{
+.about-section-details img {
   max-width: 300px;
   aspect-ratio: 1/1;
 }
@@ -103,14 +105,14 @@
   font-weight: 300;
 }
 
-.about-section-details p{
+.about-section-details p {
   font-size: 1rem;
   text-align: center;
   font-weight: lighter;
   color: #00000086;
 }
 
-.about-section-details button{
+.about-section-details button {
   text-transform: uppercase;
   align-self: center;
   padding: 1rem 4rem;
@@ -120,15 +122,47 @@
   box-shadow: none;
 }
 
-.feature-section {
-  background-color: #e8f0ff;
-  flex-direction: column;
-}
-
 .footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 4rem;
   color: #b9b6b6;
   text-align: center;
-  font-size: 20px;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.footer .logo-block {
+  color: black;
+  align-self: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  align-self: center;
+}
+
+.social-icons a {
+  color: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  align-items: center;
+}
+
+.social-icons a:nth-child(1) {
+  padding: 1rem 1.3rem;
+  background-color: rgb(51, 85, 151);
+}
+
+.social-icons a:nth-child(2) {
+  background-color: rgb(78, 172, 235);
+}
+
+.social-icons a:nth-child(3) {
+  background-color: rgb(49, 113, 154);
 }
 
 @media only screen and (min-width: 768px) {
@@ -147,6 +181,7 @@
   .logo-block {
     font-size: 1.8rem;
   }
+
   .desktop-links {
     font-weight: 400 !important;
     display: flex;
@@ -166,11 +201,12 @@
     padding: 5% 15%;
   }
 
-  .about-section-details h4, .about-section-details p{
+  .about-section-details h4,
+  .about-section-details p {
     text-align: start;
   }
 
-  .about-section-details button{
+  .about-section-details button {
     padding: 1rem 4rem;
     border-radius: 4rem;
     font-weight: 400;
@@ -178,9 +214,8 @@
     align-self: flex-start;
   }
 
-  .about-section-details img{
+  .about-section-details img {
     max-width: 500px;
     aspect-ratio: 1/1;
   }
-  
 }
