@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const api = 'http://localhost:3000/api/v1/houses';
+const api = 'https://renthousebackend.onrender.com/api/v1/houses';
 
 const ADD_HOUSE = 'RentAnItemApp/houseReducer/ADD_HOUSE';
 const FETCH_HOUSE = 'RentAnItemApp/houseReducer/FETCH_HOUSE';
@@ -26,7 +26,7 @@ export const fetchHouse = createAsyncThunk(FETCH_HOUSE, async () => {
 });
 
 export const deleteHouse = createAsyncThunk(REMOVE_HOUSE, async (houseID) => {
-  await fetch(`http://localhost:3000/api/v1/houses/${houseID}/`, {
+  await fetch(`https://renthousebackend.onrender.com/api/v1/houses/${houseID}/`, {
     method: 'DELETE',
     headers: {
       Accept: 'application/json',

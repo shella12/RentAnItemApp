@@ -21,14 +21,14 @@ export const testListFavoriteHouses = [
 ];
 
 export const fetchFavoriteHouseData = (userID) => {
-  fetchMock.getOnce(`http://localhost:3000/api/v1/users/${userID}/favorite_houses`, {
+  fetchMock.getOnce(`https://renthousebackend.onrender.com/api/v1/users/${userID}/favorite_houses`, {
     headers: { 'content-type': 'application/json' },
     body: testListFavoriteHouses,
   });
 };
 
 export const fetchHouseData = () => {
-  fetchMock.getOnce('http://localhost:3000/api/v1/houses', {
+  fetchMock.getOnce('https://renthousebackend.onrender.com/api/v1/houses', {
     headers: { 'content-type': 'application/json' },
     body: testListHouses,
   });

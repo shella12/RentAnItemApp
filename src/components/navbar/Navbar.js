@@ -19,7 +19,7 @@ const Navbar = (props) => {
 
   const handleLogout = useCallback(() => {
     axios
-      .delete('http://localhost:3000/logout', { withCredentials: true })
+      .delete('https://renthousebackend.onrender.com/logout', { withCredentials: true })
       .then(() => {
         navigate('/'); // Redirect to the "Houses" page after successful logout
       });

@@ -1,12 +1,12 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const fetchFavorites = createAsyncThunk('rent-house/favorites', async (userID) => {
-  const result = await fetch(`http://localhost:3000/api/v1/users/${userID}/favorite_houses`);
+  const result = await fetch(`https://renthousebackend.onrender.com/api/v1/users/${userID}/favorite_houses`);
   return result.json();
 });
 
 export const postFavorite = createAsyncThunk('rent-house/favorite/Create', async ({ userID, house }) => {
-  await fetch(`http://localhost:3000/api/v1/users/${userID}/favorite_houses/`, {
+  await fetch(`https://renthousebackend.onrender.com/api/v1/users/${userID}/favorite_houses/`, {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
@@ -21,7 +21,7 @@ export const postFavorite = createAsyncThunk('rent-house/favorite/Create', async
 });
 
 export const deleteFavorite = createAsyncThunk('rent-house/favorite/Delete', async ({ userID, houseID }) => {
-  await fetch(`http://localhost:3000/api/v1/users/${userID}/favorite_houses/${houseID}/`, {
+  await fetch(`https://renthousebackend.onrender.com/api/v1/users/${userID}/favorite_houses/${houseID}/`, {
     method: 'DELETE',
     headers: {
       Accept: 'application/json',

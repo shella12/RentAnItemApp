@@ -32,7 +32,7 @@ class Registration extends Component {
 
     axios
       .post(
-        'http://localhost:3000/registrations',
+        'https://renthousebackend.onrender.com/registrations',
         {
           user: {
             email,
