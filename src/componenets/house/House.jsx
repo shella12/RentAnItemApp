@@ -49,15 +49,13 @@ House.defaultProps = {
 };
 
 House.propTypes = {
-  data: PropTypes.shape(
-    ({
-      id: PropTypes.number,
-      name: PropTypes.string,
-      description: PropTypes.string,
-      price: PropTypes.string,
-      picture_url: PropTypes.string,
-    }),
-  ).isRequired,
+  data: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    description: PropTypes.string,
+    price: PropTypes.string,
+    picture_url: PropTypes.string,
+  }).isRequired,
   handleRemove: PropTypes.func,
 };
 

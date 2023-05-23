@@ -56,7 +56,7 @@ describe('test App Routing', () => {
     );
 
     const item = testListFavoriteHouses[0];
-    expect(screen.getByText('Favorites')).toBeInTheDocument();
+    expect(screen.getByText('List Favorites')).toBeInTheDocument();
     expect(screen.getByText(item.name)).toBeInTheDocument();
   });
 

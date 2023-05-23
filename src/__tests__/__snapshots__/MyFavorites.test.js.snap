@@ -146,7 +146,7 @@ Array [
       </nav>
     </div>
     <h1>
-      My Favorites
+      List Favorites
     </h1>
     <svg
       className="search-icon"

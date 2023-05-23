@@ -26,7 +26,7 @@ const MyFavourites = () => {
 
   return (
     <>
-      <Navbar title="My Favorites" />
+      <Navbar title="List Favorites" />
       <section className="section">
         {favorites?.length === 0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
         <ul className="flex-center wrap">

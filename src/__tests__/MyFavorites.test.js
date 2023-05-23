@@ -4,9 +4,9 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { waitFor } from '@testing-library/react';
 import { fetchFavoriteHouseData, fetchHouseData } from '../setupTests';
+import { MemoryRouter } from 'react-router-dom';
 import configureStore from '../redux/configureStore';
 import MyFavourites from '../pages/MyFavourites';
-import { MemoryRouter } from 'react-router';
 
 const store = configureStore;
 fetchHouseData();
