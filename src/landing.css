@@ -6,7 +6,7 @@
   background-color: transparent;
   color: #fff;
   justify-content: space-between;
-  padding: 0 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 .hamburger-landing {
@@ -22,10 +22,11 @@
   padding: 8rem 3rem;
   position: fixed;
   background-color: #ed6a3ba2;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(22px);
   top: 0;
   right: 0;
-  height: 100vh;
+  bottom: 0;
+  min-height: 100vh;
   font-size: 1.2rem;
   transition: all 0.3s ease-in-out;
   z-index: 9;
@@ -67,7 +68,6 @@
 }
 
 .header {
-  padding-top: 1rem;
   backdrop-filter: blur(2px);
 }
 
@@ -129,13 +129,18 @@
   padding: 4rem;
   color: #b9b6b6;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: normal;
 }
 
 .footer .logo-block {
   color: black;
   align-self: center;
+  font-size: 2rem;
+}
+
+.footer .logo {
+  width: 80px;
 }
 
 .social-icons {
@@ -171,7 +176,7 @@
   }
 
   .navbar-landing {
-    padding: 0 2.5rem;
+    padding: 1rem 2.5rem;
   }
 
   .logo {
@@ -217,5 +222,9 @@
   .about-section-details img {
     max-width: 500px;
     aspect-ratio: 1/1;
+  }
+
+  .footer {
+    font-size: 1.5rem;
   }
 }
