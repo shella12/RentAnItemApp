@@ -1,11 +1,11 @@
 import React from 'react';
-import '../App.scss';
+import '../Landing.scss';
 import { Container } from 'react-bootstrap';
 import Header from '../componenets/Header';
 import FeatureSection from '../componenets/FeatureSection';
 import Footer from '../componenets/Footer';
 
-function App() {
+function Landing() {
   return (
     <Container>
       <Header />
@@ -15,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default Landing;

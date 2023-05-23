@@ -28,7 +28,7 @@ const HouseDetails = () => {
   }
 
   useEffect(() => {
-    if (status === 'idle') {
+    if (status === 'idle' && currentUser) {
       dispatch(fetchHouse());
       dispatch(fetchFavorites(currentUser.id));
     }

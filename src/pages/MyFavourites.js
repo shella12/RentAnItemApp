@@ -15,7 +15,7 @@ const MyFavourites = () => {
   }
 
   useEffect(() => {
-    if (status === 'idle') {
+    if (status === 'idle' && currentUser) {
       dispatch(fetchFavorites(currentUser.id));
     }
   }, [dispatch]);

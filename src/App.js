@@ -1,17 +1,17 @@
 import { Route, Routes, useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import './App.css';
 import Home from './pages/Homepage';
 import MyFavourites from './pages/MyFavourites';
 import AddHouse from './pages/AddHouse';
 import DeleteHouse from './pages/DeleteHouse';
-import App from './pages/App';
 import HouseDetails from './pages/HouseDetail/HouseDetails';
 import Login from './componenets/auth/Login';
 import Registration from './componenets/auth/Registration';
 import { updateUser } from './redux/favorites/favoriteReducer';
+import Landing from './pages/Landing';
 
-const Routess = () => {
+const App = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -23,7 +23,7 @@ const Routess = () => {
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/" element={<App />} />
+        <Route exact path="/" element={<Landing />} />
         <Route path="login" element={<Login handleSuccessfulAuth={handleSuccessfulAuth} />} />
         <Route path="register" element={<Registration handleSuccessfulAuth={handleSuccessfulAuth} />} />
 
@@ -39,4 +39,4 @@ const Routess = () => {
   );
 };
 
-export default Routess;
+export default App;

@@ -5,7 +5,7 @@ import { render, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import store from '../redux/configureStore';
 import HouseDetails from '../pages/HouseDetail/HouseDetails';
-import { testListHouses } from './setupTests';
+import { testListHouses } from '../setupTests';
 
 describe('test render', () => {
   test('House Details page should match snapshot', async () => {

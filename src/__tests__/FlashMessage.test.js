@@ -4,7 +4,7 @@ import React from 'react';
 import { waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import FlashMessage from '../componenets/FlashMessage';
-​
+
 describe('test render', () => {
   test('Flash House should match snapshoot', async () => {
     let tree;
@@ -17,7 +17,7 @@ describe('test render', () => {
         </React.StrictMode>,
       );
     });
-​
+
     await waitFor(() => {
       expect(tree.toJSON()).toMatchSnapshot();
     });

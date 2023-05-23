@@ -55,8 +55,12 @@ const Navbar = (props) => {
   );
 };
 
+Navbar.defaultProps = {
+  title: 'House Detail',
+};
+
 Navbar.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 };
 
 export default Navbar;

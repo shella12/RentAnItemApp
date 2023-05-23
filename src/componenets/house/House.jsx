@@ -44,6 +44,10 @@ const House = (props) => {
   );
 };
 
+House.defaultProps = {
+  handleRemove: () => {},
+};
+
 House.propTypes = {
   data: PropTypes.shape(
     ({
@@ -54,7 +58,7 @@ House.propTypes = {
       picture_url: PropTypes.string,
     }),
   ).isRequired,
-  handleRemove: PropTypes.func.isRequired,
+  handleRemove: PropTypes.func,
 };
 
 export default House;
