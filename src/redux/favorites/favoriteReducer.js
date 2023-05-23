@@ -45,7 +45,10 @@ const favoriteReducer = createSlice({
   reducers: {
     updateUser: (state, action) => {
       sessionStorage.setItem('currentUser', JSON.stringify(action.payload));
-      return ({ ...state, status: 'idle', favorites: [], user: action.payload, })},
+      return ({
+        ...state, status: 'idle', favorites: [], user: action.payload,
+      });
+    },
   },
   extraReducers: (builder) => {
     builder

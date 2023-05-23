@@ -11,7 +11,7 @@ const MyFavourites = () => {
 
   if (!currentUser && sessionStorage.getItem('currentUser')) {
     currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-    dispatch(updateUser(currentUser))
+    dispatch(updateUser(currentUser));
   }
 
   useEffect(() => {

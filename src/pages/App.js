@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.scss';
 import { Container } from 'react-bootstrap';
 import Header from '../componenets/Header';
 import FeatureSection from '../componenets/FeatureSection';

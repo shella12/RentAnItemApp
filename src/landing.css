@@ -67,12 +67,18 @@
   font-size: 1.8rem;
 }
 
+.header {
+backdrop-filter: blur(2px);
+}
+
 .top-content {
   margin: 5%;
+  backdrop-filter: blur(2px);
 }
 
 .top-content p {
   margin: 0.5rem 0 2rem 0;
+  width: 50%;
 }
 
 .about-section {
