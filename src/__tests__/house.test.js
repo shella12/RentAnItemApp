@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import { waitFor } from '@testing-library/react';
 import { testListHouses } from '../setupTests';
-import House from '../componenets/house/House';
+import House from '../components/house/House';
 
 describe('test render', () => {
   test('House should match snapshoot', async () => {

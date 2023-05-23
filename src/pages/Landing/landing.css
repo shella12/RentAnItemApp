@@ -48,7 +48,7 @@
   color: #e8f0ff;
   font-weight: 500;
   height: 400px;
-  background: url("./assets/background.jpeg") center no-repeat;
+  background: url("../../assets/background.jpeg") center no-repeat;
   background-size: cover;
 }
 
@@ -69,6 +69,7 @@
 
 .header {
   backdrop-filter: blur(2px);
+  background-size: cover;
 }
 
 .top-content {

@@ -2,7 +2,7 @@ import React from 'react';
 import renderer, { act } from 'react-test-renderer';
 import { MemoryRouter } from 'react-router';
 import { Provider } from 'react-redux';
-import Registration from '../componenets/auth/Registration';
+import Registration from '../components/auth/Registration';
 import store from '../redux/configureStore';
 
 it('renders Footer correctly', () => {

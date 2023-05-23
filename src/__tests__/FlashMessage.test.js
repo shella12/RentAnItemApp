@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import { waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import FlashMessage from '../componenets/FlashMessage';
+import FlashMessage from '../components/FlashMessage';
 
 describe('test render', () => {
   test('Flash House should match snapshoot', async () => {

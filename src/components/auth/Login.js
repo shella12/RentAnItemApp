@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import { IoIosArrowBack } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 export default class Login extends Component {
   constructor(props) {
@@ -51,6 +53,12 @@ export default class Login extends Component {
     return (
       <div className="add-house-section">
         <div className="backdrop column flex-center">
+          <Link to="/">
+            <div className="flex-center btn-back">
+              <IoIosArrowBack className="back-icon" />
+              <span>Back</span>
+            </div>
+          </Link>
           <h1>Sign in</h1>
           <p>
             Hello there! Sign in and start managing your system

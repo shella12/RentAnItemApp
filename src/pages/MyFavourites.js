@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { deleteFavorite, fetchFavorites, updateUser } from '../redux/favorites/favoriteReducer';
-import House from '../componenets/house/House';
-import Navbar from '../componenets/navbar/Navbar';
+import House from '../components/house/House';
+import Navbar from '../components/navbar/Navbar';
 
 const MyFavourites = () => {
   const dispatch = useDispatch();

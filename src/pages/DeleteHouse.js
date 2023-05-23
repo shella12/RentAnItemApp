@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import House from '../componenets/house/House';
+import House from '../components/house/House';
 import { deleteHouse, fetchHouse } from '../redux/house/house';
-import Navbar from '../componenets/navbar/Navbar';
+import Navbar from '../components/navbar/Navbar';
 
 const DeleteHouse = () => {
   const listAllHouse = useSelector((state) => state.housesSlice.houses);

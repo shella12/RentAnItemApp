@@ -6,7 +6,7 @@ import {
   deleteFavorite, fetchFavorites, postFavorite, updateUser,
 } from '../../redux/favorites/favoriteReducer';
 import { fetchHouse } from '../../redux/house/house';
-import Navbar from '../../componenets/navbar/Navbar';
+import Navbar from '../../components/navbar/Navbar';
 import './house-detail.css';
 
 const HouseDetails = () => {

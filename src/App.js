@@ -6,10 +6,10 @@ import MyFavourites from './pages/MyFavourites';
 import AddHouse from './pages/AddHouse';
 import DeleteHouse from './pages/DeleteHouse';
 import HouseDetails from './pages/HouseDetail/HouseDetails';
-import Login from './componenets/auth/Login';
-import Registration from './componenets/auth/Registration';
+import Login from './components/auth/Login';
+import Registration from './components/auth/Registration';
 import { updateUser } from './redux/favorites/favoriteReducer';
-import Landing from './pages/Landing';
+import Landing from './pages/Landing/Landing';
 
 const App = () => {
   const navigate = useNavigate();

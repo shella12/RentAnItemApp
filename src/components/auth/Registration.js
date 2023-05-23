@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import { IoIosArrowBack } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 class Registration extends Component {
   constructor(props) {
@@ -63,6 +65,12 @@ class Registration extends Component {
 
     return (
       <div className="add-house-section">
+        <Link to="/">
+          <div className="flex-center btn-back">
+            <IoIosArrowBack className="back-icon" />
+            <span>Back</span>
+          </div>
+        </Link>
         <div className="backdrop column flex-center">
           <h1>Sign Up</h1>
           <p>
