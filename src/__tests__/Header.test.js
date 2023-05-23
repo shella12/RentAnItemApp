@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer, { act } from 'react-test-renderer';
-import Registration from '../componenets/auth/Registration';
+import Header from '../componenets/Header';
 import { MemoryRouter } from 'react-router';
-import { Provider } from 'react-redux';
 import store from '../redux/configureStore';
+import { Provider } from 'react-redux';
 
 it('renders Footer correctly', () => {
   let tree;
@@ -11,8 +11,8 @@ it('renders Footer correctly', () => {
     tree = renderer.create(
       <React.StrictMode>
         <Provider store={store}>
-          <MemoryRouter initialEntries={['/register']}>
-          <Registration handleSuccessfulAuth={()=> {}} />
+          <MemoryRouter initialEntries={['/']}>
+            <Header />
           </MemoryRouter>
         </Provider>
       </React.StrictMode>,

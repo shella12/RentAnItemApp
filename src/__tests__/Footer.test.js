@@ -3,6 +3,7 @@ import renderer, { act } from 'react-test-renderer';
 import Footer from '../componenets/Footer';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router';
+import store from '../redux/configureStore';
 
 it('renders Footer correctly', () => {
   let tree;
