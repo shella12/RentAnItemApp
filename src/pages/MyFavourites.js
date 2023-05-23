@@ -1,20 +1,27 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { deleteFavorite, fetchFavorites } from '../redux/favorites/favoriteReducer';
+import { deleteFavorite, fetchFavorites, updateUser } from '../redux/favorites/favoriteReducer';
 import House from '../componenets/house/House';
 import Navbar from '../componenets/navbar/Navbar';
 
 const MyFavourites = () => {
-  const { favorites, status } = useSelector((state) => state.favorite);
   const dispatch = useDispatch();
+  let currentUser = useSelector((state) => state.favorite.user);
+  const { favorites, status } = useSelector((state) => state.favorite);
+
+  if (!currentUser && sessionStorage.getItem('currentUser')) {
+    currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+    dispatch(updateUser(currentUser))
+  }
+
   useEffect(() => {
     if (status === 'idle') {
-      dispatch(fetchFavorites(1));
+      dispatch(fetchFavorites(currentUser.id));
     }
-  });
+  }, [dispatch]);
 
   const handleRemove = (houseID) => {
-    dispatch(deleteFavorite({ userID: 1, houseID }));
+    dispatch(deleteFavorite({ userID: currentUser.id, houseID }));
   };
 
   return (

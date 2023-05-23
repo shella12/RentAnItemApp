@@ -1,4 +1,6 @@
 import { Route, Routes, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import './App.css';
 import Home from './pages/Homepage';
 import MyFavourites from './pages/MyFavourites';
 import AddHouse from './pages/AddHouse';
@@ -7,18 +9,19 @@ import App from './pages/App';
 import HouseDetails from './pages/HouseDetail/HouseDetails';
 import Login from './componenets/auth/Login';
 import Registration from './componenets/auth/Registration';
-// import Navbar from './componenets/navbar/Navbar';
+import { updateUser } from './redux/favorites/favoriteReducer';
 
 const Routess = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const handleSuccessfulAuth = () => {
+  const handleSuccessfulAuth = (data) => {
+    dispatch(updateUser(data.user));
     navigate('/houses');
   };
 
   return (
     <div className="App">
-      {/* <Navbar /> */}
       <Routes>
         <Route exact path="/" element={<App />} />
         <Route path="login" element={<Login handleSuccessfulAuth={handleSuccessfulAuth} />} />

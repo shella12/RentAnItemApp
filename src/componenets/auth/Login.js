@@ -9,6 +9,7 @@ export default class Login extends Component {
     this.state = {
       email: '',
       password: '',
+      error: '',
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -38,16 +39,15 @@ export default class Login extends Component {
       .then((response) => {
         if (response.data.logged_in) {
           handleSuccessfulAuth(response.data);
+        } else {
+          this.setState({ error: 'error happened: please check email and password' });
         }
-      })
-      .catch((error) => {
-        console.log('login error', error);
       });
     event.preventDefault();
   }
 
   render() {
-    const { email, password } = this.state;
+    const { email, password, error } = this.state;
     return (
       <div className="add-house-section">
         <div className="backdrop column flex-center">
@@ -75,7 +75,7 @@ export default class Login extends Component {
               onChange={this.handleChange}
               required
             />
-
+            <p>{error}</p>
             <button type="submit" className="btn">Login</button>
           </form>
         </div>

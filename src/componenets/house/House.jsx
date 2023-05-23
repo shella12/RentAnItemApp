@@ -1,6 +1,6 @@
 import React from 'react';
-import './house.css';
 import PropTypes from 'prop-types';
+import './house.css';
 
 const House = (props) => {
   const { data, handleRemove } = props;

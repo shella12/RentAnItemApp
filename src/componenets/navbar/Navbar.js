@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { NavLink, useParams, useNavigate } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
@@ -14,14 +15,13 @@ const Navbar = (props) => {
   const isDetails = useParams().houseId !== undefined;
   const navigate = useNavigate();
 
+  const currentUser = useSelector((state) => state.favorite.user);
+
   const handleLogout = useCallback(() => {
     axios
       .delete('http://localhost:3000/logout', { withCredentials: true })
       .then(() => {
         navigate('/'); // Redirect to the "Houses" page after successful logout
-      })
-      .catch((error) => {
-        console.log('logout error', error);
       });
   }, [navigate]);
   return (
@@ -37,7 +37,7 @@ const Navbar = (props) => {
             <div className=" column mob-profile">
               <img src={profilePhoto} alt="profile" className="profile-photo mob-profile-photo" />
               <p className="username mob-username">Username</p>
-              <p>example@email.com</p>
+              <p>{currentUser?.email}</p>
             </div>
             <NavLink to="/houses" activeclassname="active" onClick={() => setOpen(false)} aria-label="Houses link">Houses</NavLink>
             <NavLink to="/houses/favorites" activeclassname="active" onClick={() => setOpen(false)} aria-label="My Favorites link">My Favorites</NavLink>

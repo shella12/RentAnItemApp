@@ -10,6 +10,7 @@ class Registration extends Component {
       email: '',
       password: '',
       passwordConfirmation: '',
+      error: '',
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -42,17 +43,23 @@ class Registration extends Component {
       .then((response) => {
         if (response.data.status === 'created') {
           handleSuccessfulAuth(response.data);
+        } else {
+          this.setState({ error: 'error happened: please check email and password' });
         }
       })
       .catch((error) => {
-        console.log('registration error', error);
+        this.setState({
+          error: error.message,
+        });
       });
 
     event.preventDefault();
   }
 
   render() {
-    const { email, password, passwordConfirmation } = this.state;
+    const {
+      email, password, passwordConfirmation, error,
+    } = this.state;
 
     return (
       <div className="add-house-section">
@@ -91,6 +98,7 @@ class Registration extends Component {
               onChange={this.handleChange}
               required
             />
+            <p>{error}</p>
 
             <button type="submit" className="btn">Register</button>
           </form>
