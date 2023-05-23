@@ -11,14 +11,14 @@ const MyFavourites = () => {
 
   if (!currentUser && sessionStorage.getItem('currentUser')) {
     currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-    dispatch(updateUser(currentUser))
+    dispatch(updateUser(currentUser));
   }
 
   useEffect(() => {
     if (status === 'idle' && currentUser) {
       dispatch(fetchFavorites(currentUser.id));
     }
-  }, [dispatch]);
+  }, [dispatch, currentUser, status]);
 
   const handleRemove = (houseID) => {
     dispatch(deleteFavorite({ userID: currentUser.id, houseID }));
@@ -31,7 +31,7 @@ const MyFavourites = () => {
         {favorites?.length === 0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
         <ul className="flex-center wrap">
           {favorites.map((house) => (
-            <li key={house.id} className="flex-center house-wrapper">
+            <li key={house.id} className="flex-center max-width house-wrapper">
               <House data={house} handleRemove={handleRemove} />
             </li>
           ))}

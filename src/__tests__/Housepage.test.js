@@ -12,10 +12,12 @@ const store = configureStore;
 fetchHouseData();
 
 jest.mock('../pages/Homepage.js', () => {
-  const MockedHomepage = () => (<>
-    <h1>Houses</h1>
-    <p className="flex-center empty-list">No Houses: List Empty</p>
-  </>);
+  const MockedHomepage = () => (
+    <>
+      <h1>Houses</h1>
+      <p className="flex-center empty-list">No Houses: List Empty</p>
+    </>
+  );
   MockedHomepage.displayName = 'Homepage';
   return MockedHomepage;
 });

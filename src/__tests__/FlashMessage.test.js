@@ -12,7 +12,7 @@ describe('test render', () => {
       tree = renderer.create(
         <React.StrictMode>
           <MemoryRouter MemoryRouter initialEntries={['/']}>
-              <FlashMessage message="Test Navbar" duration={20} />
+            <FlashMessage message="Test Navbar" duration={20} />
           </MemoryRouter>
         </React.StrictMode>,
       );

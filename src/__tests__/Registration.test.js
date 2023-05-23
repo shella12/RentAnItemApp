@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer, { act } from 'react-test-renderer';
-import Registration from '../componenets/auth/Registration';
 import { MemoryRouter } from 'react-router';
 import { Provider } from 'react-redux';
+import Registration from '../componenets/auth/Registration';
 import store from '../redux/configureStore';
 
 it('renders Footer correctly', () => {
@@ -12,7 +12,7 @@ it('renders Footer correctly', () => {
       <React.StrictMode>
         <Provider store={store}>
           <MemoryRouter initialEntries={['/register']}>
-          <Registration handleSuccessfulAuth={()=> {}} />
+            <Registration handleSuccessfulAuth={() => {}} />
           </MemoryRouter>
         </Provider>
       </React.StrictMode>,

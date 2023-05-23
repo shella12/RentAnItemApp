@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer, { act } from 'react-test-renderer';
-import Header from '../componenets/Header';
 import { MemoryRouter } from 'react-router';
-import store from '../redux/configureStore';
 import { Provider } from 'react-redux';
+import Header from '../componenets/Header';
+import store from '../redux/configureStore';
 
 it('renders Footer correctly', () => {
   let tree;

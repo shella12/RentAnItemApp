@@ -215,6 +215,10 @@ form {
   font-weight: 500;
 }
 
+.max-width {
+  width: 100%;
+}
+
 @media screen and (max-width: 764px) {
   .desktop-only {
     display: none;

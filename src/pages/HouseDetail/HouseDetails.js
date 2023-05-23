@@ -2,7 +2,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import profilePhoto from '../../assets/profilePhoto.png';
-import { deleteFavorite, fetchFavorites, postFavorite, updateUser } from '../../redux/favorites/favoriteReducer';
+import {
+  deleteFavorite, fetchFavorites, postFavorite, updateUser,
+} from '../../redux/favorites/favoriteReducer';
 import { fetchHouse } from '../../redux/house/house';
 import Navbar from '../../componenets/navbar/Navbar';
 import './house-detail.css';
@@ -24,7 +26,7 @@ const HouseDetails = () => {
 
   if (!currentUser && sessionStorage.getItem('currentUser')) {
     currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-    dispatch(updateUser(currentUser))
+    dispatch(updateUser(currentUser));
   }
 
   useEffect(() => {
@@ -32,7 +34,7 @@ const HouseDetails = () => {
       dispatch(fetchHouse());
       dispatch(fetchFavorites(currentUser.id));
     }
-  }, [dispatch]);
+  }, [dispatch, status, currentUser]);
   const handleAddFavorite = () => {
     dispatch(postFavorite({ userID: currentUser.id, house }));
     setIsFavorite(true);
@@ -71,7 +73,7 @@ const HouseDetails = () => {
           </div>
           <div className="max-content-flex detail-description">
             <h2 className="desktop-only detail-title">{name}</h2>
-            <p className='max-content-flex'>{description}</p>
+            <p className="max-content-flex">{description}</p>
             {
             isFavorite ? <button type="button" className="add-favorite" onClick={handleRemove}>Remove to favourite</button>
               : <button type="button" className="add-favorite" onClick={handleAddFavorite}>Add to favourite</button>

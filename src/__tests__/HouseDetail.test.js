@@ -1,7 +1,7 @@
 import renderer, { act } from 'react-test-renderer';
 import React from 'react';
 import { Provider } from 'react-redux';
-import { render, waitFor } from '@testing-library/react';
+import { waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import store from '../redux/configureStore';
 import HouseDetails from '../pages/HouseDetail/HouseDetails';
@@ -9,8 +9,6 @@ import { testListHouses } from '../setupTests';
 
 describe('test render', () => {
   test('House Details page should match snapshot', async () => {
-
-
     const item = testListHouses[0];
     let tree;
     act(() => {
@@ -21,7 +19,7 @@ describe('test render', () => {
               <HouseDetails />
             </MemoryRouter>
           </Provider>
-        </React.StrictMode>
+        </React.StrictMode>,
       );
     });
 
