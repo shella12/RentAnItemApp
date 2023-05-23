@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Footer correctly 1`] = `
+<div
+  className="add-house-section"
+>
+  <div
+    className="backdrop column flex-center"
+  >
+    <h1>
+      Sign in
+    </h1>
+    <p>
+      Hello there! Sign in and start managing your system
+    </p>
+    <form
+      className="column"
+      onSubmit={[Function]}
+    >
+      <input
+        className="input-text"
+        name="email"
+        onChange={[Function]}
+        placeholder="Email"
+        required={true}
+        type="email"
+        value=""
+      />
+      <input
+        className="input-text"
+        name="password"
+        onChange={[Function]}
+        placeholder="Password"
+        required={true}
+        type="password"
+        value=""
+      />
+      <p />
+      <button
+        className="btn"
+        type="submit"
+      >
+        Login
+      </button>
+    </form>
+  </div>
+</div>
+`;

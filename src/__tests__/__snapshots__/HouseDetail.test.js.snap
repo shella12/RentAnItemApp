@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test render List Favorites should match snapshoot 1`] = `
+exports[`test render House Details page should match snapshot 1`] = `
 Array [
   <div
     className="navbar"
@@ -90,9 +90,7 @@ Array [
           >
             Username
           </p>
-          <p>
-            example@email.com
-          </p>
+          <p />
         </div>
         <a
           activeclassname="active"
@@ -106,13 +104,12 @@ Array [
         </a>
         <a
           activeclassname="active"
-          aria-current="page"
           aria-label="My Favorites link"
-          className="active"
+          className=""
           href="/houses/favorites"
           onClick={[Function]}
         >
-          Favorites
+          My Favorites
         </a>
         <a
           activeclassname="active"
@@ -137,9 +134,10 @@ Array [
         />
         <a
           activeclassname="active"
+          aria-current="page"
           aria-label="Log Out link"
-          className=""
-          href="/log-out"
+          className="active"
+          href="/houses/1"
           onClick={[Function]}
         >
           Log Out
@@ -147,7 +145,7 @@ Array [
       </nav>
     </div>
     <h1>
-      My Favorites
+      House Detail
     </h1>
     <svg
       className="search-icon"
@@ -170,16 +168,52 @@ Array [
     </svg>
   </div>,
   <section
-    className="section"
+    className="section details-section"
   >
-    <p
-      className="flex-center empty-list"
-    >
-      No Houses: List Empty
-    </p>
-    <ul
-      className="flex-center wrap"
+    <img
+      alt="House"
+      className="caroselImage detail-house-img"
     />
+    <div
+      className="column details"
+    >
+      <div
+        className="row details-price-owner"
+      >
+        <div
+          className="row details-owner"
+        >
+          <img
+            alt="house owner"
+            className="profile-photo mob-profile-photo"
+            src="profilePhoto.png"
+          />
+          <p />
+        </div>
+        <p>
+          $
+          <br />
+          per month
+        </p>
+      </div>
+      <div
+        className="max-content-flex detail-description"
+      >
+        <h2
+          className="desktop-only detail-title"
+        />
+        <p
+          className="max-content-flex"
+        />
+        <button
+          className="add-favorite"
+          onClick={[Function]}
+          type="button"
+        >
+          Add to favourite
+        </button>
+      </div>
+    </div>
   </section>,
 ]
 `;

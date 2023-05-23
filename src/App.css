@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 
 *,
 ::after,
@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  font-weight: 100;
 }
 
 body {
@@ -53,8 +52,8 @@ a {
   flex-wrap: wrap;
 }
 
-.App {
-  padding-top: 90px;
+.section {
+  padding-top: 80px;
 }
 
 .profile-photo {
@@ -80,40 +79,6 @@ a {
   opacity: 0.3;
   width: 70%;
   margin: 3rem 0 1rem 0;
-}
-
-.carousel.carousel-slider .control-arrow {
-  top: 45%;
-  background-color: black;
-  border-radius: 50%;
-  bottom: auto;
-  padding: 0.5rem;
-}
-
-li.selected img {
-  box-shadow: 2px 10px 22px -7px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 2px 10px 22px -7px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 10px 22px -7px rgba(0, 0, 0, 0.75);
-  border: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-li.slide :not(.selected) img {
-  transform: scale(0.8);
-  transform: translate(2px, -5%);
-  padding: 4rem;
-}
-
-li.slide div {
-  background-color: transparent;
-}
-
-.carousel-root {
-  margin: 2rem;
-  background-color: #fff;
-}
-
-.carousel .control-dots {
-  translate: 0 1rem;
 }
 
 .caroselImage {
@@ -213,6 +178,20 @@ form {
   color: #d5582a;
   font-size: 1rem;
   font-weight: 500;
+}
+
+.max-width {
+  width: 100%;
+}
+
+.btn-back {
+  color: black;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+  z-index: 10;
 }
 
 @media screen and (max-width: 764px) {

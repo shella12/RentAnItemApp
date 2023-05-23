@@ -4,7 +4,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import { fetchFavoriteHouseData, fetchHouseData, testListFavoriteHouses } from './setupTests';
+import { fetchFavoriteHouseData, fetchHouseData, testListFavoriteHouses } from '../setupTests';
 import store from '../redux/configureStore';
 import App from '../App';
 import { fetchFavorites } from '../redux/favorites/favoriteReducer';
@@ -56,7 +56,7 @@ describe('test App Routing', () => {
     );
 
     const item = testListFavoriteHouses[0];
-    expect(screen.getByText('Favorites')).toBeInTheDocument();
+    expect(screen.getByText('List Favorites')).toBeInTheDocument();
     expect(screen.getByText(item.name)).toBeInTheDocument();
   });
 

@@ -4,23 +4,22 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import { fetchFavoriteHouseData, fetchHouseData } from './setupTests';
+import { fetchHouseData } from '../setupTests';
 import configureStore from '../redux/configureStore';
-import MyFavourites from '../pages/MyFavourites';
+import AddHouse from '../pages/AddHouse';
 
 const store = configureStore;
 fetchHouseData();
-fetchFavoriteHouseData(1);
 
 describe('test render', () => {
-  test('List Favorites should match snapshoot', async () => {
+  test('Add House page should match snapshoot', async () => {
     let tree;
     act(() => {
       tree = renderer.create(
         <React.StrictMode>
           <Provider store={store}>
-            <MemoryRouter initialEntries={['/houses/favorites']}>
-              <MyFavourites />
+            <MemoryRouter initialEntries={['/houses/add']}>
+              <AddHouse />
             </MemoryRouter>
           </Provider>
         </React.StrictMode>,

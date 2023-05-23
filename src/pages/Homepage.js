@@ -1,9 +1,9 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Carousel from '../componenets/Carousel';
+import Carousel from '../components/Carousel/Carousel';
 import { fetchHouse } from '../redux/house/house';
-import Navbar from '../componenets/navbar/Navbar';
+import Navbar from '../components/navbar/Navbar';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -15,6 +15,7 @@ const Home = () => {
   return (
     <>
       <Navbar title="Houses" />
+
       {houses?.length === 0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
       <section className="section home-section">
         <Carousel houses={houses} />

@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import FlashMessage from '../componenets/FlashMessage';
+import FlashMessage from '../components/FlashMessage';
 import { addHouse } from '../redux/house/house';
-import Navbar from '../componenets/navbar/Navbar';
+import Navbar from '../components/navbar/Navbar';
 
 const AddHouse = () => {
   const dispatch = useDispatch();

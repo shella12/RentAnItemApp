@@ -33,6 +33,7 @@
 }
 
 .carousel-card-details {
+  display: flex;
   background-color: #edf4f6;
   justify-content: space-between;
   padding: 1rem;
