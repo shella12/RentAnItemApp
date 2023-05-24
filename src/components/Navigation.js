@@ -3,7 +3,7 @@ import { Sling as Hamburger } from 'hamburger-react';
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
-export default function Navigation() {
+const Navigation = () => {
   const [isOpen, setOpen] = useState(false);
   return (
     <div className="navbar-landing">
@@ -24,4 +24,5 @@ export default function Navigation() {
       </div>
     </div>
   );
-}
+};
+export default Navigation;

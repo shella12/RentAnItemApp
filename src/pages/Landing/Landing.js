@@ -5,14 +5,12 @@ import FeatureSection from '../../components/FeatureSection';
 import Footer from '../../components/Footer';
 import './landing.css';
 
-function Landing() {
-  return (
-    <Container>
-      <Header />
-      <FeatureSection />
-      <Footer />
-    </Container>
-  );
-}
+const Landing = () => (
+  <Container>
+    <Header />
+    <FeatureSection />
+    <Footer />
+  </Container>
+);
 
 export default Landing;

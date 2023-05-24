@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`test render Flash House should match snapshoot 1`] = `
-<div
-  className="flash-message"
->
-  Test Navbar
-</div>
-`;
