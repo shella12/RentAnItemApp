@@ -20,11 +20,10 @@ const DeleteHouse = () => {
     <>
       <Navbar title="Delete House" />
       <section className="section">
-        <h1 className="flex-center">Delete House</h1>
         {listAllHouse?.length === 0 && (<p className="flex-center empty-list">No Houses: List Empty</p>)}
-        <ul className="flex-center wrap">
+        <ul className="flex-center column wrap">
           { listAllHouse.map((house) => (
-            <li key={house.id} className="flex-center house-wrapper">
+            <li key={house.id} className="flex-center max-content-flex house-wrapper">
               <House data={house} handleRemove={handleRemove} />
             </li>
           ))}
