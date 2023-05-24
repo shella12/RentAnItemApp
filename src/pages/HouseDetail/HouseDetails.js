@@ -75,7 +75,7 @@ const HouseDetails = () => {
             <h2 className="desktop-only detail-title">{name}</h2>
             <p className="max-content-flex">{description}</p>
             {
-            isFavorite ? <button type="button" className="add-favorite" onClick={handleRemove}>Remove to favourite</button>
+            isFavorite ? <button type="button" className="add-favorite" onClick={handleRemove}>Remove from favourite</button>
               : <button type="button" className="add-favorite" onClick={handleAddFavorite}>Add to favourite</button>
           }
           </div>
