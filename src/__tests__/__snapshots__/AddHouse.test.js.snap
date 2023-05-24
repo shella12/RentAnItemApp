@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test render Add House page should match snapshoot 1`] = `
+Array [
+  <div
+    className="navbar"
+  >
+    <div
+      className="hamburger"
+    >
+      <div
+        aria-expanded={false}
+        className="hamburger-react"
+        onClick={[Function]}
+        onKeyUp={[Function]}
+        role="button"
+        style={
+          Object {
+            "cursor": "pointer",
+            "height": "48px",
+            "outline": "none",
+            "position": "relative",
+            "transform": "none",
+            "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
+            "userSelect": "none",
+            "width": "48px",
+          }
+        }
+        tabIndex={0}
+      >
+        <div
+          style={
+            Object {
+              "background": "#7e7d7f",
+              "borderRadius": "9em",
+              "height": "2px",
+              "left": "14px",
+              "position": "absolute",
+              "top": "17px",
+              "transform": "none",
+              "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
+              "width": "20px",
+            }
+          }
+        />
+        <div
+          style={
+            Object {
+              "background": "#7e7d7f",
+              "borderRadius": "9em",
+              "height": "2px",
+              "left": "14px",
+              "position": "absolute",
+              "top": "23px",
+              "transform": "none",
+              "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
+              "width": "20px",
+            }
+          }
+        />
+        <div
+          style={
+            Object {
+              "background": "#7e7d7f",
+              "borderRadius": "9em",
+              "height": "2px",
+              "left": "14px",
+              "position": "absolute",
+              "top": "29px",
+              "transform": "none",
+              "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
+              "width": "20px",
+            }
+          }
+        />
+      </div>
+      <nav
+        className="navlinks"
+      >
+        <div
+          className=" column mob-profile"
+        >
+          <img
+            alt="profile"
+            className="profile-photo mob-profile-photo"
+            src="profile-photo.jpeg"
+          />
+          <p
+            className="username mob-username"
+          >
+            Username
+          </p>
+          <p />
+        </div>
+        <a
+          activeclassname="active"
+          aria-current="page"
+          aria-label="Houses link"
+          className="active"
+          href="/houses"
+          onClick={[Function]}
+        >
+          Houses
+        </a>
+        <a
+          activeclassname="active"
+          aria-label="My Favorites link"
+          className=""
+          href="/houses/favorites"
+          onClick={[Function]}
+        >
+          My Favorites
+        </a>
+        <a
+          activeclassname="active"
+          aria-current="page"
+          aria-label="Add house link"
+          className="active"
+          href="/houses/add"
+          onClick={[Function]}
+        >
+          Add house
+        </a>
+        <a
+          activeclassname="active"
+          aria-label="Delete house link"
+          className=""
+          href="/houses/delete"
+          onClick={[Function]}
+        >
+          Delete house
+        </a>
+        <hr
+          className="divider"
+        />
+        <a
+          activeclassname="active"
+          aria-current="page"
+          aria-label="Log Out link"
+          className="active"
+          href="/houses/add"
+          onClick={[Function]}
+        >
+          Log Out
+        </a>
+      </nav>
+    </div>
+    <h1>
+      New House
+    </h1>
+    <svg
+      className="search-icon"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
+      />
+    </svg>
+  </div>,
+  <section
+    className="add-house-section"
+  >
+    <div
+      className="backdrop column flex-center"
+    >
+      <h1>
+        Add a house
+      </h1>
+      <p>
+        Turn the key and walk through the door. This new house is all you ever wanted and more. The best journey takes you home
+      </p>
+      <form
+        className="column"
+        onChange={[Function]}
+        onSubmit={[Function]}
+      >
+        <input
+          className="input-text"
+          name="name"
+          onChange={[Function]}
+          placeholder="House type e.g pent house, cottage etc..."
+          required={true}
+          type="text"
+          value=""
+        />
+        <input
+          className="input-text"
+          min="1"
+          name="price"
+          onChange={[Function]}
+          placeholder="Price e.g $30,00,0000..."
+          required={true}
+          type="number"
+          value=""
+        />
+        <input
+          className="input-text"
+          name="owner"
+          onChange={[Function]}
+          placeholder="owner name e.g John doe"
+          required={true}
+          type="text"
+          value=""
+        />
+        <input
+          className="input-text"
+          name="picture"
+          onChange={[Function]}
+          placeholder="Picture url"
+          required={true}
+          type="file"
+          value=""
+        />
+        <textarea
+          className="input-textarea"
+          name="description"
+          onChange={[Function]}
+          placeholder="write a description of the house ..."
+          required={true}
+          value=""
+        />
+        <button
+          className="btn"
+          type="submit"
+        >
+          Add a house
+        </button>
+      </form>
+    </div>
+  </section>,
+]
+`;

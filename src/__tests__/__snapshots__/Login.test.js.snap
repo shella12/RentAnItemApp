@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Footer correctly 1`] = `
+<div
+  className="add-house-section"
+>
+  <div
+    className="backdrop column flex-center"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <div
+        className="flex-center btn-back"
+      >
+        <svg
+          className="back-icon"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"
+          />
+        </svg>
+        <span>
+          Back
+        </span>
+      </div>
+    </a>
+    <h1>
+      Sign in
+    </h1>
+    <p>
+      Hello there! Sign in and start managing your system
+    </p>
+    <form
+      className="column"
+      onSubmit={[Function]}
+    >
+      <input
+        className="input-text"
+        name="email"
+        onChange={[Function]}
+        placeholder="Email"
+        required={true}
+        type="email"
+        value=""
+      />
+      <input
+        className="input-text"
+        name="password"
+        onChange={[Function]}
+        placeholder="Password"
+        required={true}
+        type="password"
+        value=""
+      />
+      <p />
+      <button
+        className="btn"
+        type="submit"
+      >
+        Login
+      </button>
+    </form>
+  </div>
+</div>
+`;
