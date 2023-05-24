@@ -68,6 +68,7 @@
 Click [here](https://github.com/shella12/RentAnItemBackend) to access the back end app that was built with ruby-on-rails
 
 ### Kanban
+we are 3 team members:
 - Click [here](https://github.com/users/shella12/projects/12) to see the Front End Kanban project
 - Click [here](https://github.com/users/shella12/projects/11) to see the Back End Kanban project
 
