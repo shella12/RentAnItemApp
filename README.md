@@ -76,8 +76,6 @@ Click [here](https://github.com/shella12/RentAnItemBackend) to access the back e
 style="width:45%">
 <img src="https://user-images.githubusercontent.com/44798044/236760117-f47fb991-c12e-4f3d-9cc1-120fa9986b02.png" alt="image kaban board"
 style="width:45%">
-![image](https://user-images.githubusercontent.com/44798044/236760630-feca6d27-23fd-4af2-8ddd-9812e62e183c.png)
-![image](https://user-images.githubusercontent.com/44798044/236760117-f47fb991-c12e-4f3d-9cc1-120fa9986b02.png)
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
