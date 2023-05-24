@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Footer correctly 1`] = `
+<section
+  className="top-section"
+>
+  <header
+    className="header"
+  >
+    <div
+      className="navbar-landing"
+    >
+      <a
+        aria-current="page"
+        className="logo-block active"
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="Logo"
+          className="logo"
+          src="logo.png"
+        />
+        Circle
+      </a>
+      <div
+        className="hamburger-landing"
+      >
+        <div
+          aria-expanded={false}
+          className="hamburger-react"
+          onClick={[Function]}
+          onKeyUp={[Function]}
+          role="button"
+          style={
+            Object {
+              "cursor": "pointer",
+              "height": "48px",
+              "outline": "none",
+              "position": "relative",
+              "transform": "none",
+              "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
+              "userSelect": "none",
+              "width": "48px",
+            }
+          }
+          tabIndex={0}
+        >
+          <div
+            style={
+              Object {
+                "background": "#ffffff",
+                "borderRadius": "9em",
+                "height": "2px",
+                "left": "14px",
+                "position": "absolute",
+                "top": "17px",
+                "transform": "none",
+                "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
+                "width": "20px",
+              }
+            }
+          />
+          <div
+            style={
+              Object {
+                "background": "#ffffff",
+                "borderRadius": "9em",
+                "height": "2px",
+                "left": "14px",
+                "position": "absolute",
+                "top": "23px",
+                "transform": "none",
+                "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
+                "width": "20px",
+              }
+            }
+          />
+          <div
+            style={
+              Object {
+                "background": "#ffffff",
+                "borderRadius": "9em",
+                "height": "2px",
+                "left": "14px",
+                "position": "absolute",
+                "top": "29px",
+                "transform": "none",
+                "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
+                "width": "20px",
+              }
+            }
+          />
+        </div>
+        <nav
+          className="navlinks-landing"
+        >
+          <a
+            activeclassname="active"
+            aria-label="Login link"
+            className=""
+            href="/login"
+            onClick={[Function]}
+          >
+            SIGN IN
+          </a>
+          <a
+            activeclassname="active"
+            aria-label="Sign up link"
+            className=""
+            href="/register"
+            onClick={[Function]}
+          >
+            SIGN UP
+          </a>
+        </nav>
+      </div>
+      <div
+        className="desktop-links"
+      >
+        <a
+          activeclassname="active"
+          aria-label="Login link"
+          className=""
+          href="/login"
+          onClick={[Function]}
+        >
+          SIGN IN
+        </a>
+        <a
+          activeclassname="active"
+          aria-label="Sign up link"
+          className=""
+          href="/register"
+          onClick={[Function]}
+        >
+          SIGN UP
+        </a>
+      </div>
+    </div>
+    <div
+      className="top-content"
+    >
+      <h1
+        className="main-title"
+      >
+        Find house anywhere
+      </h1>
+      <p>
+        The best offers for you at any point of your journey. where ever you are, feel yourself like at your own home.
+      </p>
+      <a
+        className="btn"
+        href="/register"
+        onClick={[Function]}
+      >
+        Rent a house
+      </a>
+    </div>
+  </header>
+</section>
+`;

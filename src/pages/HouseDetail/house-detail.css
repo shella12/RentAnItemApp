@@ -1,0 +1,94 @@
+.detail-house-img {
+  aspect-ratio: 3/2;
+  width: 100%;
+}
+
+.details-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem !important;
+  height: 80vh;
+}
+
+.details-bar h1 {
+  font-family: 'Poppins', serif;
+  font-weight: 500;
+  color: #3a3838;
+}
+
+.details-section button {
+  background-color: var(--orange);
+  color: #f6f3f8;
+  outline: none;
+  border: none;
+  font-size: medium;
+  margin-top: 1rem;
+}
+
+.details-price-owner {
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  backdrop-filter: blur(1px);
+  padding: 0 1rem 0 0;
+  background-color: rgba(0, 0, 0, 0.029);
+}
+
+.details-price-owner p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.details-owner {
+  align-items: center;
+  gap: 0.6rem;
+  color: white;
+  padding: 16px;
+}
+
+.detail-description {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 0.5rem 1rem;
+}
+
+.details {
+  transform: translateY(-6rem);
+  gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .details-section {
+    margin: 1% 5%;
+    flex-direction: row;
+    height: auto;
+  }
+
+  .details-section img {
+    aspect-ratio: 1/1;
+    max-height: 500px;
+    flex: 1;
+    object-fit: cover;
+  }
+
+  .details {
+    transform: translateY(0);
+    flex: 1;
+  }
+
+  .details-price-owner {
+    backdrop-filter: none;
+    background-color: transparent;
+    color: black;
+  }
+
+  .details-price-owner p {
+    color: black;
+  }
+
+  .details-section button {
+    align-self: flex-end;
+    margin-top: 1rem;
+  }
+}

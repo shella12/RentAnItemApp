@@ -1,0 +1,74 @@
+.swiper {
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 50px;
+  height: 80vh;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  width: 350px;
+  height: 350px;
+}
+
+.swiper-slide img {
+  display: block;
+  aspect-ratio: 1/1;
+  width: 100%;
+}
+
+.btn-see-details {
+  /* transform: translateY(-3.5rem); */
+  background-color: #ed6b3b;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 1rem;
+  outline: none;
+  border: none;
+}
+
+.carousel-card-details {
+  display: flex;
+  background-color: #edf4f6;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.stars {
+  color: #ffe600;
+  font-size: 1.3rem;
+}
+
+.grey-text {
+  color: var(--navbar-icon-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 445px) {
+  .swiper-slide {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .swiper-slide {
+    width: 350px;
+    height: 500px;
+  }
+
+  .swiper-slide img {
+    object-fit: cover;
+  }
+
+  .swiper {
+    padding-top: 50px;
+    height: 80vh;
+  }
+}

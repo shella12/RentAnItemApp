@@ -4,25 +4,27 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 RENT A HOUSE ](#-rent-a-house-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+    - [Back End app ](#back-end-app-)
+    - [Kanban](#kanban)
+    - [ScreenShots of Kanban boards](#screenshots-of-kanban-boards)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
@@ -66,14 +68,19 @@
 Click [here](https://github.com/shella12/RentAnItemBackend) to access the back end app that was built with ruby-on-rails
 
 ### Kanban
-- Click [here]() to see the Front End Kanban project
-- Click [here]() to see the Back End Kanban project
+we are 3 team members:
+- Click [here](https://github.com/users/shella12/projects/12) to see the Front End Kanban project
+- Click [here](https://github.com/users/shella12/projects/11) to see the Back End Kanban project
 
 ### ScreenShots of Kanban boards
-![image]()
-![image]()
+<img src="https://user-images.githubusercontent.com/44798044/236760630-feca6d27-23fd-4af2-8ddd-9812e62e183c.png" alt="image kaban board"
+style="width:45%">
+<img src="https://user-images.githubusercontent.com/44798044/236760117-f47fb991-c12e-4f3d-9cc1-120fa9986b02.png" alt="image kaban board"
+style="width:45%">
 
+## 🚀 Live Demo <a name="live-demo"></a>
 
+You can see the live **[Rent a house here](https://renthousefront.onrender.com)**.
 
 <!-- GETTING STARTED -->
 
@@ -111,7 +118,7 @@ Clone this repository to your desired folder:
 
 ```sh
   git clone git@github.com:shella12/RentAnItemApp.git
-  cd fRentAnItemApp
+  cd RentAnItemApp
 ```
 
 ### Install
@@ -128,6 +135,15 @@ To run the project, execute the following command:
 
 `npm start`
 
+
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  npm run test
+```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
@@ -140,7 +156,6 @@ To run the project, execute the following command:
 - GitHub: [@ZuhRa-HashiMi](https://github.com/ZuhRa-HashiMi)
 - LinkedIn: [Zuhra Hashmi](https://www.linkedin.com/in/zuhra-hashimi/)
 - AngelList: [zuhra-hashimi](https://wellfound.com/u/zuhra-hashimi)
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 👤 **Ayesha Arshad**
 
@@ -148,12 +163,11 @@ To run the project, execute the following command:
 - Twitter: [@Ayesha Arshad](https://twitter.com/AyeshaA03712974)
 - LinkedIn: [Ayesha Arshad](https://www.linkedin.com/in/ayesha-arshad-a690a015a/)
 
-👤 **Ssekweyama Pius**
+👤 **Dicko Allasane**
 
-
-- GitHub: [@githubhandle](https://github.com/SSEKPIUS)
-- Twitter: [@twitterhandle](https://twitter.com/SSEK_PIUS)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/pius-ssekweyama-23665794)
+- GitHub: [@githubhandle](https://github.com/Trast00)
+- Twitter: [@twitterhandle](https://twitter.com/AllassaneDicko0/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/allassane-dicko-744aaa224)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -189,7 +203,7 @@ If you like this project by staring it.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- The app is built using this [Design](https://www.behance.net/gallery/37706679/Circle-(Landing-page-Dashboard-Mobile-App)) by [Alexey Savitskiy](https://www.behance.net/alexey_savitskiy)
+The app is built using this [Design](https://www.behance.net/gallery/37706679/Circle-(Landing-page-Dashboard-Mobile-App)) by [Alexey Savitskiy](https://www.behance.net/alexey_savitskiy)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -200,4 +214,4 @@ If you like this project by staring it.
 This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-# RentAnItemApp
+
